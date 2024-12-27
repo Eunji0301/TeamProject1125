@@ -5,6 +5,6 @@
 <title>팀프로젝트</title>
 </head>
 <body>
-    메인페이지hehehe
+    김건주 연결확인 메세지 최최최초ㅓㅣ최최초종
 </body>
 </html>
