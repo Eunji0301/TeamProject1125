@@ -5,6 +5,6 @@
 <title>팀프로젝트</title>
 </head>
 <body>
-    메인페이지hehehe
+    김건주 연결확인 진짜로 최종으로 끝내라 좋은말로 할때
 </body>
 </html>
