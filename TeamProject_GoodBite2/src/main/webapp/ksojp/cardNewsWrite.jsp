@@ -208,7 +208,7 @@ $(document).ready(function(){
 	</div>
 </header>
 
-<div class="board write"> <!-- 수정사항 -->
+<div class="board write"> 
 	<div class="inner">
 		<article class="detailContents">
 			<div class="contentTitle">

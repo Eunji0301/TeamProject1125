@@ -97,7 +97,7 @@
     </div>
   </div>
   
-<!-- 페이지 네비게이션 버튼 추가 --> <!-- 수정사항 -->
+<!-- 페이지 네비게이션 버튼 추가 --> 
 <div class="container text-center mt-5">
     <nav>
         <ul class="pagination justify-content-center m-0">
