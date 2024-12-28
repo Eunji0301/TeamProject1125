@@ -1,0 +1,199 @@
+@charset "UTF-8";
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html, body{
+    min-height: 100vh;
+}
+a{
+	display:inline-block;
+	text-decoration: none;
+	color : black;
+}
+.inner {
+    position: static;
+    width: auto;
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+ .Inner {
+width:1180px; 
+margin:0 auto; 
+position:relative;} 
+@media (max-width: 1299px) {
+    .inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+@media (max-width: 1180px){
+	.inner {width:100%;}
+}
+
+
+#checkUp, #DQ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#checkUp .inner .diagnosisBody .koreanSSN input {
+    width: 100%;
+    height: 50px; /* 버튼 높이와 동일하게 설정 */
+    padding: 10px;
+    margin: 5px 0;
+    border : 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+#checkUp .inner .diagnosisBody .koreanSSN input:focus {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #CDC8E7; /* 테두리 색상 강조 */
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 0.25rem rgba(205, 200, 231, 0.25);
+    outline: none; /* 기본 아웃라인 제거 */
+}
+#checkUp .inner .diagnosisButton .diagnosisStartButton, 
+#checkUp .inner .diagnosisBody .diagnosisBottom .authenticateButton{
+    width: 100%;
+    height: 44px; 
+    padding: 0;
+    background-color: transparent;
+    color: #8475BC;
+    border: 1px solid #8475BC;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#checkUp .inner .diagnosisButton .diagnosisStartButton{
+	font-size: 24px;
+	height: 66px; 
+	border: 3px solid #8475BC;
+}
+#checkUp .inner .diagnosisButton .diagnosisStartButton:hover, 
+#checkUp .inner .diagnosisBody .diagnosisBottom .authenticateButton:hover{
+    background-color: #8475BC;
+    color: white;
+}
+
+#checkUp .inner .diagnosisBody,
+#checkUp .inner .diagnosisBody .koreanSSN,
+#checkUp .inner .diagnosisBottom .authenticateBox,
+#DQ .inner .DQBody {
+	width:100%;
+	border: 5px solid #8475BC;
+}
+
+#checkUp .inner .diagnosisBottom img{
+	margin : 2rem;
+	width: 5rem;
+    height: 5rem; 
+}
+
+/**/
+#DQ .inner .DQBody .DQTop h1{
+	width:100%;
+	background: #CDC8E7;
+	color : #ffffff;
+}
+#DQ .inner .DQBody .DQTop div{
+	width:100%;
+	border: 5px solid #CDC8E7;
+}
+#DQ .inner .DQBody .DQBottom hr{
+	display:block;
+border: 2px solid #8475BC;
+opacity: 1; /* 불투명도 100% */
+}
+#DQ .inner .DQBody .DQBottom img{
+	width: 90px;
+	height: 90px;
+}
+/* 기본 select 스타일 */
+select {
+    width: 100%;          /* 전체 너비 */
+    padding: 8px;         /* 여백 */
+    font-size: 16px;       /* 폰트 크기 */
+    border: 1px solid #3681AB;  /* 테두리 */
+    border-radius: 4px;      /* 둥근 모서리 */
+    background-color: #ffffff; /* 배경 색상 */
+    color: #3681AB;             /* 글자 색상 */
+    text-align: center;}
+
+/* 선택된 옵션 스타일 */
+select option:checked {
+    background-color: #3681AB; /* 선택된 옵션의 배경 색상 */
+    color: #fff;               /* 선택된 옵션의 글자 색상 */
+}
+
+/* 옵션 호버 상태 스타일 */
+select option:hover {
+    background-color: #f0f0f0; /* 호버 상태에서 배경 색상 */
+    color: #333;               /* 호버 상태에서 글자 색상 */
+}
+
+/* 호버 상태 스타일 */
+select:hover {
+    border-color: #3681AB;  /* 호버 상태에서 테두리 색상 */
+}
+
+/* 옵션 스타일 */
+option {
+    padding: 8px;           /* 옵션 여백 */
+    font-size: 16px;         /* 옵션 폰트 크기 */
+    background-color: #ffffff; /* 기본 배경 색상 */
+    color: #3681AB;            /* 기본 글자 색상 */
+}
+#DQ .inner .DQBody  .DQButton  {
+    width: 50%;
+    height: 44px; 
+    padding: 0;
+    background-color: transparent;
+    color: #8475BC;
+    border: 1px solid #8475BC;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#DQ .inner .DQBody .DQButton:hover  {
+    background-color: #8475BC;
+    color: white;
+}
+    .container {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+            width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #toggleButton {
+        transition: all 0.5s ease;
+        width: 100%; /* 버튼의 너비를 100%로 설정 */
+    }
+    .hidden-content {
+        display: none; /* 처음에는 숨김 */
+        opacity: 0; /* 불투명도 초기화 */
+        transform: translateY(20px); /* 아래에서 시작 */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* 불투명도와 변형에 대한 트랜지션 설정 */
+    }
+    .visible {
+        display: block; /* 보이도록 설정 */
+        opacity: 1; /* 불투명도를 1로 설정 */
+        transform: translateY(0); /* 원래 위치로 이동 */
+    }
+
+    .moved {
+        align-self: flex-start;
+        margin-top: 20px;
+    }
