@@ -7,7 +7,7 @@
 <title>GoodBite User Login</title>
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/sycss/user.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/user.css">
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('tabUser').addEventListener('click', function() {
@@ -74,6 +74,7 @@ function showLogin(contentId) {
             </div>
         </div>
     </main>
-
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
