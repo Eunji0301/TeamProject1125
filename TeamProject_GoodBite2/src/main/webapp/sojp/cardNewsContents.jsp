@@ -207,7 +207,7 @@ $(document).ready(function(){
 	</div>
 </header>
 <div class="inner">
-	<a class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></a> 
+	<a class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></a> <!-- 수정사항 -->
 </div>
 <article class="detailContents">
 	<div class="inner">
