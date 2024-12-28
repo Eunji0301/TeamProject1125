@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+* { 
+	line-height: 1.5; 
+	font-size: 12px; 
+	margin: 0; 
+	padding: 0; 
+	}
+	
+body { 
+    margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    width: 65%; /* 너비를 설정해야 적용됨 */
+    height: 100%;
+	}
+	
+.editer{
+	background-color: #CDC8E7; /* 배경 색 */
+    border: 5px solid #CDC8E7; /* 테두리 색 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    margin-bottom: 20px; /* 하단 여백 */
+	font-size: 24px; /* 제목 크기 */
+	text-align: center;
+	color: #8475BC;
+	height: 5px;
+	display: flex; /* 텍스트를 가운데 정렬 */
+    justify-content: center; /* 수평 정렬 */
+    align-items: center; /* 세로 정렬 */
+}
+	
+.content {
+	background-color: #FFFFFF; /* 배경 색 */
+    border: 5px solid #CDC8E7; /* 테두리 색 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    width: 99%; /* 너비를 설정해야 적용됨 */
+    height: 700px;
+}
+	
+.board.write {
+    background-color: #FFFFFF; /* 배경 색 */
+    border: 5px solid #CDC8E7; /* 테두리 색 */
+    padding: 20px; /* 내부 여백 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+.contentTitle {
+    margin-bottom: 20px; /* 하단 여백 */
+    font-family: Arial, sans-serif; /* 글꼴 설정 */
+    text-align: left;
+    display: flex; /* flexbox로 설정하여 나란히 배치 */
+    gap: 10px; /* 두 요소 사이에 간격을 추가 */
+}
+
+.contentTitle .title {
+	background-color: #CDC8E7;
+    font-size: 24px; /* 제목 크기 */
+    font-weight: bold; /* 제목 두께 */
+    margin-bottom: 10px; /* 제목과 내용 사이의 여백 */
+    border: 5px solid #CDC8E7; 
+    display: block; /* a 태그를 블록 요소로 만들어 줄바꿈을 발생시킴 */
+    width: 10%; /* 너비를 설정해야 적용됨 */
+    display: flex;           /* Flexbox 활성화 */
+    justify-content: center; /* 가로 정렬 */
+    align-items: center;     /* 세로 정렬 */
+    height: 10vh;           /* 부모 요소의 높이를 지정 (예: 화면 전체) */
+    border-radius: 20px; /* 둥근 모서리 적용 */
+}
+
+.contentTitle .subbox {
+    font-size: 18px; /* 내용 크기 */
+    margin-bottom: 10px; /* 제목과 내용 사이의 여백 */
+    border: 5px solid #CDC8E7; 
+    display: block; /* a 태그를 블록 요소로 만들어 줄바꿈을 발생시킴 */
+    width: 90%; /* 너비를 설정해야 적용됨 */
+    display: flex;           /* Flexbox 활성화 */
+    justify-content: center; /* 가로 정렬 */
+    align-items: center;     /* 세로 정렬 */
+    height: 10vh;           /* 부모 요소의 높이를 지정 (예: 화면 전체) */
+    border-radius: 20px; /* 둥근 모서리 적용 */
+}
+	
+a { 
+	text-decoration: none; 
+	color: inherit; 
+	}
+	
+select { 
+	cursor: pointer; 
+	border-color: #8475BC; 
+	height: 20px; 
+	width: 70px; 
+	}
+	
+textarea { 
+	border-color: #8475BC; 
+	padding: 0 5px; 
+	}
+	
+input { 
+	border: 2px solid #8475BC; 
+	padding: 0 5px; 
+	}
+	
+input[type="file"] { 
+	border: none; 
+	padding: 0; 
+	}
+	
+ul { 
+	list-style: none; 
+	}
+	
+img { 
+	vertical-align: middle; 
+	}
+
+
+/* header */
+header { 
+	border-bottom: 2px solid #8475BC; 
+	margin-bottom: 10px;
+	}
+
+header .mainTitle { 
+	font-size: 40px; 
+	padding: 10px 0px 5px; 
+	color:#8475BC; 
+	}
+
+header .search { 
+	text-align: right; 
+	margin-bottom: 10px; 
+	}
+
+p {
+	text-align: center;
+	color: #8475BC;
+	font-size: 16px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column; /* 세로로 나열 */
+    gap: 10px; /* 이미지 사이 간격 */
+    margin-top: 20px; /* 상단 여백 */
+    justify-content: center; /* 수평 정렬 */
+    align-items: center; /* 세로 정렬 */
+}
+
+.content-image {
+    width: 300px; /* 이미지 너비 */
+    height: 300px; /* 이미지 높이 */
+    object-fit: cover; /* 비율에 맞게 이미지 자르기 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    justify-content: center; /* 수평 정렬 */
+    align-items: center; /* 세로 정렬 */
+}
+
+/* table */
+table { width: 100%; border-collapse: collapse; }
+table th, table td { padding: 5px 10px; }
+
+.listTable th, .listTable td { text-align: center; border-bottom: 2px solid #8475BC;  }
+.listTable .title { text-align: left; }
+
+.writeTable input[type="text"], .writeTable textarea { width: 80%; }
+.writeTable input[name="writer"] { width: auto; }
+
+.replyTable th, .replyTable td { text-align: center; border-bottom: 2px solid #8475BC; }
+.replyTable .content  { text-align: left; }
+
+
+/* button */
+.btn { background: #CDC8E7; color: #8475BC; border-radius: 3px; border: none; width: 100px; height: 40px; 
+	cursor: pointer; display: inline-block; vertical-align: middle; }
+.aBtn {	text-align: center; line-height: 40px; font-size: 20px; }
+
+.btnBox { text-align:right; margin-top: 20px; margin-bottom: 20px; }
+.btnBox .btn { display: inline-block; width: 90px; }
+
+
+/* paging */
+.page { margin: 50px 0 20px; text-align: center;}
+.page ul { display: inline-block; }
+.page li { display: inline-block; width: 30px; height: 30px; cursor: pointer; }
+.page .on { background: black; color: white; }
+
+
+/* detail */
+.detailContents { border-bottom: 2px solid #FFFFFF;  padding: 10px; }
+.detailContents .content { padding: 20px 0; }
+.detailContents .fileDown img { margin-right: 10px; }
+
+.commentContents form[name="frm"] { margin-bottom: 40px; }
+.commentContents .commentWriter { border: 1px solid lightgray; display: inline-block; padding: 0 100px; }
+.commentContents input { width: 600px; height: 25px; float: left; }
+.commentContents .replyBtn { background: #555; width: 188px; float: left; border: none; cursor: pointer;
+	color: white; height: 27px; }
