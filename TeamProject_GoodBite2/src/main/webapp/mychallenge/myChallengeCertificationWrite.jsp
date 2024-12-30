@@ -2,8 +2,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>GoodBite | 마이챌린지인증 작성</title>
+<title>마이챌린지 인증글 작성</title>
 <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
 .inner {
     position: static;
     width: auto;
@@ -11,11 +16,13 @@
     padding: 0 10px;
     margin: 0 auto;
 }
+
 .Inner {
     width: 1180px;
     margin: 0 auto;
     position: relative;
 }
+
 @media (max-width: 1299px) {
     .inner {
         padding-left: 16px;
@@ -23,26 +30,83 @@
     }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: white;
-    padding-top: 4cm;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 24px;
 }
 
-.auth-container {
+.container {
+    width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 3px solid #CDC8E7;
+    border-radius: 8px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8475BC;
+    background-color: #CDC8E7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #CDC8E7;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.recipe-details {
+    text-align: center;
+}
+
+.notice {
+    background-color: #fffacd;
+    border: 3px solid #ffd700;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.notice h3 {
+    color: #b8860b;
+}
+
+.challenge-image {
     width: 100%;
     max-width: 800px;
-    background-color: white;
-    padding: 20px;
+    margin-top: 20px; 
     border-radius: 8px;
+    border: 2px solid #CDC8E7;
+}
+
+.recipe-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recipe-images .section {
+    width: 48%;
+    margin-bottom: 20px;
     text-align: center;
-    border: 5px solid #CDC8E7;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #CDC8E7;
+    box-sizing: border-box;
+}
+
+.recipe-images .section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #CDC8E7;
 }
 
 h2 {
@@ -53,15 +117,17 @@ h2 {
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
-    width: 100%; /* auth-container 안에서 박스 너비와 일치 */
+    width: 100%;
 }
 
 .form-section label {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     display: block;
+    margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
+    color: #8475BC
 }
 
 .form-section input, 
@@ -69,10 +135,11 @@ h2 {
     width: 100%;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #CDC8E7;
+    border: 2px solid #CDC8E7;
     border-radius: 4px;
     margin-bottom: 10px;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .form-section hr {
@@ -104,31 +171,23 @@ h2 {
 .button-group button {
     width: 48%;
     padding: 10px 0;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.button-group .btn-submit {
+.button-group .btn-submit, .button-group .btn-cancel {
     background-color: #CDC8E7;
-    color: white;
+    color: #8475BC;
+    font-weight: bold;
 }
 
-.button-group .btn-submit:hover {
+.button-group .btn-submit:hover, .button-group .btn-cancel:hover {
     background-color: #8475BC;
     color: white;
 }
 
-.button-group .btn-cancel {
-    background-color: #CDC8E7;
-    color: white;
-}
-
-.button-group .btn-cancel:hover {
-    background-color: #8475BC;
-    color: white; 
-}
 .form-section-box {
     background-color: #CDC8E7;
     padding: 5px;
@@ -144,7 +203,6 @@ hr {
     border-top: 3px solid #8475BC;
     margin: 10px 0;
 }
-
 </style>
 <script>
     // 썸네일 미리보기
@@ -165,21 +223,20 @@ hr {
 </script>
 </head>
 <body>
-    <div class="auth-container">
-        <!-- 제목을 auth-container 내부로 이동 -->
-        <h2>챌린지 인증</h2> 
-
+    <header>헤더</header>
+    <div class="container">
+        <div class="header">챌린지 인증</div>
         <form action="challengeCertificationAction.jsp" method="post" enctype="multipart/form-data">
             <!-- 챌린지명 -->
             <div class="form-section">
                 <label for="challengeName"></label>
-                <input type="text" id="challengeName" name="challengeName" placeholder="챌린지명 입력되는 부분">
+                <input type="text" id="challengeName" name="challengeName" placeholder="챌린지명 입력되는 부분" readonly="readonly">
             </div>
             <hr>
             <!-- 제목 -->
             <div class="form-section">
                 <label for="title"></label>
-                <input type="text" id="title" name="title" placeholder="제목을 입력하세요">
+                <input type="text" id="title" name="title" placeholder="제목을 입력하세요.">
             </div>
             <hr>
             <!-- 사진 추가 -->
@@ -198,7 +255,7 @@ hr {
                 <div class="form-section-box">
                     <label for="content">내용</label>
                 </div>
-                <textarea id="content" name="content" rows="4" placeholder="내용을 입력하세요"></textarea>
+                <textarea id="content" name="content" rows="4" placeholder="내용을 입력하세요."></textarea>
             </div>
             <!-- 버튼 -->
             <div class="button-group">
