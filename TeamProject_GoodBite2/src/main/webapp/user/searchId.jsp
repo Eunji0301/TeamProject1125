@@ -7,7 +7,7 @@
 <title>GoodBite Search Id</title>
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/sycss/user.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/user.css">
 
 </head>
 <body>
@@ -16,7 +16,7 @@
             <h1 class="title">아이디 찾기</h1>
             <div class="searchBorder p-4">
             	<div class="text-center my-3">
-            		<img src="../resources/headerImage/titlelogoimg.png">
+            		<img src="../resources/img/common/titlelogoimg.png">
             		<div class="mt-2">* 아래에 정보를 입력해 주세요. *</div>
             	</div>
 	            <form class="search-form">
@@ -32,6 +32,7 @@
             </div>
         </div>
     </main>
-
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

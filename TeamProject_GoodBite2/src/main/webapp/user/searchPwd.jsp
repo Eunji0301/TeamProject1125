@@ -15,7 +15,7 @@
             <h1 class="title">비밀번호 찾기</h1>
             <div class="searchBorder p-4">
             	<div class="text-center my-3">
-            		<img src="../resources/headerImage/titlelogoimg.png">
+            		<img src="../resources/img/common/titlelogoimg.png">
             		<div class=" mt-2">* 아래에 정보를 입력해 주세요. *</div>
             	</div>
 	            <form class="search-form">
@@ -31,6 +31,7 @@
             </div>
         </div>
     </main>
-
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

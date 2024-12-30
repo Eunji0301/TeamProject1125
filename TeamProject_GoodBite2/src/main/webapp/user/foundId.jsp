@@ -7,7 +7,7 @@
 <title>GoodBite Found Id</title>
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/sycss/user.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/user.css">
 
 </head>
 <body>
@@ -36,6 +36,7 @@
             </div>
         </div>
     </main>
-
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

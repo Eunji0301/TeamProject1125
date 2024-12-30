@@ -7,7 +7,7 @@
 <title>GoodBite Join</title>
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/sycss/user.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/user.css">
 </head>
 <body>
     <main id="join">
