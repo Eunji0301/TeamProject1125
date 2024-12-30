@@ -1,0 +1,328 @@
+@charset "UTF-8";
+/* 전체 페이지 스타일 */
+body {
+    margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    width: 65%; /* 너비를 설정해야 적용됨 */
+    height: 60%;
+}
+
+header { 
+	border-bottom: 2px solid #8475BC; 
+	margin-bottom: 20px;
+}
+
+header .mainTitle { 
+	font-size: 40px; padding: 10px 0px 5px; color:#8475BC;
+	margin-left: -100px;
+}
+
+header .search { 
+	text-align: right; margin-bottom: 10px; 
+}
+
+.page-now {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -100px;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* 가로로 배치 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    margin-bottom: 40px;
+}
+
+.pagination .page-item {
+    margin: 0 5px; /* 각 페이지 버튼 사이에 간격 추가 */
+}
+
+.pagination .page-link {
+    display: inline-block; /* a 태그를 인라인 블록으로 설정 */
+    padding: 10px 15px; /* 버튼 크기 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: black; /* 버튼 텍스트 색상 */
+    background-color: #fff; /* 배경색 */
+    border-radius: 5px; /* 테두리 라운드 */
+    text-align: center; /* 텍스트 정렬 */
+}
+
+.pagination .page-link:hover {
+    background-color: #8475BC; 버튼 호버 색상
+}
+
+/* 텍스트 정렬 */
+.text-center {
+    text-align: center !important;
+}
+
+/* Padding 설정 */
+.py-5 {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+/* 미디어 쿼리 (반응형) */
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 992px) {
+    .py-lg-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+/* Row 스타일 */
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+/* Flex 관련 */
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.fw-light {
+    font-weight: 300 !important;
+}
+
+@media (min-width: 1200px) {
+    .h1, h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* 텍스트 스타일 */
+.text-body-secondary {
+    color: var(--bs-secondary-color) !important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.my-2 {
+    margin-top: .5rem !important;
+    margin-bottom: .5rem !important;
+}
+
+/* 버튼 스타일 */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0d6efd;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+}
+
+/* 그리드 시스템 */
+.g-3, .gy-3 {
+    --bs-gutter-y: 1rem;
+}
+.g-3, .gx-3 {
+    --bs-gutter-x: 1rem;
+}
+
+@media (min-width: 768px) {
+    .row-cols-md-3>* {
+        flex: 0 0 auto;
+        width: 50%;  /* This sets the grid to 2 columns per row */
+    }
+}
+
+/* 카드 스타일 */
+.shadow-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    color: var(--bs-body-color);
+    background-color: var(--bs-card-bg);
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+    padding: 20px 0px;
+    
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: var(--bs-card-inner-border-radius);
+    border-top-right-radius: var(--bs-card-inner-border-radius);
+    border: 5px solid #CDC8E7; /* 테두리 선 추가 */
+    width: 50%; /* 너비를 설정해야 적용됨 */
+    margin: 0 auto; /* 상하 마진 0, 좌우 자동으로 설정 */
+    background-color: #FFFFFF;
+    height:400px;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: 98.3%;
+    background-color: #FFFFFF;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    border: 5px solid #CDC8E7; /* 테두리 선 추가 */
+    background-color: #FFFFFF;
+    height:50px;
+}
+
+.card-text {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    background-color: #FFFFFF;
+    height:40px;
+    display: flex;
+    align-items: center; /* 세로 정렬 */
+}
+
+/* Flexbox 관련 */
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+/* 버튼 그룹 스타일 */
+.btn-group {
+    border-radius: var(--bs-border-radius);
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn-group>.btn-group:not(:last-child)>.btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    --bs-btn-padding-y: 0.25rem;
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-font-size: 0.875rem;
+    --bs-btn-border-radius: var(--bs-border-radius-sm);
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: #6c757d;
+    --bs-btn-border-color: #6c757d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6c757d;
+    --bs-btn-hover-border-color: #6c757d;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6c757d;
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #6c757d;
+}
+
+/* 작은 텍스트 */
+.small, small {
+    font-size: .875em;
+}
+
+/* 문서 색상 */
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+}
+
+	  .inner {
+	    position: static;
+	    width: auto;
+	    max-width: 1000px;
+	    padding: 0 10px;
+	    margin: 0 auto;
+	  }
+	  
+	  .Inner {
+		width:1180px; 
+		margin:0 auto; 
+		position:relative;
+	  }
+		
+	  @media (max-width: 1299px) {
+		.inner {
+		padding-left: 16px;
+		padding-right: 16px;
+		}
+      }
