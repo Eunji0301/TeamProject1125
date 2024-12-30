@@ -7,7 +7,7 @@
 <title>GoodBite footer</title>
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/sycss/util.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/util.css">
 </head>
 <body>
 	<header id="footer" >
@@ -15,7 +15,7 @@
 		<div class="footerBody py-3">
 			<div class="inner d-flex align-items-center justify-content-between pe-4 ps-4">
 				<div class=" d-flex align-items-center">
-					<img class=" pe-4 logoimg" src="../resources/headerImage/titlelogoimg.png">
+					<img class=" pe-4 logoimg" src="../resources/img/common/titlelogoimg.png">
 					<div class="comFont" >
 						HelloHealthy.company
 					</div>

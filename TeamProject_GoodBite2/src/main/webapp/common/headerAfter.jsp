@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,13 +7,13 @@
 <title>GoodBite Header</title>
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/sycss/util.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/util.css">
 </head>
 <body>
 	<header id="header" >
 		<div class="headerBody py-2">
 			<div class="inner d-flex align-items-center">
-				<img class="logo" src="../resources/headerImage/titlelogo1.png">
+				<img class="logo" src="../resources/img/common/titlelogo.png">
 				<div  id="toggleSidebar" class="sidebarButton" >
 					<button class = "sidebarButtonBackGround p-2">
 						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#CDC8E7" class="bi bi-list" viewBox="0 0 16 16">
