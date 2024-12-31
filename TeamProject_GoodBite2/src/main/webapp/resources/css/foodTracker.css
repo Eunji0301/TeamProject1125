@@ -10,73 +10,41 @@ a{
 	text-decoration: none;
 	color : black;
 }
-#header, #footer{
-    position: relative;
-    z-index: 2;
-    background: #CDC8E7;
-}
 .inner {
 	
 width:1180px; 
 margin:0 auto; 
-position:relative;}
+position:relative;
+min-width: 700px;}
 @media (max-width: 1180px){
 	.inner {width:100%;}
 }
 
 
-#foodTrackerMealLog{
+#foodTrackerMealLog, #foodTrackerList, #foodTrackerDetail{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-
-/*공통 틀*/
-#foodTrackerMealLog .inner .frameCircle {
-	z-index: 1;
-	top: 40px;
-	position: relative;
-	width:4rem;
-	height: 4rem;
-	border-radius : 50%;
-	border: 1rem solid #3681AB;
-	margin-top: -50px;
-}
-#foodTrackerMealLog .inner .frameSquare {
-	z-index: 1;
-	top: 25px;
-	position: relative;
-	width:10rem;
-	height: 3rem;
-	background: #3681AB;
-}
-#foodTrackerMealLog .inner .frameMain {
-	position: relative;
-	width:100%;
-	border: 10px solid #AED7ED;
-}
-#foodTrackerMealLog .inner .frameMain .mealTitle {
-	font-size : 3rem;
-}
-#foodTrackerMealLog .inner .frameMain .mealTitle hr{
-	border: 5px solid #3681AB;
-	opacity: 1;
-}
-#foodTrackerMealLog .inner .frameMain .mealSearch {
+/*2공통 틀*/
+#foodTrackerMealLog .inner .frameMain .mealSearch,
+#foodTrackerList .inner .frameMain .mealSearch {
 	border: 5px solid #AED7ED;
 }
-#foodTrackerMealLog .inner .frameMain .mealSearch input {
+#foodTrackerMealLog .inner .frameMain .mealSearch input,
+#foodTrackerList .inner .frameMain .mealSearch input{
     width: 80%;
-    height: 50px; /* 버튼 높이와 동일하게 설정 */
+    height: 60px; /* 버튼 높이와 동일하게 설정 */
     padding: 10px;
     border: 1px solid #AED7ED;
     font-size: 16px;
     box-sizing: border-box;
 }
-#foodTrackerMealLog .inner .frameMain .mealSearch input:focus {
+#foodTrackerMealLog .inner .frameMain .mealSearch input:focus,
+#foodTrackerList .inner .frameMain .mealSearch input:focus {
     width: 80%;
-    height: 50px;
+    height: 60px;
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
@@ -84,10 +52,54 @@ position:relative;}
     outline: none; /* 기본 아웃라인 제거 */
 }
 
+/*3공통 틀*/
+#foodTrackerMealLog .inner .frameCircle,
+#foodTrackerList .inner .frameCircle,
+#foodTrackerDetail .inner .frameCircle {
+	z-index: 1;
+	top: 40px;
+	position: relative;
+	width:4rem;
+	height: 4rem;
+	border-radius : 50%;
+	border: 1rem solid #3681AB;
+}
+#foodTrackerMealLog .inner .frameSquare,
+#foodTrackerList .inner .frameSquare,
+#foodTrackerDetail .inner .frameSquare {
+	z-index: 1;
+	top: 25px;
+	position: relative;
+	width:10rem;
+	height: 3rem;
+	background: #3681AB;
+}
+#foodTrackerMealLog .inner .frameMain,
+#foodTrackerList .inner .frameMain,
+#foodTrackerDetail .inner .frameMain   {
+	position: relative;
+	width:100%;
+	border: 10px solid #AED7ED;
+}
+#foodTrackerMealLog .inner .frameMain .mealTitle,
+#foodTrackerList .inner .frameMain .title div,
+#foodTrackerDetail .inner .frameMain .title div {
+	font-size : 2rem;
+}
+#foodTrackerMealLog .inner .frameMain .mealTitle hr,
+#foodTrackerList .inner .frameMain .title hr,
+#foodTrackerDetail .inner .frameMain .title hr{
+	border: 5px solid #3681AB;
+	opacity: 1;
+}
+
+/*----*/
+
 #foodTrackerMealLog .inner .frameMain .mealSearch .mealSearchButton,
-#foodTrackerMealLog .inner .frameMain .mealInfoSaveButton{
-    width: 20%;
-    height: 50px; 
+#foodTrackerMealLog .inner .frameMain .mealInfoSaveButton,
+#foodTrackerList .inner .frameMain .mealSearch .mealSearchButton{
+    width: 25%;
+    height: 60px; 
     padding: 0;
     background-color: #3681AB;
     color: #ffffff;
@@ -97,60 +109,222 @@ position:relative;}
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 #foodTrackerMealLog .inner .frameMain .mealSearch .mealSearchButton:hover,
-#foodTrackerMealLog .inner .frameMain .mealInfoSaveButton:hover {
+#foodTrackerMealLog .inner .frameMain .mealInfoSaveButton:hover,
+#foodTrackerList .inner .frameMain .mealSearch .mealSearchButton:hover {
     background-color: #ffffff;
     color: #3681AB;
 }
 
-
-
-#foodTrackerMealLog .inner .frameMain .mealTable {
+/*----*/
+#foodTrackerMealLog .inner .frameMain .mealTable,
+#foodTrackerMealLog .inner .frameMain .mealTable,
+#foodTrackerList .inner .frameMain .foodListTable {
    max-height: 700px; /* 최대 높이 설정 */
    overflow-y: auto; /* 컨텐츠가 많아질 경우 스크롤 추가 */
    margin: 20px auto; /* 중앙 정렬 */
 }
 
-#foodTrackerMealLog .inner .frameMain .mealTable table {
+#foodTrackerMealLog .inner .frameMain .mealTable table, 
+#foodTrackerList .inner .frameMain .foodListTable table{
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 #foodTrackerMealLog .inner .frameMain .mealTable th, 
-#foodTrackerMealLog .inner .frameMain .mealTable td {
+#foodTrackerMealLog .inner .frameMain .mealTable td,
+#foodTrackerList .inner .frameMain .foodListTable th, 
+#foodTrackerList .inner .frameMain .foodListTable td  {
     border-top: 3px solid #AED7ED;
     border-bottom: 3px solid #AED7ED;
-    padding: 10px;
+    padding: 18px 0;
 }
-#foodTrackerMealLog .inner .frameMain .mealTable .onPadding {
+#foodTrackerMealLog .inner .frameMain .mealTable .onPadding,
+#foodTrackerList .inner .frameMain .foodListTable .onPadding {
     padding: 0px;
     text-align: right;
 }
-#foodTrackerMealLog .inner .frameMain .mealTable .tableCircle {
+#foodTrackerMealLog .inner .frameMain .mealTable .tableCircle,
+#foodTrackerList .inner .frameMain .foodListTable .tableCircle {
 	display : inline-block;
 	width: 15px;
 	height:15px;
 	border-radius : 50%;
 	background: #AED7ED;
 }
-#foodTrackerMealLog .inner .frameMain .mealTable Button{
+#foodTrackerMealLog .inner .frameMain .mealTable Button,
+#foodTrackerList .inner .frameMain .foodListTable Button {
     width: 63px;
     height:  100%; 
     background-color: #3681AB;
     color: #ffffff;
     border: 1px solid #3681AB;
     font-size: 16px;
-    padding: 10px 12px;
+    margin: auto;
+    padding: 17px 12px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-#foodTrackerMealLog .inner .frameMain .mealTable Button:hover {
+#foodTrackerMealLog .inner .frameMain .mealTable Button:hover,
+#foodTrackerList .inner .frameMain .foodListTable Button:hover  {
     background-color: #ffffff;
     color: #3681AB;
 }
+
+/*----*/
+
 #foodTrackerMealLog .inner .frameMain .totalKcal {
 	display : inline-block;
     background-color: #AED7ED;
     padding: 10px 12px;
     border-radius: 2rem;
     font-weight: 700;
+}
+
+
+/*----*/
+#foodTrackerList .inner .frameMain .foodListMoreButton,
+#foodTrackerDetail .inner .frameMain .foodSaveButton{
+    width: 100%;
+    height: 60px; 
+    padding: 0;
+    background-color: #ffffff;
+    color: #3681AB;
+    border: 2px solid #3681AB;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#foodTrackerList .inner .frameMain .foodListMoreButton:hover,
+#foodTrackerDetail .inner .frameMain .foodSaveButton:hover {
+    background-color: #3681AB;
+    color: #ffffff;
+}
+#foodTrackerList .inner .frameMain .foodListTable {
+   max-height: 700px; /* 최대 높이 설정 */
+   overflow-y: auto; /* 컨텐츠가 많아질 경우 스크롤 추가 */
+   margin: 20px 0 0 0; /* 중앙 정렬 */
+}
+
+
+/*----*/    
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .graph-container {
+    --percent: 30%; /* 여기서 퍼센트 값을 변경할 수 있습니다 */
+    width: 400px;
+    height: 20px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .carbGraphBar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #F4554F var(--percent), transparent var(--percent));
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .proteinGraphBar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #F4A14F var(--percent), transparent var(--percent));
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .fatGraphBar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #F4EE4F var(--percent), transparent var(--percent));
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .sugarGraphBar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4FF44F var(--percent), transparent var(--percent));
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .sodiumGraphBar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4F9CF4 var(--percent), transparent var(--percent));
+}
+
+#foodTrackerDetail .inner .foodNutritionPercent  strong{
+	 width: 100px;
+}
+#foodTrackerDetail .inner .foodNutritionPercent span{
+	 width: 110px;
+}
+
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .carbCircle {
+	display:inline-block;
+    width: 12px;
+    height: 12px;
+    background:#F4554F;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .proteinCircle {
+	display:inline-block;
+    width: 12px;
+    height: 12px;
+    background:#F4A14F;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .fatCircle {
+	display:inline-block;
+    width: 12px;
+    height: 12px;
+    background:#F4EE4F;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .sugarCircle {
+	display:inline-block;
+    width: 12px;
+    height: 12px;
+    background:#4FF44F;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .sodiumCircle {
+	display:inline-block;
+    width: 12px;
+    height: 12px;
+    background:#4F9CF4;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+/**/
+#foodTrackerDetail .inner .frameMain .foodQuantityInfo,
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent {
+	border: 5px solid #AED7ED;
+}
+
+#foodTrackerDetail .inner .frameMain .foodQuantityInfo select {
+    width: 100px;          /* 전체 너비 */
+    padding: 8px;         /* 여백 */
+    font-size: 16px;       /* 폰트 크기 */
+    border: 1px solid #3681AB;  /* 테두리 */
+    border-radius: 4px;      /* 둥근 모서리 */
+    background-color: #ffffff; /* 배경 색상 */
+    color: #3681AB;             /* 글자 색상 */
+    text-align: center;}
+
+/* 선택된 옵션 스타일 */
+#foodTrackerDetail .inner .frameMain .foodQuantityInfo select option:checked {
+    background-color: #3681AB; /* 선택된 옵션의 배경 색상 */
+    color: #fff;               /* 선택된 옵션의 글자 색상 */
+}
+
+/* 옵션 호버 상태 스타일 */
+#foodTrackerDetail .inner .frameMain .foodQuantityInfo select option:hover {
+    background-color: #f0f0f0; /* 호버 상태에서 배경 색상 */
+    color: #333;               /* 호버 상태에서 글자 색상 */
+}
+
+#foodTrackerDetail .inner .frameMain .foodQuantityInfo .num {
+    width: 100px;          /* 전체 너비 */
+    padding: 8px;         /* 여백 */
+    font-size: 16px;       /* 폰트 크기 */
+    border: 1px solid #3681AB;  /* 테두리 */
+    border-radius: 4px;      /* 둥근 모서리 */
+    background-color: #ffffff; /* 배경 색상 */
+    color: #3681AB;             /* 글자 색상 */
+    text-align: center;
 }
