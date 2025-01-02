@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+<configuration> 
+<typeAliases>
+<typeAlias alias="civ" type="com.HelloHealthy.myapp.domain.ChallengeInfoVo"/>
+<typeAlias alias="cv" type="com.HelloHealthy.myapp.domain.CommentVo"/>
+<typeAlias alias="dsv" type="com.HelloHealthy.myapp.domain.DailySummaryVo"/>
+<typeAlias alias="drv" type="com.HelloHealthy.myapp.domain.DiagnosisRecordVo"/>
+<typeAlias alias="ftv" type="com.HelloHealthy.myapp.domain.FoodTrackerVo"/>
+<typeAlias alias="fv" type="com.HelloHealthy.myapp.domain.FoodVo"/>
+<typeAlias alias="gsv" type="com.HelloHealthy.myapp.domain.GradeStandardVo"/>
+<typeAlias alias="hbv" type="com.HelloHealthy.myapp.domain.HealthBoardVo"/>
+<typeAlias alias="mrv" type="com.HelloHealthy.myapp.domain.MealRecordVo"/>
+<typeAlias alias="nsv" type="com.HelloHealthy.myapp.domain.NutritionStandardVo"/>
+<typeAlias alias="rnv" type="com.HelloHealthy.myapp.domain.RecipeNutritionVo"/>
+<typeAlias alias="rsv" type="com.HelloHealthy.myapp.domain.RecipeStepsVo"/>
+<typeAlias alias="rv" type="com.HelloHealthy.myapp.domain.RecipeVo"/>
+<typeAlias alias="uccv" type="com.HelloHealthy.myapp.domain.UserChallengeCertificationVo"/>
+<typeAlias alias="ucv" type="com.HelloHealthy.myapp.domain.UserChallengeVo"/>
+<typeAlias alias="ufv" type="com.HelloHealthy.myapp.domain.UserFridgeVo"/>
+<typeAlias alias="uv" type="com.HelloHealthy.myapp.domain.UserVo"/>
+</typeAliases>
+</configuration>

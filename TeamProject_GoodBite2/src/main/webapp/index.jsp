@@ -5,6 +5,31 @@
 <title>팀프로젝트</title>
 </head>
 <body>
-    김건주 연결확인 진짜로 최종으로 끝내라 좋은말로 할때
+	<a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
+	<a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
+	<a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/common/footer.do">footer</a><br>
+	<a href="<%=request.getContextPath()%>/common/headerAfter.do">headerAfter</a><br>
+	<a href="<%=request.getContextPath()%>/common/headerBefore.do">headerBefore</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodDetail.do">foodTrackerFoodDetail</a><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodList.do">foodTrackerFoodList</a><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMain.do">foodTrackerMain</a><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMealLog.do">foodTrackerMealLog</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsContents.do">cardNewsContents</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsList.do">cardNewsList</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWrite.do">cardNewsWrite</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/dietaryQuestionnaire.do">dietaryQuestionnaire</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/healthCheckup.do">healthCheckup</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/mealreportResult.do">mealreportResult</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/myChallengeContents.do">myChallengeContents</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/myChallengeList.do">myChallengeList</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/myChallengeWrite.do">myChallengeWrite</a><br>
+	<br><br><br>
 </body>
 </html>
