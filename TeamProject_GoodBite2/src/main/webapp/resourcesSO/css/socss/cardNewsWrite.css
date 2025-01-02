@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.inner {
+	    position: static;
+	    width: auto;
+	    max-width: 1000px;
+	    padding: 0 10px;
+	    margin: 0 auto;
+	  }
+
 * { 
 	line-height: 1.5; 
 	font-size: 12px; 
