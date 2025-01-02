@@ -186,7 +186,7 @@
 				</div>
 				<div>
 					<div>+</div>
-					<div>야 1식</div>
+					<div>야식</div>
 				</div>
 			</div>
 		</div>	
