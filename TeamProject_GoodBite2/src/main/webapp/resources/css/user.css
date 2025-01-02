@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/*공통 css*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html, body{
+    min-height: 100vh;
+}
+a{
+	display:inline-block;
+	text-decoration: none;
+	color : black;
+}
+
+.loginInner, .searchInner, .changeInner, .foundInner{	
+width:400px; 
+margin:0 auto; 
+position:relative;
+}
+.inner {
+    position: static;
+    width: auto;
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.Inner {
+width:1180px; 
+margin:0 auto; 
+position:relative;}
+@media (max-width: 1299px) {
+    .inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+@media (max-width: 1180px){
+	.inner {width:100%;}
+}
+
+#login, #search, #change, #found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#join {
+    min-height: 100vh;
+}
+#login .loginInner .title,
+#search .searchInner .title,
+#change .changeInner .title {
+    font-size: 50px;
+    color: #8475BC;
+    margin-bottom: 20px;
+    text-align: left;
+}
+#login .loginInner .loginSelected .login-form input,
+#search .searchInner .searchBorder .search-form input,
+#change .changeInner .changeBorder .change-form input{
+    width: 100%;
+    height: 60px; /* 버튼 높이와 동일하게 설정 */
+    padding: 10px;
+    margin: 5px 0;
+    border : 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+#join .inner .join-form input {
+    width: 100%;
+    height: 60px; /* 버튼 높이와 동일하게 설정 */
+    padding: 10px;
+    margin: 5px 0;
+    border : none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#login .loginInner .loginSelected .loginButton, 
+#login .loginInner .loginSelected .signupButton,
+#search .searchInner .searchBorder .searchIdButton,
+#change .changeInner .changeBorder  .changePwdButton,
+#found .foundInner .foundBorder .searchPwdButton,
+#join .inner .join-form .joinButton  {
+    width: 100%;
+    height: 44px; 
+    padding: 0;
+    background-color: transparent;
+    color: #8475BC;
+    border: 1px solid #8475BC;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#login .loginInner .loginSelected .loginButton:hover, 
+#login .loginInner .loginSelected .signupButton:hover,
+#search .searchInner .searchBorder .searchIdButton:hover,
+#change .changeInner .changeBorder  .changePwdButton:hover,
+#found .foundInner .foundBorder .searchPwdButton:hover,
+#join .inner .join-form .joinButton:hover  {
+    background-color: #8475BC;
+    color: white;
+}
+
+#search .searchInner .searchBorder,
+#change .changeInner .changeBorder,
+#found .foundInner .foundBorder,
+#found .foundInner .foundBorder .foundInBorder{
+border: 5px solid #8475BC;
+}
+#search .searchInner .search-form hr,
+#change .changeInner .change-form hr,
+#found .foundInner .foundBorder hr{
+border: 2px solid #8475BC;
+opacity: 1; /* 불투명도 100% */
+}
+#search .searchInner .search-form a,
+#change .changeInner .change-form a{
+font-weight: 700;
+text-decoration: underline;
+}
+
+/**/
+#login .loginInner .loginSelected .login-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+    margin-bottom: 15px;
+}
+#login .loginInner .login-tabs {
+    display: flex;
+    justify-content: center;
+}
+.loginContent {
+    display: none;
+}
+
+.loginVisible {
+    display: block;
+}
+#login .loginInner .loginSelected .login-tabs button{
+    height: 44px; /* 입력 필드의 높이와 동일하게 설정 */
+    padding: 0 20px;
+    border: 1px solid #CDC8E7;
+    border-bottom: 2px solid #8475BC;
+    background-color: white;
+    color: #8475BC;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%; /* 입력창과 동일한 너비로 설정 */
+    max-width: 400px; /* 최대 너비를 입력창과 동일하게 설정 */
+}
+
+#login .loginInner .loginSelected .login-tabs button:not(.tabSelected) {
+    height: 44px; /* 입력 필드의 높이와 동일하게 설정 */
+    padding: 0 20px;
+    border: 1px solid #CDC8E7;
+    border-bottom: 2px solid #8475BC;
+    background-color: white;
+    color: #8475BC;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%; /* 입력창과 동일한 너비로 설정 */
+    max-width: 400px; /* 최대 너비를 입력창과 동일하게 설정 */
+}
+
+#login .loginInner .loginSelected .login-tabs button.tabSelected {
+    height: 44px; /* 입력 필드의 높이와 동일하게 설정 */
+    padding: 0 20px;
+    border: 2px solid #8475BC;
+    border-bottom: none;
+    background-color: white;
+    color: #8475BC;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%; /* 입력창과 동일한 너비로 설정 */
+    max-width: 400px; /* 최대 너비를 입력창과 동일하게 설정 */
+}
+
+/***/
+#found .foundInner .title {
+    font-size: 40px;
+    color: #8475BC;
+    margin-bottom: 20px;
+    text-align: left;
+    
+}
+#found .foundInner .foundSubTitle {
+    font-size: 25px;
+    color: #8475BC;
+}
+#found .foundInner .foundBorder .foundCircle {
+	display:inline-block;
+	width : 0.8rem;
+	height : 0.8rem;
+    background-color: #8475BC;
+     border-radius: 50%;
+    
+}
+#found .foundInner .foundBorder .foundPwdResult {
+font-size: 12px;
+    
+}
+#found .foundInner .foundInBorder .foundInfo  strong{
+	display: inline-block; /* 너비 적용 가능 */
+    width: 67px;
+}
+
+/**/
+#join .inner .title {
+    font-size: 40px;
+    color: #8475BC;
+    text-align: left;
+}
+#login .loginInner .loginSelected .login-form input:focus,
+#search .searchInner .searchBorder .search-form input:focus,
+#change .changeInner .changeBorder .change-form input:focus,
+#join .inner .join-form input:focus {
+    width: 100%;
+    height: 60px; /* 버튼 높이와 동일하게 설정 */
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #CDC8E7; /* 테두리 색상 강조 */
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 0.25rem rgba(205, 200, 231, 0.25);
+    outline: none; /* 기본 아웃라인 제거 */
+}
+
+#join .inner .join-form input[type="radio"],
+#join .inner .join-form input[type="checkbox"] {
+    appearance: none; /* 기본 스타일 제거 */
+    -webkit-appearance: none; /* 웹킷 브라우저용 */
+    width: 50px;
+    height: 50px;
+    border: 5px solid #8475BC; /* 외부 테두리 */
+    border-radius: 50%; /* 원형 버튼 */
+    margin: 5px;
+    position: relative;
+    cursor: pointer; /* 클릭 가능한 포인터 */
+    outline: none;
+}
+
+#join .inner .join-form input[type="radio"]:checked,
+#join .inner .join-form input[type="checkbox"]:checked {
+    border-color: #8475BC; /* 선택된 상태의 외부 테두리 */
+}
+
+#join .inner .join-form input[type="radio"]:checked::after,
+#join .inner .join-form input[type="checkbox"]:checked::after {
+    content: ''; /* 내부 원 추가 */
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #8475BC; /* 내부 원 색상 */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+}
+#join .inner .join-form .writeTitle strong {
+	display: inline-block; /* 너비 적용 가능 */
+    width: auto;
+    margin: 15px 5px 5px  0;
+    padding: 2px 10px;
+    background-color: #E8DCF4;
+    border-radius: 1rem;
+}
+#join .inner .join-form .joinCheckButton {
+    width: 20%;
+    height: 59px; 
+    padding: 0;
+    background-color: transparent;
+    color: #8475BC;
+    border: 1px solid #8475BC;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#join .inner .join-form .joinCheckButton:hover {
+    background-color: #8475BC;
+    color: white;
+}
+.joinConditionBox {
+    overflow-y: scroll;
+    height: 233px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #fff;
+}
+.joinConditionBoxInBox {
+    box-sizing: border-box;
+}
+
+.joinConditionBox {
+    overflow-y: scroll;
+    height: 150px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #fff;
+}
+
+.joinConditionBoxInBox {
+    box-sizing: border-box;
+}
+
+.joinConditionBox h2, .joinConditionBox h3 {
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.joinConditionBox p, .joinConditionBox ul {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.joinConditionBox ul {
+    padding-left: 20px;
+}
+
+.joinConditionBox ul li {
+    margin-bottom: 8px;
+    color: #555;
+    list-style-type: none;  /* 점 없애기 */
+    margin-left: 15px;      /* 왼쪽 마진 추가 */
+}
+#join .inner .join-form .joinButton  {
+    margin-bottom: 5rem;
+}
