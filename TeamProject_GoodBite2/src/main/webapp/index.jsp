@@ -34,5 +34,13 @@
 	<a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
 	<a href="<%=request.getContextPath()%>/recipe/recipeList.do">recipeList</a><br>
 	<br><br><br>
+	<a href="<%=request.getContextPath()%>/user/changePwd.do">changePwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/foundId.do">foundId</a><br>
+	<a href="<%=request.getContextPath()%>/user/foundPwd.do">foundPwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/join.do">join</a><br>
+	<a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
+	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
+	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
+	<br><br><br>
 </body>
 </html>
