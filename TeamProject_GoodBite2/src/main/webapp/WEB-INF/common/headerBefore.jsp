@@ -27,9 +27,10 @@
 			<div class="inner d-flex justify-content-around ">
 				<a href="#" class = "headerMenu">HOME</a>
 				<a href="#" class = "headerMenu">ABOUT</a>
-				<a href="#" class = "headerMenu">건강진단</a>
-				<a href="#" class = "headerMenu">내 처방전</a>
-				<a href="#" class = "headerMenu">챌린지/커뮤니티</a>
+				<a href="#" class = "headerMenu">식사리포트</a>
+				<a href="#" class = "headerMenu">푸드트래커</a>
+				<a href="#" class = "headerMenu">챌린지</a>
+				<a href="#" class = "headerMenu">레시피</a>
 			</div>
 		</div>
 	</header>
@@ -53,14 +54,16 @@
             <a href="#" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">건강진단</a>
+            <a href="#" class="nav-link">식사리포트</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">내 처방전</a>
+            <a href="#" class="nav-link">푸드트래커</a>
           </li>
           <li class="nav-item">
-          
-            <a href="#" class="nav-link">챌린지/커뮤니티</a>
+            <a href="#" class="nav-link">챌린지</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">레시피</a>
           </li>
         </ul>
         

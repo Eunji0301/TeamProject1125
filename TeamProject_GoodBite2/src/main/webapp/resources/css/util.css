@@ -19,7 +19,8 @@ a{
 	
 width:1180px; 
 margin:0 auto; 
-position:relative;}
+position:relative;
+ }
 @media (max-width: 1180px){
 	.inner {width:100%;}
 }
