@@ -13,10 +13,13 @@ body {
 	padding-top: 6cm;
 }
 
-.main-section {
-	width: 90%;
-	max-width: 1180px;
-	margin: auto;
+.container {
+    width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 3px solid #CDC8E7;
+    border-radius: 8px;
 }
 
 /* 챌린지 제목 */
@@ -116,10 +119,6 @@ body {
 	height: 40px;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-	background-color: white;
-}
-
 /* Challenge status container */
 .challenge-status {
 	background-color: #fff;
@@ -128,10 +127,9 @@ body {
 	border: 1px solid #CDC8E7;
 }
 </style>
-
 </head>
 <body>
-	<section class="main-section">
+	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
 		<div class="container">
 			<h2 class="challenge-title">MY CHALLENGE</h2>
 
@@ -176,7 +174,7 @@ body {
 								<img src="https://via.placeholder.com/1180x300"
 									class="d-block w-100" alt="완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>1번챌린지</h5>
+									<h5>완료챌린지1</h5>
 									<p>챌린지를 성공적으로 완료했습니다!</p>
 								</div>
 							</div>
@@ -184,7 +182,7 @@ body {
 								<img src="https://via.placeholder.com/1180x300"
 									class="d-block w-100" alt="완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>2번챌린지</h5>
+									<h5>완료챌린지2</h5>
 									<p>챌린지를 성공적으로 완료했습니다!</p>
 								</div>
 							</div>
@@ -192,7 +190,7 @@ body {
 								<img src="https://via.placeholder.com/1180x300"
 									class="d-block w-100" alt="완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>3번챌린지</h5>
+									<h5>완료챌린지3</h5>
 									<p>챌린지를 성공적으로 완료했습니다!</p>
 								</div>
 							</div>
@@ -233,7 +231,7 @@ body {
 								<img src="https://via.placeholder.com/1180x300"
 									class="d-block w-100" alt="미완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>4번챌린지</h5>
+									<h5>미완료챌린지1</h5>
 									<p>아주 잘하고 있어요 !!!!</p>
 								</div>
 							</div>
@@ -241,7 +239,7 @@ body {
 								<img src="https://via.placeholder.com/1180x300"
 									class="d-block w-100" alt="미완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>5번챌린지</h5>
+									<h5>미완료챌린지2</h5>
 									<p>끝까지 화이팅 !!!!!</p>
 								</div>
 							</div>
@@ -249,7 +247,7 @@ body {
 								<img src="https://via.placeholder.com/1180x300"
 									class="d-block w-100" alt="미완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
-									<h5>6번챌린지</h5>
+									<h5>미완료챌린지3</h5>
 									<p>끝까지 화이팅 !!!!!</p>
 								</div>
 							</div>
@@ -270,6 +268,6 @@ body {
 				</div>
 			</div>
 		</div>
-	</section>
+	<jsp:include page="/WEB-INF/common/footer.jsp" />
 </body>
 </html>
