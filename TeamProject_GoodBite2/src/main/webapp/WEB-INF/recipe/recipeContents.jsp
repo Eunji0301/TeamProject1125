@@ -31,14 +31,6 @@ body {
 	}
 }
 
-header {
-	background-color: #333;
-	color: #fff;
-	padding: 40px 20px;
-	text-align: center;
-	font-size: 24px;
-}
-
 /* 레시피 상세보기 */
 .container {
 	width: 800px;
@@ -122,8 +114,7 @@ header {
 </style>
 </head>
 <body>
-	<header>헤더</header>
-	
+	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
 	<div class="container">
 		<div class="header">라따뚜이</div>
 		<div class="recipe-details">
@@ -156,5 +147,6 @@ header {
 			</div>
 		</div>
 	</div>
+	<jsp:include page="/WEB-INF/common/footer.jsp" />
 </body>
 </html>
