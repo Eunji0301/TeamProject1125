@@ -15,11 +15,11 @@ a{
 width:1180px; 
 margin:0 auto; 
 position:relative;
+
 min-width: 970px;}
 @media (max-width: 1180px){
 	.inner {width:100%;}
 }
-
 
 #foodTrackerMealLog, #foodTrackerList, #foodTrackerDetail, #foodTrackerMain{
     display: flex;
@@ -251,6 +251,7 @@ min-width: 970px;}
 	 width: 110px;
 }
 
+
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .carbCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .carbCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResultContent .carbCircle{
@@ -261,6 +262,7 @@ min-width: 970px;}
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .proteinCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .proteinCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResultContent .proteinCircle  {
@@ -271,6 +273,7 @@ min-width: 970px;}
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .fatCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .fatCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResultContent .fatCircle {
@@ -281,6 +284,7 @@ min-width: 970px;}
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .sugarCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .sugarCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResultContent .sugarCircle {
@@ -291,6 +295,7 @@ min-width: 970px;}
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .sodiumCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .sodiumCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResultContent .sodiumCircle {
@@ -301,6 +306,7 @@ min-width: 970px;}
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #foodTrackerMain .inner .frameMain .graph .totalResult .calorieCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResultContent .calorieCircle  {
 	display:inline-block;
@@ -310,6 +316,7 @@ min-width: 970px;}
     border-radius: 50%;
     margin-right: 10px;
 }
+
 /**/
 #foodTrackerDetail .inner .frameMain .foodQuantityInfo,
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent {
@@ -347,6 +354,7 @@ min-width: 970px;}
     background-color: #ffffff; /* 배경 색상 */
     color: #3681AB;             /* 글자 색상 */
     text-align: center;
+
 }
 
 
@@ -543,4 +551,3 @@ min-width: 970px;}
     font-size: 25px;
 	text-align: center;
 }
-
