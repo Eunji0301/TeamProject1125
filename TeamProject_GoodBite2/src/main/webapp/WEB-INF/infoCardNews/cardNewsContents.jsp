@@ -17,7 +17,7 @@
 <html>
 <head>
 <title>cardNewsContents</title>
-<link href="${pageContext.request.contextPath}/resources/css/socss/cardNewsContents.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resourcesSO/css/socss/cardNewsContents.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 <script>
