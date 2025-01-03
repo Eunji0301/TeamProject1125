@@ -42,5 +42,7 @@
 	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
 	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
 	<br><br><br>
+	<a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br>
 </body>
 </html>
