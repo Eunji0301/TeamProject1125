@@ -29,7 +29,8 @@ position:relative;
 .Inner {
 width:1180px; 
 margin:0 auto; 
-position:relative;}
+position:relative;
+ }
 @media (max-width: 1299px) {
     .inner {
         padding-left: 16px;

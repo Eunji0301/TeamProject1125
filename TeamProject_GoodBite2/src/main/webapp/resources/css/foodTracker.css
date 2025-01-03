@@ -15,8 +15,7 @@ a{
 width:1180px; 
 margin:0 auto; 
 position:relative;
-
-min-width: 970px;}
+}
 @media (max-width: 1180px){
 	.inner {width:100%;}
 }
@@ -254,10 +253,11 @@ min-width: 970px;}
 
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .carbCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .carbCircle,
-#foodTrackerMain .inner .frameMain .graph .totalResultContent .carbCircle{
+#foodTrackerMain .inner .frameMain .graph .totalResultContent .carbCircle,
+#foodTrackerMain .inner .frameMain .totalResultGraphBar .carbCircle{
 	display:inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     background:#F4554F;
     border-radius: 50%;
     margin-right: 10px;
@@ -265,10 +265,11 @@ min-width: 970px;}
 
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .proteinCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .proteinCircle,
-#foodTrackerMain .inner .frameMain .graph .totalResultContent .proteinCircle  {
+#foodTrackerMain .inner .frameMain .graph .totalResultContent .proteinCircle,
+#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .proteinCircle   {
 	display:inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     background:#F4A14F;
     border-radius: 50%;
     margin-right: 10px;
@@ -276,10 +277,11 @@ min-width: 970px;}
 
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .fatCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .fatCircle,
-#foodTrackerMain .inner .frameMain .graph .totalResultContent .fatCircle {
+#foodTrackerMain .inner .frameMain .graph .totalResultContent .fatCircle,
+#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .fatCircle {
 	display:inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     background:#F4EE4F;
     border-radius: 50%;
     margin-right: 10px;
@@ -287,10 +289,11 @@ min-width: 970px;}
 
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .sugarCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .sugarCircle,
-#foodTrackerMain .inner .frameMain .graph .totalResultContent .sugarCircle {
+#foodTrackerMain .inner .frameMain .graph .totalResultContent .sugarCircle,
+#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .sugarCircle  {
 	display:inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     background:#4FF44F;
     border-radius: 50%;
     margin-right: 10px;
@@ -298,20 +301,22 @@ min-width: 970px;}
 
 #foodTrackerDetail .inner .frameMain .foodNutritionPercent .sodiumCircle,
 #foodTrackerMain .inner .frameMain .graph .totalResult .sodiumCircle,
-#foodTrackerMain .inner .frameMain .graph .totalResultContent .sodiumCircle {
+#foodTrackerMain .inner .frameMain .graph .totalResultContent .sodiumCircle,
+ #foodTrackerMain .inner .frameMain .graph .totalResultGraphBar  .sodiumCircle{
 	display:inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     background:#4F9CF4;
     border-radius: 50%;
     margin-right: 10px;
 }
 
 #foodTrackerMain .inner .frameMain .graph .totalResult .calorieCircle,
-#foodTrackerMain .inner .frameMain .graph .totalResultContent .calorieCircle  {
+#foodTrackerMain .inner .frameMain .graph .totalResultContent .calorieCircle,
+#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .calorieCircle  {
 	display:inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
+    height: 16px;
     background:#ba4ff4;
     border-radius: 50%;
     margin-right: 10px;
@@ -358,6 +363,50 @@ min-width: 970px;}
 }
 
 
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent {
+
+    display: flex;
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
+}
+
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* 여백 추가 */
+}
+
+
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent strong {
+    flex-grow: 1; /* 텍스트가 부모 요소에 따라 크기 조정 */
+}
+
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent span {
+    width: 110px;
+    text-align: left; /* 텍스트 정렬 */
+}
+
+#foodTrackerDetail .inner .frameMain .foodNutritionPercent .graph-container {
+    flex-grow: 2; /* 그래프의 비율을 유지하면서 공간 차지 */
+}
+@media (max-width: 1000px) {
+    #foodTrackerDetail .inner .frameMain .foodNutritionPercent {
+        flex-direction: column; /* 화면 좁아지면 세로로 배치 */
+    }
+
+    #foodTrackerDetail .inner .frameMain .foodNutritionPercent > div {
+        flex-direction: column; /* 요소들이 세로로 정렬 */
+    }
+
+    #foodTrackerDetail .inner .frameMain .foodNutritionPercent .graph-container {
+        width: 100%; /* 그래프 크기 맞추기 */
+    }
+
+    #foodTrackerDetail .inner .frameMain .foodNutritionPercent span {
+        width: 100%;
+        text-align: left;
+    }
+}
+
 /***/
 #foodTrackerMain .inner .frameMain .top,
 #foodTrackerMain .inner .frameMain .calendar,
@@ -369,14 +418,27 @@ min-width: 970px;}
 #foodTrackerMain .inner .frameMain .top {
 	width:100%;
 	border: 5px solid #AED7ED;
+	max-width: 100%;
+	flex-wrap: wrap; /* 자식 요소가 줄 바꿈을 하도록 설정 */
+	overflow: hidden; /* 넘치는 콘텐츠를 숨김 */
+	box-sizing: border-box; /* 패딩 포함한 전체 크기 조정 */
+}
+#foodTrackerMain .inner .frameMain .top .profile {
+  max-width: 100px; /* 적절한 크기로 제한 */
+  flex-shrink: 1; /* 공간 부족 시 줄어들도록 설정 */
+}
+#foodTrackerMain .inner .frameMain .top .profileAll {
+  flex: 1; /* 남은 공간을 채우도록 설정 */
+  min-width: 200px; /* 최소 크기 설정 */
 }
 #foodTrackerMain .inner .frameMain .top img{
-	width:110px;
-	height:110px;
+	max-width: 100%;
+    height: auto; /* 이미지 비율 유지 */
 	border: 5px solid #AED7ED;
 	border-radius: 50%;
 }
 #foodTrackerMain .inner .frameMain .top .profile .profileButton{
+	max-width: 100%;
     width: 100%;
     height: 30px; 
     padding: 0;
@@ -393,8 +455,19 @@ min-width: 970px;}
     background-color: #AED7ED;
     color: #ffffff;
 }
-#foodTrackerMain .inner .frameMain .top .profileAll{
-	 flex: 1 1 auto;
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column; /* 수직 레이아웃으로 변경 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+  }
+
+  .profile {
+    margin: 0 auto; /* 중앙 정렬 */
+  }
+
+  .profileAll {
+    width: 100%;
+  }
 }
 #foodTrackerMain .inner .frameMain .top .profileCircle{
 	display:inline-block;
@@ -429,11 +502,18 @@ min-width: 970px;}
 	border-radius : 4rem;
 	margin: 0 10px;
 }
+
 /*----*/    
+#foodTrackerMain .inner .frameMain .totalResultBottom {
+  max-width: 100%; /* 부모 요소의 너비 제한 */
+  flex-wrap: wrap; /* 자식 요소가 넘치면 줄 바꿈 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  overflow: hidden; /* 넘치는 콘텐츠 숨기기 */
+}
 #foodTrackerMain .inner .frameMain .totalResultBottom .graph-container {
     --percent: 30%; /* 여기서 퍼센트 값을 변경할 수 있습니다 */
-	width: 40px; /* 너비와 높이를 바꿉니다 */
-    height: 400px;
+	  width: 20px; /* 막대 그래프 너비 조정 */
+	  height: 400px; /* 막대 그래프 높이 조정 */
     background-color: #ccc;
     overflow: hidden;
     position: relative;
@@ -469,53 +549,54 @@ min-width: 970px;}
     height: 100%;
     background: linear-gradient(to top, #ba4ff4 var(--percent), transparent var(--percent));
 }
-#foodTrackerMain .inner .frameMain .totalResultGraphBar .carbCircle{
-	display:inline-block;
-    width: 40px;
-    height: 40px;
-    background:#F4554F;
-    border-radius: 50%;
-    margin-top: 5px;
+
+#foodTrackerMain .inner .frameMain .totalResultBottom {
+  display: flex;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
 }
-#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .proteinCircle {
-	display:inline-block;
-    width: 40px;
-    height: 40px;
-    background:#F4A14F;
-    border-radius: 50%;
-    margin-top: 5px;
+
+#foodTrackerMain .inner .frameMain .totalResultGraphBar {
+  flex: 1 1 60%; /* 기본적으로 전체 너비 */
 }
-#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .fatCircle{
-	display:inline-block;
-    width: 40px;
-    height: 40px;
-    background:#F4EE4F;
-        border-radius: 50%;
-    margin-top: 5px;
+
+#foodTrackerMain .inner .frameMain .totalResultContent {
+  display: flex;
+  flex-wrap: wrap; /* 항목을 줄바꿈 */
+  gap: 1rem; /* 항목 간 간격 */
+  flex: 1 1 40%; /* 기본적으로 전체 너비 */
 }
-#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .sugarCircle {
-	display:inline-block;
-    width: 40px;
-    height: 40px;
-    background:#4FF44F;
-    border-radius: 50%;
-    margin-top: 5px;
+
+#foodTrackerMain .inner .frameMain .totalResultContent > div {
+  flex: 1 1 50%; /* 기본적으로 50% 너비 */
 }
-#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar  .sodiumCircle {
-	display:inline-block;
-    width: 40px;
-    height: 40px;
-    background:#4F9CF4;
-    border-radius: 50%;
-    margin-top: 5px;
+
+/* 작은 화면에서 반응형 */
+@media (max-width: 768px) {
+  #foodTrackerMain .inner .frameMain .totalResultGraphBar {
+    flex: 1 1 100%; /* 위로 이동 */
+    order: 1;
+  }
+  
+  #foodTrackerMain .inner .frameMain .totalResultContent {
+    flex: 1 1 100%; /* 아래로 이동 */
+    order: 2;
+  }
+
+  #foodTrackerMain .inner .frameMain .totalResultContent > div {
+  flex: 1 1 calc(50% - 1rem); /* 두 줄로 정렬 */
+  box-sizing: border-box; /* 여백 포함한 계산 */
+  }
 }
-#foodTrackerMain .inner .frameMain .graph .totalResultGraphBar .calorieCircle  {
-	display:inline-block;
-    width: 40px;
-    height: 40px;
-    background:#ba4ff4;
-    border-radius: 50%;
-    margin-top: 5px;
+#foodTrackerMain .inner .frameMain .graph .totalResult .result{
+	width: 160px;
+}
+#foodTrackerMain .inner .frameMain .graph .totalResult strong{
+	display : inline-block;
+	width: 65px;
+}
+#foodTrackerMain .inner .frameMain .graph .totalResult span{
+	display : inline-block;
+	width: 44px;
 }
 /****/
 #foodTrackerMain .inner .frameMain .mealLogButtonGroup .title {
@@ -550,4 +631,16 @@ min-width: 970px;}
 
     font-size: 25px;
 	text-align: center;
+}
+.meal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px; /* 최소 너비 설정 */
+}
+
+@media (max-width: 768px) {
+    .meal-item {
+        min-width: 60px; /* 작은 화면에서의 최소 너비 */
+    }
 }
