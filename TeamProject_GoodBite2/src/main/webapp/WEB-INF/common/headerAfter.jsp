@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>GoodBite Header</title>
-<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../resources/css/util.css">
+<link rel="stylesheet" type="text/css" href="./resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./resources/css/util.css">
 </head>
 <body>
 	<header id="header" >
 		<div class="headerBody py-2">
 			<div class="inner d-flex align-items-center">
-				<img class="logo" src="../resources/img/common/titlelogo.png">
+				<img class="logo" src="./resources/img/common/titlelogo.png">
 				<div  id="toggleSidebar" class="sidebarButton" >
 					<button class = "sidebarButtonBackGround p-2">
 						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#CDC8E7" class="bi bi-list" viewBox="0 0 16 16">
@@ -27,21 +27,22 @@
 			<div class="inner d-flex justify-content-around ">
 				<a href="#" class = "headerMenu">HOME</a>
 				<a href="#" class = "headerMenu">ABOUT</a>
-				<a href="#" class = "headerMenu">건강진단</a>
-				<a href="#" class = "headerMenu">내 처방전</a>
-				<a href="#" class = "headerMenu">챌린지/커뮤니티</a>
+				<a href="#" class = "headerMenu">식사리포트</a>
+				<a href="#" class = "headerMenu">푸드트래커</a>
+				<a href="#" class = "headerMenu">챌린지</a>
+				<a href="#" class = "headerMenu">레시피</a>
 			</div>
 		</div>
 	</header>
 
       <div id="sidebar"  class="sidebar">
         <div  class="text-center p-4">
-            <img src="../resources/headerImage/sidelogo.png" alt="Sidebar Logo" class="sidebar-logo">
+            <img src="./resources/img/common/sidelogo.png" alt="Sidebar Logo" class="sidebar-logo">
         </div >
 
         <!-- 로그인 버튼을 클릭 시 토글 메뉴 없이 직접 링크로 설정 -->
         <div class="sidebarLoginLine d-flex align-items-center justify-content-center mb-3">
-  			<img src="../resources/headerImage/themnailSample.png" alt="" width="60" height="60" class="rounded-circle me-2">
+  			<img src="./resources/img/common/themnailSample.png" alt="" width="60" height="60" class="rounded-circle me-2">
 			<div class=" sidebarLoginAfter ">
 	  			<div class="greet">안녕하세요.</div>
 	  			<div class="nickName">홍길동 님</div>
@@ -60,14 +61,16 @@
             <a href="#" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">건강진단</a>
+            <a href="#" class="nav-link">식사리포트</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">내 처방전</a>
+            <a href="#" class="nav-link">푸드트래커</a>
           </li>
           <li class="nav-item">
-          
-            <a href="#" class="nav-link">챌린지/커뮤니티</a>
+            <a href="#" class="nav-link">챌린지</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">레시피</a>
           </li>
         </ul>
         

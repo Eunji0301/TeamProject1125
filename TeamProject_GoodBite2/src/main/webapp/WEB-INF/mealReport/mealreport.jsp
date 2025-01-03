@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ include file="../common/headerBefore.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -72,11 +73,6 @@
   </style>
 </head>
 <body>
-
-<!-- 헤더 공간 -->
-<header>
-  GOODBITE - 건강 진단
-</header>
 
 <!-- 메인 컨테이너 -->
 <div class="container">

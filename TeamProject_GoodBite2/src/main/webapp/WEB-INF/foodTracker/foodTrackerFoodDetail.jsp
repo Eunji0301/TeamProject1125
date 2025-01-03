@@ -60,7 +60,7 @@
 			        <div class="carbGraphBar" style="--percent: 19%; "></div>
 			    </div>
 			</div>
-			<div class="d-flex align-items-center my-4">
+			<div class="d-flex align-items-center ">
 				<div class="proteinCircle"></div>
 				<strong>단백질 (g)</strong>
 				<span> : 8.0(15%)</span>
@@ -76,7 +76,7 @@
 			        <div class="fatGraphBar" style="--percent: 30%; "></div>
 			    </div>
 			</div>
-			<div class="d-flex align-items-center my-4">
+			<div class="d-flex align-items-center ">
 				<div class="sugarCircle"></div>
 				<strong>당류 (g)</strong>
 				<span> : 100.0(100%) </span>

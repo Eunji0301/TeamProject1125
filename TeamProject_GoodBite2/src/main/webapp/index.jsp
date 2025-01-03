@@ -94,6 +94,7 @@ window.onload = function() {
 	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
 	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
 	<br><br><br>
+
 <main class="container">
 <div class="inner">
 <div class="row mb-2">
@@ -384,6 +385,10 @@ window.onload = function() {
 </main>
 
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+	<a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br>
 
 </body>
 </html>

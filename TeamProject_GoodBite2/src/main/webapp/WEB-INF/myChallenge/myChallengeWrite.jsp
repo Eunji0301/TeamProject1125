@@ -30,14 +30,6 @@ body {
     }
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 24px;
-}
-
 .container {
     width: 800px;
     margin: 80px auto;
@@ -223,7 +215,7 @@ hr {
 </script>
 </head>
 <body>
-    <header>헤더</header>
+    <<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
     <div class="container">
         <div class="header">챌린지 인증</div>
         <form action="challengeCertificationAction.jsp" method="post" enctype="multipart/form-data">
@@ -264,5 +256,6 @@ hr {
             </div>
         </form>
     </div>
+    <jsp:include page="/WEB-INF/common/footer.jsp" />
 </body>
 </html>

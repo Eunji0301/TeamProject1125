@@ -31,14 +31,6 @@ body {
     }
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 24px;
-}
-
 .header {
     font-size: 24px;
     font-weight: bold;
@@ -174,7 +166,7 @@ h2 {
     justify-content: center;
 }
 
-.user-info .user-details span {
+.user-info .user-details p {
     font-size: 25px;
     color: #8475BC;
     margin-bottom: 5px;
@@ -250,7 +242,7 @@ h2 {
     resize: none;
 }
 
-.comment-input-group .btn-submit {
+.comment-input-group #btn-submit {
     padding: 8px 16px;
     font-size: 16px;
     color: #8475BC;
@@ -276,24 +268,22 @@ h2 {
 </style>
 </head>
 <body>
-	<header>헤더</header>
+	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
     <!-- 부트스트랩 JS 및 Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
 	<div class="container">
-        <!-- 드롭다운 메뉴 -->
+	<!-- 드롭다운 메뉴 -->
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">페이지 이동</button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <li><a class="dropdown-item" href="myChallengeCertificationWrite.jsp">수정</a></li>
             <li><a class="dropdown-item" href="deletePage.jsp">삭제</a></li>
-        </ul>
-        
+        </ul>        
         <div class="header">챌린지명</div>
         <div class="user-info">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWa_mc313dCFVWI_au-D-LreEypG2j-ZyxGA&s" alt="유저 사진">
             <div class="user-details">
-                <span>김철수</span>
-                <span>2024-12-24 등록</span>
+                <p>김철수</p>
+                <p>2024-12-24 등록</p>
             </div>
         </div>
 
@@ -335,6 +325,9 @@ h2 {
             <div class="form-section-box">
                 <label for="comment">댓글(댓글수)</label>
             </div>
+            <table class="comment-list">
+            	<tbody id="commentListView"></tbody>
+            </table>
         </div>
     </div>
 
@@ -344,9 +337,10 @@ h2 {
             <div class="user-info">
                 <img src="" alt="유저 사진">
             </div>
-            <textarea id="comment" name="comment" placeholder="댓글을 입력해주세요."></textarea>
-            <button type="submit" class="btn-submit">등록</button>
+            <textarea id="comment" placeholder="댓글을 입력해주세요."></textarea>
+            <button id="btn-submit">댓글 등록</button>
         </div>
     </div>
+    <jsp:include page="/WEB-INF/common/footer.jsp" />
 </body>
 </html>
