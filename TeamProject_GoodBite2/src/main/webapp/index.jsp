@@ -22,87 +22,6 @@
 <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
 <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-
     
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
@@ -114,20 +33,26 @@
 //버튼 클릭 시 해당 주차 내용만 보이게 처리하는 함수
 function showContent(challengeType, week) {
   // 모든 주차 내용 숨기기
-  const allWeeks = document.querySelectorAll(`#week-${challengeType} .photo-wrapper`);
+  const allWeeks = document.querySelectorAll(`#challenge-${challengeType} .photo-wrapper`);
   allWeeks.forEach((weekDiv) => {
     weekDiv.style.display = 'none';
   });
 
   // 선택된 주차 내용만 보이기
-  document.getElementById(`week-${challengeType}-${week}`).style.display = 'block';
+  const weekId = `week-${challengeType}-${week}`;
+  const selectedWeek = document.getElementById(weekId);
+  if (selectedWeek) {
+    selectedWeek.style.display = 'block';
+  }
 }
 
 // 페이지가 로드될 때 1주 내용을 기본으로 보여주기
 window.onload = function() {
-  showContent(1, 1); // 처음에 최다 도전 챌린지 1주 보이도록
+  // 각 챌린지 타입과 주차별로 기본값을 설정
+  showContent(1, 1); // 최다 도전 챌린지 1주 보이도록
   showContent(2, 1); // 최다 성공 챌린지 1주 보이도록
 };
+
 </script>
 
 
@@ -248,84 +173,84 @@ window.onload = function() {
     <!-- 챌린지와 라디오 박스를 세로로 정렬 -->
     <div class="d-flex flex-column" style="width: 70%;">
 
-      <!-- 최다 도전 챌린지 -->
-      <div class="challenge-box mb-4">
-        <div class="challenge-header">최다 도전 챌린지</div>
-        <div class="challenge-subheader">주차 선택</div>
+	<!-- 최다 도전 챌린지 -->
+	<div class="challenge-box mb-4" id="challenge-1">
+	  <div class="challenge-header">최다 도전 챌린지</div>
+	  <div class="challenge-subheader">주차 선택</div>
+	
+	  <!-- 1주 -->
+	  <div id="week-1-1" class="photo-wrapper">
+	    <div>
+	      <img src="/resources/image/cat.jpg" alt="사진 1" style="width: 100px; height: 100px;">
+	      <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	    </div>
+	  </div>
+	
+	  <!-- 2주 -->
+	  <div id="week-1-2" class="photo-wrapper" style="display: none;">
+	    <div>
+	      <img src="/resources/image/cat.jpg" alt="사진 2" style="width: 100px; height: 100px;">
+	      <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	    </div>
+	  </div>
+	
+	  <!-- 3주 -->
+	  <div id="week-1-3" class="photo-wrapper" style="display: none;">
+	    <div>
+	      <img src="/resources/image/cat.jpg" alt="사진 3" style="width: 100px; height: 100px;">
+	      <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	    </div>
+	  </div>
+	
+	  <!-- 페이지 버튼 -->
+	  <div class="pagination">
+	    <ul class="pagination">
+	      <li class="page-item active"><a class="page-link" href="#" onclick="showContent(1, 1)">1</a></li>
+	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(1, 2)">2</a></li>
+	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(1, 3)">3</a></li>
+	    </ul>
+	  </div>
+	</div>
+	
+	<!-- 최다 성공 챌린지 -->
+	<div class="challenge-box" id="challenge-2">
+	  <div class="challenge-header">최다 성공 챌린지</div>
+	  <div class="challenge-subheader">주차 선택</div>
+	
+	  <!-- 1주 -->
+	  <div id="week-2-1" class="photo-wrapper">
+	    <div>
+	      <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 100px;">
+	      <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	    </div>
+	  </div>
+	
+	  <!-- 2주 -->
+	  <div id="week-2-2" class="photo-wrapper" style="display: none;">
+	    <div>
+	      <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 100px;">
+	      <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	    </div>
+	  </div>
+	
+	  <!-- 3주 -->
+	  <div id="week-2-3" class="photo-wrapper" style="display: none;">
+	    <div>
+	      <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 100px;">
+	      <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	    </div>
+	  </div>
+	
+	  <!-- 페이지 버튼 -->
+	  <div class="pagination">
+	    <ul class="pagination">
+	      <li class="page-item active"><a class="page-link" href="#" onclick="showContent(2, 1)">1</a></li>
+	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(2, 2)">2</a></li>
+	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(2, 3)">3</a></li>
+	    </ul>
+	  </div>
+	</div>
 
-        <!-- 1주 -->
-        <div id="week-1" class="photo-wrapper">
-          <div>
-            <img src="/resources/image/cat.jpg" alt="사진 1" style="width: 100px; height: 100px;">
-            <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-          </div>
-        </div>
-
-        <!-- 2주 -->
-        <div id="week-2" class="photo-wrapper" style="display: none;">
-          <div>
-            <img src="/resources/image/cat.jpg" alt="사진 2" style="width: 100px; height: 100px;">
-            <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-          </div>
-        </div>
-
-        <!-- 3주 -->
-        <div id="week-3" class="photo-wrapper" style="display: none;">
-          <div>
-            <img src="/resources/image/cat.jpg" alt="사진 3" style="width: 100px; height: 100px;">
-            <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-          </div>
-        </div>
-
-        <!-- 페이지 버튼 -->
-        <div class="pagination">
-          <ul class="pagination">
-            <li class="page-item active"><a class="page-link" href="#" onclick="showContent(1)">1</a></li>
-            <li class="page-item"><a class="page-link" href="#" onclick="showContent(2)">2</a></li>
-            <li class="page-item"><a class="page-link" href="#" onclick="showContent(3)">3</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 최다 성공 챌린지 -->
-      <div class="challenge-box">
-        <div class="challenge-header">최다 성공 챌린지</div>
-        <div class="challenge-subheader">주차 선택</div>
-
-        <!-- 1주 -->
-        <div id="week-4" class="photo-wrapper">
-          <div>
-            <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 100px;">
-            <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-          </div>
-        </div>
-
-        <!-- 2주 -->
-        <div id="week-5" class="photo-wrapper" style="display: none;">
-          <div>
-            <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 100px;">
-            <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-          </div>
-        </div>
-
-        <!-- 3주 -->
-        <div id="week-6" class="photo-wrapper" style="display: none;">
-          <div>
-            <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 100px;">
-            <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-          </div>
-        </div>
-
-        <!-- 페이지 버튼 -->
-        <div class="pagination">
-          <ul class="pagination">
-            <li class="page-item active"><a class="page-link" href="#" onclick="showContent(4)">1</a></li>
-            <li class="page-item"><a class="page-link" href="#" onclick="showContent(5)">2</a></li>
-            <li class="page-item"><a class="page-link" href="#" onclick="showContent(6)">3</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
     <!-- 라디오 박스 -->
     <div class="list-group" style="width: 25%; height: 100%;">
