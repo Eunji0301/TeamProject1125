@@ -13,10 +13,34 @@ public class FoodTrackerController {
 	private static final Logger logger = LoggerFactory.getLogger(FoodTrackerController.class);
 	
 	@RequestMapping(value = "foodTrackerMain.do", method = RequestMethod.GET)
-	public String boardWrite() {
+	public String foodTrackerMain() {
 
 		logger.info("foodTrackerMain 들어옴");
 
 		return "WEB-INF/foodTracker/foodTrackerMain";
+	}
+	
+	@RequestMapping(value = "foodTrackerMealLog.do", method = RequestMethod.GET)
+	public String foodTrackerMealLog() {
+
+		logger.info("foodTrackerMealLog 들어옴");
+
+		return "WEB-INF/foodTracker/foodTrackerMealLog";
+	}
+	
+	@RequestMapping(value = "foodTrackerFoodList.do", method = RequestMethod.GET)
+	public String foodTrackerFoodList() {
+
+		logger.info("foodTrackerFoodList 들어옴");
+
+		return "WEB-INF/foodTracker/foodTrackerFoodList";
+	}
+	
+	@RequestMapping(value = "foodTrackerFoodDetail.do", method = RequestMethod.GET)
+	public String boardWrite() {
+
+		logger.info("foodTrackerFoodDetail 들어옴");
+
+		return "WEB-INF/foodTracker/foodTrackerFoodDetail";
 	}
 }
