@@ -102,6 +102,7 @@ body {
 	font-size: 16px;
 	font-weight: bold;
 	margin-top: 10px;
+	color: #8475BC
 }
 
 .pagination {
@@ -136,7 +137,7 @@ body {
 </head>
 <body>
 	<!-- <header>헤더</header> -->
-	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
+	<%@ include file="../common/headerBefore.jsp"%>
 	<!-- 레시피 커뮤니티 -->
 	<div class="container">
 		<div class="header">레시피</div>
@@ -206,6 +207,6 @@ body {
 			<button>&raquo;</button>
 		</div>
 	</div>
-	<jsp:include page="/WEB-INF/common/footer.jsp" />
+	<%@ include file="../common/footer.jsp"%>
 </body>
 </html>

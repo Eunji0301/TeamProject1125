@@ -215,7 +215,7 @@ hr {
 </script>
 </head>
 <body>
-    <<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
+    <%@ include file="../common/headerBefore.jsp"%>
     <div class="container">
         <div class="header">챌린지 인증</div>
         <form action="challengeCertificationAction.jsp" method="post" enctype="multipart/form-data">
@@ -256,6 +256,6 @@ hr {
             </div>
         </form>
     </div>
-    <jsp:include page="/WEB-INF/common/footer.jsp" />
+    <%@ include file="../common/footer.jsp"%>
 </body>
 </html>
