@@ -33,7 +33,7 @@
 				<button class="profileButton d-block mt-1">내 프로필</button>
 			</div>
 			<div class="profileAll mt-2">
-				<div class="d-flex align-items-center   basicProfile">
+				<div class="d-flex align-items-center flex-wrap  basicProfile">
 					<div class="d-flex align-items-center"><div class="profileCircle"></div><strong>키</strong><span> : 175 CM</span></div>
 					<div class="d-flex align-items-center"><div class="profileCircle"></div><strong>체중</strong><span> : 80 KG</span></div>
 					<div class="d-flex align-items-center"><div class="profileCircle"></div><strong>체지방량</strong><span> : 14 KG</span></div>
@@ -58,28 +58,40 @@
 		
 		<!-- 현재 총 먹은 음식 열량의 총집계 -->
 		<div class="graph mt-3 p-3">
-			<div class="totalResult d-flex align-items-center justify-content-center ">
-				<div class="carbCircle"></div>
-				<strong>탄수화물</strong>
-				<span>: 위험</span>
-				<div class="proteinCircle"></div>
-				<strong>단백질</strong>
-				<span>: 양호</span>
-				<div class="fatCircle"></div>
-				<strong>지방</strong>
-				<span>: 양호</span>
-				<div class="sugarCircle"></div>
-				<strong>당류</strong>
-				<span>: 양호</span>
-				<div class="sodiumCircle"></div>
-				<strong>나트륨</strong>
-				<span>: 양호</span>
-				<div class="calorieCircle"></div>
-				<strong>총열량</strong>
-				<span>: 양호</span>
+			<div class="totalResult d-flex align-items-center flex-wrap justify-content-center ">
+				<div class="result">
+					<div class="carbCircle"></div>
+					<strong>탄수화물</strong>
+					<span>: 위험</span>
+				</div>
+				<div class="result">
+					<div class="proteinCircle"></div>
+					<strong>단백질</strong>
+					<span>: 양호</span>
+				</div>
+				<div class="result">
+					<div class="fatCircle"></div>
+					<strong>지방</strong>
+					<span>: 양호</span>
+				</div>
+				<div class="result">
+					<div class="sugarCircle"></div>
+					<strong>당류</strong>
+					<span>: 양호</span>
+				</div>
+				<div class="result">
+					<div class="sodiumCircle"></div>
+					<strong>나트륨</strong>
+					<span>: 양호</span>
+				</div>
+				<div class="result">
+					<div class="calorieCircle"></div>
+					<strong>총열량</strong>
+					<span>: 양호</span>
+				</div>
 			</div>
-			<div class="totalResultBottom d-flex align-items-center mt-3 mx-5 ">
-				<div class="totalResultGraphBar d-flex align-items-center w-70 justify-content-around ">
+			<div class="totalResultBottom d-flex flex-wrap align-items-center mt-3 mx-5 ">
+				<div class="totalResultGraphBar d-flex align-items-center  w-70 justify-content-around ">
 					<div >
 					    <div class="graph-container">
 					        <div class="carbGraphBar" style="--percent: 30%; "></div>
@@ -117,53 +129,57 @@
 					    <div class="calorieCircle"></div>
 					</div>
 				</div>
-				<div class="totalResultContent w-30">
-					<div class="d-flex align-items-baseline">
-						<div class="carbCircle"></div>
-						<div>
-							<strong>탄수화물</strong>
-							<div>권장량 : <span>371</span>G</div>
-							<div>총 섭취량 : <span>76.8</span>G</div>
+				<div class="totalResultContent flex-wrap w-30">
+					<div>
+						<div class="d-flex align-items-baseline">
+							<div class="carbCircle"></div>
+							<div>
+								<strong>탄수화물</strong>
+								<div>권장량 : <span>371</span>G</div>
+								<div>총 섭취량 : <span>76.8</span>G</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-baseline">
+							<div class="proteinCircle"></div>
+							<div>
+								<strong>단백질</strong>
+								<div>권장량 : <span>371</span>G</div>
+								<div>총 섭취량 : <span>76.8</span>G</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-baseline">
+							<div class="fatCircle"></div>
+							<div>
+								<strong>지방</strong>
+								<div>권장량 : <span>371</span>G</div>
+								<div>총 섭취량 : <span>76.8</span>G</div>
+							</div>
 						</div>
 					</div>
-					<div class="d-flex align-items-baseline">
-						<div class="proteinCircle"></div>
-						<div>
-							<strong>단백질</strong>
-							<div>권장량 : <span>371</span>G</div>
-							<div>총 섭취량 : <span>76.8</span>G</div>
+					<div>
+						<div class="d-flex align-items-baseline">
+							<div class="sugarCircle"></div>
+							<div>
+								<strong>당류</strong>
+								<div>권장량 : <span>371</span>G</div>
+								<div>총 섭취량 : <span>76.8</span>G</div>
+							</div>
 						</div>
-					</div>
-					<div class="d-flex align-items-baseline">
-						<div class="fatCircle"></div>
-						<div>
-							<strong>지방</strong>
-							<div>권장량 : <span>371</span>G</div>
-							<div>총 섭취량 : <span>76.8</span>G</div>
+						<div class="d-flex align-items-baseline">
+							<div class="sodiumCircle"></div>
+							<div>
+								<strong>나트륨</strong>
+								<div>권장량 : <span>371</span>G</div>
+								<div>총 섭취량 : <span>76.8</span>G</div>
+							</div>
 						</div>
-					</div>
-					<div class="d-flex align-items-baseline">
-						<div class="sugarCircle"></div>
-						<div>
-							<strong>당류</strong>
-							<div>권장량 : <span>371</span>G</div>
-							<div>총 섭취량 : <span>76.8</span>G</div>
-						</div>
-					</div>
-					<div class="d-flex align-items-baseline">
-						<div class="sodiumCircle"></div>
-						<div>
-							<strong>나트륨</strong>
-							<div>권장량 : <span>371</span>G</div>
-							<div>총 섭취량 : <span>76.8</span>G</div>
-						</div>
-					</div>
-					<div class="d-flex align-items-baseline">
-						<div class=" calorieCircle"></div>
-						<div>
-							<strong>총열량</strong>
-							<div>권장량 : <span>371</span>G</div>
-							<div>총 섭취량 : <span>76.8</span>G</div>
+						<div class="d-flex align-items-baseline">
+							<div class=" calorieCircle"></div>
+							<div>
+								<strong>총열량</strong>
+								<div>권장량 : <span>371</span>G</div>
+								<div>총 섭취량 : <span>76.8</span>G</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -171,31 +187,31 @@
 		</div>	
 		
 		<!-- 식사 버튼을 이용하여 각 식사때 먹은 음식들에 대해서 기록할 수 있음 -->
-		<div class="mealLogButtonGroup mt-3  p-3">
-			<div class="text-center my-1"><div class="d-inline-block title">식사기록</div></div>
-			<div class="d-flex align-items-center justify-content-around  mt-3">
-				<div>
-					<button>+</button>
-					<div>아침</div>
-				</div>
-				<div>
-					<button>+</button>
-					<div>점심</div>
-				</div>
-				<div>
-					<button>+</button>
-					<div>저녁</div>
-				</div>
-				<div>
-					<button>+</button>
-					<div>간식</div>
-				</div>
-				<div>
-					<button>+</button>
-					<div>야식</div>
-				</div>
+		<div class="mealLogButtonGroup mt-3  p-3 ">
+			<div class="text-center my-1"><div class="d-inline-block title w-100">식사기록</div></div>
+			<div class="d-flex flex-wrap align-items-center justify-content-around mt-3 w-100">
+			    <div class="meal-item m-2">
+			        <button class="btn btn-primary">+</button>
+			        <div>아침</div>
+			    </div>
+			    <div class="meal-item m-2">
+			        <button class="btn btn-primary">+</button>
+			        <div>점심</div>
+			    </div>
+			    <div class="meal-item m-2">
+			        <button class="btn btn-primary">+</button>
+			        <div>저녁</div>
+			    </div>
+			    <div class="meal-item m-2">
+			        <button class="btn btn-primary">+</button>
+			        <div>간식</div>
+			    </div>
+			    <div class="meal-item m-2">
+			        <button class="btn btn-primary">+</button>
+			        <div>야식</div>
+			    </div>
 			</div>
-		</div>	
+			</div>	
 		</div>
 	</div>
 </main>
