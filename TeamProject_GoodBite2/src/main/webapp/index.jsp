@@ -125,151 +125,174 @@ window.onload = function() {
 </div>
 
 <div class="container mt-5">
-<div class="inner">
-<!-- 최강 챌린저 섹션 -->
-<div class="border rounded p-4 shadow-sm">
-  <!-- 상단 제목: 보드 처리 및 색상 변경 -->
-  <div class="border-bottom mb-4 pb-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
-    <h2 class="text-center mb-0" style="color: #8475BC;">최강 챌린저</h2>
-  </div>
+<div class="d-flex" style="width: 100%; gap: 20px;">
   
-  <!-- 사진과 이름 나열 -->
-  <div class="row mb-4">
-    <div class="row justify-content-center mb-4">
-      <div class="col-md-2 text-center">
-        <img src="/resources/image/cat.jpg" alt="사진 1" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-        <p>1.홍길동</p>
+  <!-- 왼쪽: 최강 챌린저 섹션 -->
+  <div class="border-5 rounded p-4 shadow-sm" style="width: 48%;">
+    <div class="rounded p-4 shadow-sm" style="width: 100%; border: 5px solid #CDC8E7;">
+      <!-- 상단 제목: 보드 처리 및 색상 변경 -->
+      <div class="border-bottom mb-4 pb-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
+        <h2 class="text-center mb-0" style="color: #8475BC;">최강 챌린저</h2>
       </div>
-      <div class="col-md-2 text-center">
-        <img src="/resources/image/cat.jpg" alt="사진 2" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-        <p>2.홍길동</p>
+
+      <!-- 사진과 이름 나열 -->
+      <div class="row mb-4">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-2 text-center">
+            <img src="/resources/image/cat.jpg" alt="사진 1" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>1.홍길동</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="/resources/image/cat.jpg" alt="사진 2" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>2.홍길동</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="/resources/image/cat.jpg" alt="사진 3" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>3.홍길동</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="/resources/image/cat.jpg" alt="사진 4" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>4.홍길동</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <img src="/resources/image/cat.jpg" alt="사진 5" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+            <p>5.홍길동</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-2 text-center">
-        <img src="/resources/image/cat.jpg" alt="사진 3" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-        <p>3.홍길동</p>
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="/resources/image/cat.jpg" alt="사진 4" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-        <p>4.홍길동</p>
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="/resources/image/cat.jpg" alt="사진 5" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-        <p>5.홍길동</p>
+
+      <!-- 완료 메시지 나열 -->
+      <div class="mb-4">
+        <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+        <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+        <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
       </div>
     </div>
   </div>
 
-  <!-- 완료 메시지 나열 -->
-  <div class="mb-4">
-    <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-    <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-    <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-  </div>
-</div>
-</div>
+  <!-- 오른쪽: 챌린지와 라디오 박스 -->
+  <div class="d-flex flex-column" style="width: 48%;">
 
-<div class="container mt-5">
-  <div class="d-flex justify-content-between">
-    <!-- 챌린지와 라디오 박스를 세로로 정렬 -->
-    <div class="d-flex flex-column" style="width: 70%;">
-
-	<!-- 최다 도전 챌린지 -->
-	<div class="challenge-box mb-4" id="challenge-1">
-	  <div class="challenge-header">최다 도전 챌린지</div>
-	  <div class="challenge-subheader">주차 선택</div>
+	<!-- 보드 시작 -->
+	<div class="board" style="border: 5px solid #8475BC; padding: 20px; border-radius: 10px; background-color: #F4F4F4;">
 	
-	  <!-- 1주 -->
-	  <div id="week-1-1" class="photo-wrapper">
-	    <div>
-	      <img src="/resources/image/cat.jpg" alt="사진 1" style="width: 100px; height: 100px;">
-	      <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	  <!-- 최다 도전 챌린지 -->
+	  <div class="challenge-box mb-4" id="challenge-1">
+	    <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; padding: 10px; border-radius: 5px; color: #8475BC; margin-top:30px; width: fit-content; margin-left: auto; margin-right: auto;">
+	      최다 도전 챌린지
+	    </div>
+	
+	    <!-- 1주 -->
+	    <div id="week-2-1" class="photo-wrapper">
+	      <div class="d-flex align-items-center">
+	        <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 100px; margin-right: 10px;">
+	        <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	      </div>
+	    </div>
+	
+	    <!-- 2주 -->
+	    <div id="week-2-2" class="photo-wrapper" style="display: none;">
+	      <div class="d-flex align-items-center">
+	        <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 100px; margin-right: 10px;">
+	        <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	      </div>
+	    </div>
+	
+	    <!-- 3주 -->
+	    <div id="week-2-3" class="photo-wrapper" style="display: none;">
+	      <div class="d-flex align-items-center">
+	        <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 100px; margin-right: 10px;">
+	        <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	      </div>
+	    </div>
+	
+	    <!-- 페이지 버튼 -->
+	    <div class="pagination d-flex justify-content-center">
+	      <ul class="pagination">
+	        <li class="page-item active">
+	          <a class="page-link" href="#" onclick="showContent(1, 1)">1</a>
+	        </li>
+	        <li class="page-item">
+	          <a class="page-link" href="#" onclick="showContent(1, 2)">2</a>
+	        </li>
+	        <li class="page-item">
+	          <a class="page-link" href="#" onclick="showContent(1, 3)">3</a>
+	        </li>
+	      </ul>
 	    </div>
 	  </div>
 	
-	  <!-- 2주 -->
-	  <div id="week-1-2" class="photo-wrapper" style="display: none;">
-	    <div>
-	      <img src="/resources/image/cat.jpg" alt="사진 2" style="width: 100px; height: 100px;">
-	      <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	  <!-- 최다 성공 챌린지 -->
+	  <div class="challenge-box" id="challenge-2">
+	    <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; padding: 10px; border-radius: 5px; color: #8475BC; margin-top:30px; width: fit-content; margin-left: auto; margin-right: auto;">
+	      최다 성공 챌린지
+	    </div>
+	
+	    <!-- 1주 -->
+	    <div id="week-2-1" class="photo-wrapper">
+	      <div class="d-flex align-items-center">
+	        <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 100px; margin-right: 10px;">
+	        <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	      </div>
+	    </div>
+	
+	    <!-- 2주 -->
+	    <div id="week-2-2" class="photo-wrapper" style="display: none;">
+	      <div class="d-flex align-items-center">
+	        <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 100px; margin-right: 10px;">
+	        <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	      </div>
+	    </div>
+	
+	    <!-- 3주 -->
+	    <div id="week-2-3" class="photo-wrapper" style="display: none;">
+	      <div class="d-flex align-items-center">
+	        <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 100px; margin-right: 10px;">
+	        <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+	      </div>
+	    </div>
+	
+	    <!-- 페이지 버튼 -->
+	    <div class="pagination d-flex justify-content-center">
+	      <ul class="pagination">
+	        <li class="page-item active">
+	          <a class="page-link" href="#" onclick="showContent(1, 1)">1</a>
+	        </li>
+	        <li class="page-item">
+	          <a class="page-link" href="#" onclick="showContent(1, 2)">2</a>
+	        </li>
+	        <li class="page-item">
+	          <a class="page-link" href="#" onclick="showContent(1, 3)">3</a>
+	        </li>
+	      </ul>
 	    </div>
 	  </div>
 	
-	  <!-- 3주 -->
-	  <div id="week-1-3" class="photo-wrapper" style="display: none;">
-	    <div>
-	      <img src="/resources/image/cat.jpg" alt="사진 3" style="width: 100px; height: 100px;">
-	      <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-	    </div>
-	  </div>
-	
-	  <!-- 페이지 버튼 -->
-	  <div class="pagination">
-	    <ul class="pagination">
-	      <li class="page-item active"><a class="page-link" href="#" onclick="showContent(1, 1)">1</a></li>
-	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(1, 2)">2</a></li>
-	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(1, 3)">3</a></li>
-	    </ul>
-	  </div>
 	</div>
-	
-	<!-- 최다 성공 챌린지 -->
-	<div class="challenge-box" id="challenge-2">
-	  <div class="challenge-header">최다 성공 챌린지</div>
-	  <div class="challenge-subheader">주차 선택</div>
-	
-	  <!-- 1주 -->
-	  <div id="week-2-1" class="photo-wrapper">
-	    <div>
-	      <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 100px;">
-	      <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-	    </div>
-	  </div>
-	
-	  <!-- 2주 -->
-	  <div id="week-2-2" class="photo-wrapper" style="display: none;">
-	    <div>
-	      <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 100px;">
-	      <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-	    </div>
-	  </div>
-	
-	  <!-- 3주 -->
-	  <div id="week-2-3" class="photo-wrapper" style="display: none;">
-	    <div>
-	      <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 100px;">
-	      <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-	    </div>
-	  </div>
-	
-	  <!-- 페이지 버튼 -->
-	  <div class="pagination">
-	    <ul class="pagination">
-	      <li class="page-item active"><a class="page-link" href="#" onclick="showContent(2, 1)">1</a></li>
-	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(2, 2)">2</a></li>
-	      <li class="page-item"><a class="page-link" href="#" onclick="showContent(2, 3)">3</a></li>
-	    </ul>
-	  </div>
+	<!-- 보드 끝 -->
+
+
+	<!-- 라디오 박스 -->
+	<div class="list-group d-flex flex-column align-items-start" style=" width: 100%; position: relative; left: 500px; top: -480px;">
+	  <label class="list-group-item d-flex align-items-center gap-2">
+	    <span>1주</span>
+	    <input class="flex-shrink-0" style="height: 140px; width: 100px; appearance: none; border: none;" type="radio" name="listGroupRadios" id="listGroupRadios3" value="" checked>
+	  </label>
+	  <label class="list-group-item d-flex align-items-center gap-2">
+	  	<span>2주</span>
+	    <input class="flex-shrink-0" style="height: 140px; width: 100px; appearance: none; border: none;" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
+	  </label>
+	  <label class="list-group-item d-flex align-items-center gap-2">
+	    <span>3주</span>
+	    <input class="flex-shrink-0" style="height: 140px; width: 100px; appearance: none; border: none;" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
+	  </label>
 	</div>
-
-
-    <!-- 라디오 박스 -->
-    <div class="list-group" style="width: 25%; height: 100%;">
-      <label class="list-group-item d-flex gap-2">
-        <input class="form-check-input flex-shrink-0" style="height: 300;" type="radio" name="listGroupRadios" id="listGroupRadios1" value="" checked>
-        <span>1주</span>
-      </label>
-      <label class="list-group-item d-flex gap-2">
-        <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios2" value="">
-        <span>2주</span>
-      </label>
-      <label class="list-group-item d-flex gap-2">
-        <input class="form-check-input flex-shrink-0" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
-        <span>3주</span>
-      </label>
-    </div>
   </div>
+
 </div>
 </div>
+
+
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <div class="row">
