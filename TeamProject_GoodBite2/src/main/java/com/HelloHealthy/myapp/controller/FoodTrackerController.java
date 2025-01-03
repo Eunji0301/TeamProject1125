@@ -27,7 +27,7 @@ public class FoodTrackerController {
 
 		return "WEB-INF/foodTracker/foodTrackerMealLog";
 	}
-	
+	                            
 	@RequestMapping(value = "foodTrackerFoodList.do", method = RequestMethod.GET)
 	public String foodTrackerFoodList() {
 
