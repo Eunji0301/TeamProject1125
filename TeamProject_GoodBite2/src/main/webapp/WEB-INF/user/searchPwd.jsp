@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../resources/css/user.css">
 </head>
 <body>
+<%@ include file="../common/headerBefore.jsp"%>
     <main id="search">
         <div class="searchInner">
             <h1 class="title">비밀번호 찾기</h1>
@@ -31,7 +32,9 @@
             </div>
         </div>
     </main>
+<%@ include file="../common/footer.jsp"%>
+</body>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-</body>
+
 </html>

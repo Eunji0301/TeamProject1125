@@ -84,6 +84,7 @@ position:relative;
 #login .loginInner .loginSelected .signupButton,
 #search .searchInner .searchBorder .searchIdButton,
 #change .changeInner .changeBorder  .changePwdButton,
+#found .foundInner .foundBorder .loginButton,
 #found .foundInner .foundBorder .searchPwdButton,
 #join .inner .join-form .joinButton  {
     width: 100%;
@@ -102,6 +103,7 @@ position:relative;
 #login .loginInner .loginSelected .signupButton:hover,
 #search .searchInner .searchBorder .searchIdButton:hover,
 #change .changeInner .changeBorder  .changePwdButton:hover,
+#found .foundInner .foundBorder .loginButton:hover,
 #found .foundInner .foundBorder .searchPwdButton:hover,
 #join .inner .join-form .joinButton:hover  {
     background-color: #8475BC;

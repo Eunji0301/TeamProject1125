@@ -15,12 +15,13 @@
 </script>
 </head>
 <body>
+<%@ include file="../common/headerBefore.jsp"%>
     <main id="change">
         <div class="changeInner">
             <h1 class="title">비밀번호 변경</h1>
             <div class="changeBorder p-4">
             	<div class="text-center my-3">
-            		<img src="../resources/headerImage/titlelogoimg.png">
+            		<img src="../resources/img/common/titlelogoimg.png">
             		<div class=" mt-2">* 아래에 변경하실 비밀번호를 입력해 주세요. *</div>
             	</div>
 	            <form class="change-form">
@@ -35,7 +36,9 @@
             </div>
         </div>
     </main>
+<%@ include file="../common/footer.jsp"%>
+</body>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-</body>
+
 </html>
