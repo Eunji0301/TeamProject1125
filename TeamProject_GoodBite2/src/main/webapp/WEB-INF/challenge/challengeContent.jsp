@@ -153,7 +153,7 @@
   </style>
 </head>
 <body>
-
+<%@ include file="../common/headerBefore.jsp"%>
   <div class="container">
     <div class="header">사진</div>
     <div class="photo-container">챌린지 사진</div>
@@ -206,7 +206,7 @@
       <button class="btn-custom">마이 챌린지로 저장</button>
     </div>
   </div>
-
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
 

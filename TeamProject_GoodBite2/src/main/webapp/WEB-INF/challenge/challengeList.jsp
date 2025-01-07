@@ -95,7 +95,7 @@
   </style>
 </head>
 <body>
-
+<%@ include file="../common/headerBefore.jsp"%>
   <div class="content">
     <!-- 관리자 챌린지 리스트 -->
     <div class="challenge-container">
@@ -141,7 +141,7 @@
       <button class="more-button">더보기</button>
     </div>
   </div>
-
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
 

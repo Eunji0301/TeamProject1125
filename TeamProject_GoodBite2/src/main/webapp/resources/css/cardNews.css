@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 전체 페이지 스타일 */
-body {
+.tap {
     margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
     font-family: var(--bs-body-font-family);
     font-size: var(--bs-body-font-size);
@@ -337,20 +337,6 @@ p {
 	padding: 0; 
 	}
 	
-body { 
-    margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    width: 65%; /* 너비를 설정해야 적용됨 */
-    height: 100%;
-	}
 	
 a { 
 	text-decoration: none; 
@@ -491,20 +477,7 @@ table th, table td { padding: 5px 10px; }
 	padding: 0; 
 	}
 	
-body { 
-    margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    width: 65%; /* 너비를 설정해야 적용됨 */
-    height: 100%;
-	}
+
 	
 .editer{
 	background-color: #CDC8E7; /* 배경 색 */

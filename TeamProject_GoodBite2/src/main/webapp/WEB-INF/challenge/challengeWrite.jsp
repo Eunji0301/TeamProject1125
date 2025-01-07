@@ -98,7 +98,7 @@
   </style>
 </head>
 <body>
-
+<%@ include file="../common/headerBefore.jsp"%>
   <!-- 챌린지 작성 Form -->
   <div class="form-container">
     <div class="form-header text-color">챌린지 작성</div>
@@ -147,5 +147,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
