@@ -30,23 +30,6 @@ body {
   padding: 0;
 }
 
-/* 헤더 스타일 */
-header {
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-header a {
-  text-decoration: none;
-  color: #000;
-}
-
-header .fs-4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 /* 버튼 스타일 */
 .btn-primary {
   background-color: #007bff;
@@ -218,28 +201,29 @@ header .fs-4 {
   align-items: center;
 }
 
-.pagination .page-link {
+/* 원형 버튼 스타일 */
+.custom-btn {
+  display: inline-block;
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%; /* 원형 버튼 */
-  background-color: #CDC8E7; /* 기본 배경 색상 */
-  color: white; /* 텍스트 색상 */
-  text-decoration: none; /* 링크 기본 스타일 제거 */
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s; /* 배경 색상 변화 애니메이션 */
-  padding: 0; /* 여백 제거 */
+  background-color: #CDC8E7 !important;  /* 기본 색 */
+  border-radius: 50% !important;          /* 원형 */
+  text-align: center;
+  line-height: 40px;                      /* 버튼 중앙에 텍스트 배치 */
+  color: #fff !important;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease !important;  /* 색상 변화에 부드러운 전환 추가 */
 }
 
-.pagination .page-item.active .page-link {
-  background-color: #8475BC; /* 활성화된 버튼 색상 */
+/* 클릭했을 때 색 변화 */
+.custom-btn:active {
+  background-color: #8475BC !important;  /* 눌렀을 때 색 */
 }
 
-.pagination .page-link:hover {
-  background-color: #9e94c8; /* 호버 시 배경 색상 */
+/* 버튼 호버 시 색상 변화 */
+.custom-btn:hover {
+  background-color: #A29CC8 !important;
 }
 
 /* 반응형 디자인 */
@@ -262,13 +246,3 @@ header .fs-4 {
   }
 }
 
-/* 추가적인 스타일 */
-footer {
-  text-align: center;
-  font-size: 0.875rem;
-  color: #6c757d;
-}
-
-footer .border-top {
-  border-top: 5px solid #8475BC !important;
-}
