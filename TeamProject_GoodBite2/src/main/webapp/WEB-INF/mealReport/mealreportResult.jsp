@@ -14,7 +14,7 @@
       margin: 0;
       padding: 20px;
     }
-
+ 
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -151,10 +151,11 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <div class="header">영양진단 결과</div>
+ <!-- Header -->
+    <%@ include file="../common/headerBefore.jsp"%>
 
+  <div class="container">
+   
     <!-- User Info -->
     <div class="user-info">
       <div>
@@ -245,6 +246,7 @@
       자세한 사항은 "나의 처방전"에서 확인할 수 있습니다.
     </div>
   </div>
+  <%@ include file="../common/footer.jsp"%>
 </body>
 </html>
 
