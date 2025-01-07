@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../resources/css/user.css">
 </head>
 <body>
+<%@ include file="../common/headerBefore.jsp"%>
     <main id="join">
         <div class="inner my-5">
                 <h1 class="title">회원가입</h1>
@@ -53,8 +54,9 @@
 					</div>
 		            <div class="writeTitle">
 		            	<strong >이메일</strong>
-		            	<div>
+		            	<div class="d-flex align-items-center">
 		            	<input type="email" placeholder="이메일 입력" required>
+		            	<button type="button" class="joinCheckButton">중복체크<br>확인</button>
 		            	</div>
 					</div>
 		            <div  class="writeTitle">
@@ -155,7 +157,9 @@
 	            </form>
             		</div>
     </main>
+<%@ include file="../common/footer.jsp"%>
+</body>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-</body>
+
 </html>

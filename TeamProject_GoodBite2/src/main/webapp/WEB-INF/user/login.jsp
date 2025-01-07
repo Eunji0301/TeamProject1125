@@ -35,6 +35,7 @@ function showLogin(contentId) {
 </script>
 </head>
 <body>
+<%@ include file="../common/headerBefore.jsp"%>
     <main id="login">
         <div class="loginInner">
             <h1 class="title">로그인</h1>
@@ -74,7 +75,9 @@ function showLogin(contentId) {
             </div>
         </div>
     </main>
+<%@ include file="../common/footer.jsp"%>
+</body>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-</body>
+
 </html>

@@ -268,7 +268,7 @@ h2 {
 </style>
 </head>
 <body>
-	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
+	<%@ include file="../common/headerBefore.jsp"%>
     <!-- 부트스트랩 JS 및 Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 	<div class="container">
@@ -341,6 +341,6 @@ h2 {
             <button id="btn-submit">댓글 등록</button>
         </div>
     </div>
-    <jsp:include page="/WEB-INF/common/footer.jsp" />
+    <%@ include file="../common/footer.jsp"%>
 </body>
 </html>

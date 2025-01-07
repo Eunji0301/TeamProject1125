@@ -129,7 +129,7 @@ body {
 </style>
 </head>
 <body>
-	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
+	<%@ include file="../common/headerBefore.jsp"%>
 		<div class="container">
 			<h2 class="challenge-title">MY CHALLENGE</h2>
 
@@ -268,6 +268,6 @@ body {
 				</div>
 			</div>
 		</div>
-	<jsp:include page="/WEB-INF/common/footer.jsp" />
+	<%@ include file="../common/footer.jsp"%>
 </body>
 </html>

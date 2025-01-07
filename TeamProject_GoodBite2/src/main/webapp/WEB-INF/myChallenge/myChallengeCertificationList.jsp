@@ -108,7 +108,7 @@ body {
 </style>
 </head>
 <body>
-	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
+	<%@ include file="../common/headerBefore.jsp"%>
 	<div class="container">
 		<div class="header">챌린지명</div>
 		<div class="recipe-details">
@@ -141,6 +141,6 @@ body {
 			</div>
 		</div>
 	</div>
-	<jsp:include page="/WEB-INF/common/footer.jsp" />
+	<%@ include file="../common/footer.jsp"%>
 </body>
 </html>

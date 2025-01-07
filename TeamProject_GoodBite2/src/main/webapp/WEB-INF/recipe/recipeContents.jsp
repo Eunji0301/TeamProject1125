@@ -99,7 +99,7 @@ body {
 }
 
 .step img {
-	width: 200px;
+	width: 300px;
 	height: auto;
 	border-radius: 8px;
 	border: 1px solid #CDC8E7;
@@ -114,7 +114,7 @@ body {
 </style>
 </head>
 <body>
-	<jsp:include page="/WEB-INF/common/headerAfter.jsp" />
+	<%@ include file="../common/headerBefore.jsp"%>
 	<div class="container">
 		<div class="header">라따뚜이</div>
 		<div class="recipe-details">
@@ -142,11 +142,11 @@ body {
 				</div>
 				<div class="step">
 					<img src="https://static.wtable.co.kr/image/production/service/recipe/645/0344825f-b4d1-46f7-940f-9d42d9565433.jpg?size=800x800" alt="단계 4 이미지">
-					<p>4. 오븐에서 노릇하게 익힌다면 꺼내고 취향대로 치즈가루와 파슬리가루를 뿌려주세요.</p>
+					<p>4. 오븐에서 노릇하게 익혔다면 꺼내고 취향대로 치즈가루와 파슬리가루를 뿌려주세요.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<jsp:include page="/WEB-INF/common/footer.jsp" />
+	<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
