@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 전체 페이지 스타일 */
-body {
+tap {
     margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
     font-family: var(--bs-body-font-family);
     font-size: var(--bs-body-font-size);
@@ -21,17 +21,21 @@ header {
 }
 
 header .mainTitle { 
-	font-size: 40px; padding: 10px 0px 5px; color:#8475BC;
+	margin-top:60px;
+	margin-bottom: 20px;
+	margin-left:-300px;
+	font-size: 40px; 
+	color:#8475BC;
 }
 
 header .search { 
-	text-align: right; margin-bottom: 10px; 
+	text-align: right; 
+	margin-bottom: 10px; 
 }
 
 /* 페이지네이션 스타일 */
 .pagination {
     list-style: none;
-    padding: 0;
     margin: 0;
     display: flex; /* 가로로 배치 */
     justify-content: center; /* 수평 가운데 정렬 */
@@ -59,12 +63,6 @@ header .search {
 /* 텍스트 정렬 */
 .text-center {
     text-align: center !important;
-}
-
-/* Padding 설정 */
-.py-5 {
-    padding-top: 20px;
-    padding-bottom: 0;
 }
 
 /* 미디어 쿼리 (반응형) */
@@ -160,13 +158,8 @@ p {
 @media (min-width: 768px) {
     .row-cols-md-3>* {
         flex: 0 0 auto;
-        width: 50%;  /* This sets the grid to 2 columns per row */
+        width: 25%;  /* This sets the grid to 2 columns per row */
     }
-}
-
-/* 카드 스타일 */
-.shadow-sm {
-    box-shadow: var(--bs-box-shadow-sm) !important;
 }
 
 .card {
@@ -178,22 +171,20 @@ p {
     background-color: var(--bs-card-bg);
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
-    padding: 20px 0px;
-    
 }
 
 .card-img, .card-img-top {
     border-top-left-radius: var(--bs-card-inner-border-radius);
     border-top-right-radius: var(--bs-card-inner-border-radius);
     border: 5px solid #CDC8E7; /* 테두리 선 추가 */
-    width: 50%; /* 너비를 설정해야 적용됨 */
+    width: 25%; /* 너비를 설정해야 적용됨 */
     margin: 0 auto; /* 상하 마진 0, 좌우 자동으로 설정 */
     background-color: #FFFFFF;
     height:400px;
 }
 
 .card-img, .card-img-bottom, .card-img-top {
-    width: 98.3%;
+    width: 50%;
     background-color: #FFFFFF;
 }
 
@@ -207,9 +198,9 @@ p {
 
 .card-text {
     flex: 1 1 auto;
-    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
     color: var(--bs-card-color);
     background-color: #FFFFFF;
+    width:600px;
     height:40px;
     display: flex;
     align-items: center; /* 세로 정렬 */
@@ -298,16 +289,15 @@ p {
     --bs-dark-rgb: 33, 37, 41;
 }
 
-	  .inner {
+	  .fix {
 	    position: static;
 	    width: auto;
-	    max-width: 1000px;
-	    padding: 0 10px;
+	    max-width: 645px;
 	    margin: 0 auto;
 	  }
 	  
-	  .Inner {
-		width:1180px; 
+	  .Fix {
+		width:645px; 
 		margin:0 auto; 
 		position:relative;
 	  }

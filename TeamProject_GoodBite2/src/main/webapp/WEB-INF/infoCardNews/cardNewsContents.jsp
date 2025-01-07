@@ -17,7 +17,7 @@
 <html>
 <head>
 <title>cardNewsContents</title>
-<link href="${pageContext.request.contextPath}/resourcesSO/css/socss/cardNewsContents.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/cardNews.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 <script>
@@ -201,6 +201,8 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<%@ include file="../common/headerBefore.jsp"%>
+<div class="tap">
 <header>
 	<div class="inner">
 		<h1 class="mainTitle">카드 뉴스</h1>
@@ -235,5 +237,7 @@ $(document).ready(function(){
 		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardList.aws">목록</a>
 	</div>
 </div>
+</div>
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
