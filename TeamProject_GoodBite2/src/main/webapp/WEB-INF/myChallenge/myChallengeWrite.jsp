@@ -195,6 +195,22 @@ hr {
     border-top: 3px solid #8475BC;
     margin: 10px 0;
 }
+
+.read-only-box {
+	border: 2px solid #CDC8E7;
+	padding: 8px;
+	border-radius: 4px;
+	height: auto;
+	display: inline-block;
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	color: #8475BC;
+}
+
+
 </style>
 <script>
     // 썸네일 미리보기
@@ -221,8 +237,8 @@ hr {
         <form action="challengeCertificationAction.jsp" method="post" enctype="multipart/form-data">
             <!-- 챌린지명 -->
             <div class="form-section">
-                <label for="challengeName"></label>
-                <input type="text" id="challengeName" name="challengeName" placeholder="챌린지명 입력되는 부분" readonly="readonly">
+                <!-- 읽기 전용 제목 -->
+				<div class="read-only-box" id="title-box">배달음식 없는 하루 챌린지</div>
             </div>
             <hr>
             <!-- 제목 -->
