@@ -1,0 +1,142 @@
+@charset "UTF-8";
+ body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F9F9FF;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+ 
+    .container {
+      max-width: 900px;
+      margin: 40px;
+      padding: 40px 40px 40px 40px;
+      border: 2px solid #CDC6E7;
+      border-radius: 15px;
+      background-color: white;
+      margin-top: 110px; /* 헤더 높이 */
+      margin-bottom: 100px; /* 푸터 높이 */
+    }
+
+    .header {
+      text-align: center;
+      color: #7A5FBB;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .user-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .user-info div {
+      font-size: 1.1em;
+      color: #7A5FBB;
+    }
+
+    .section-title {
+      color: #7A5FBB;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .score-bar {
+      height: 20px;
+      border-radius: 10px;
+      background: linear-gradient(to right, red 0%, yellow 50%, green 100%);
+      position: relative;
+    }
+
+    .score-pointer {
+      position: absolute;
+      top: -10px;
+      left: 67%;
+      transform: translateX(-50%);
+      font-size: 0.9em;
+      font-weight: bold;
+      color: white;
+      background-color: #7A5FBB;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    .nutrition-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .nutrition-item {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+
+    .nutrition-item .bar {
+      position: relative;
+      height: 20px;
+      background: linear-gradient(to right, yellow 30%, green 60%, red 100%);
+      border-radius: 10px;
+      margin-top: 5px;
+    }
+
+    .nutrition-item .bar .pointer {
+      position: absolute;
+      top: -10px;
+      left: 75%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      font-weight: bold;
+      color: white;
+      background-color: #7A5FBB;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    .alert-message {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 1.2em;
+      color: black;
+      font-weight: bold;
+    }
+
+    .alert-message .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    .alert-button {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
+      background-color: #7A5FBB;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .alert-button:hover {
+      background-color: #5C479A;
+    }
+
+    .alert-detail {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
