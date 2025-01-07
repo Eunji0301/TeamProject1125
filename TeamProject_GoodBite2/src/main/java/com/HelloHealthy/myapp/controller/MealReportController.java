@@ -20,4 +20,22 @@ public class MealReportController {
 		String path = "WEB-INF/mealReport/mealreport";
 		return path;
 	}
+	
+	@RequestMapping(value = "mealreportResult.do", method=RequestMethod.GET)
+	public String mealreportResult() {
+		
+		logger.info("mealreportResult>>>?");
+		
+		String path = "WEB-INF/mealReport/mealreportResult";
+		return path;
+	}
+	
+	@RequestMapping(value = "dietaryQuestionnaire.do", method=RequestMethod.GET)
+	public String dietaryQuestionnaire() {
+		
+		logger.info("dietaryQuestionnaire>>>?");
+		
+		String path = "WEB-INF/mealReport/dietaryQuestionnaire";
+		return path;
+	}
 }

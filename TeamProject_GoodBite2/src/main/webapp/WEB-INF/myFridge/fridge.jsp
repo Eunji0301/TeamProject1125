@@ -98,9 +98,7 @@
 </head>
 <body>
 
-<div class="header">
-  MY 냉장고
-</div>
+<%@ include file="../common/headerBefore.jsp"%>
 
 <div class="container">
   <div class="section-title">MY 냉장고</div>
@@ -128,9 +126,7 @@
   </div>
 </div>
 
-<div class="footer">
-  HelloHealthy.company
-</div>
+<%@ include file="../common/footer.jsp"%>
 
 <script>
   let currentSection = "";

@@ -90,7 +90,11 @@ window.onload = function() {
 	<a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
 	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
 	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
-	<br><br><br> --%>
+
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/mealreportResult.do">mealreportResult</a><br>
 
 <main class="container">
 <div class="inner">
@@ -384,9 +388,4 @@ window.onload = function() {
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
-<%-- 	<a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
-	<a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br> --%>
-	
-<%@ include file="WEB-INF/common/footer.jsp"%>
-</body>
-</html>
+
