@@ -54,8 +54,9 @@
 					</div>
 		            <div class="writeTitle">
 		            	<strong >이메일</strong>
-		            	<div>
+		            	<div class="d-flex align-items-center">
 		            	<input type="email" placeholder="이메일 입력" required>
+		            	<button type="button" class="joinCheckButton">중복체크<br>확인</button>
 		            	</div>
 					</div>
 		            <div  class="writeTitle">
