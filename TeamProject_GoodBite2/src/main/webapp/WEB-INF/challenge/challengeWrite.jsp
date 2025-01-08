@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #F9F9FF;
+      background-color: #FFFFFF;
       font-family: 'Arial', sans-serif;
     }
     .theme-color {
@@ -59,6 +59,7 @@
       font-size: 1.1em;
       text-align: center;
       margin-bottom: 10px;
+      margin-left:10px;
     }
     .form-group label {
       flex: 0 0 100px;
@@ -75,8 +76,11 @@
       border-color: #CDC6E7;
     }
     .btn-theme {
-      background-color: #DBD1E9;
-      color: white;
+      background-color: #CDC6E7;
+      color: #7A5FBB;
+      border: 3px solid #CDC6E7;
+      border-radius: 10px;
+      font-weight: bold;
     }
     .btn-theme:hover {
       background-color: #989BBE; /* 저장 버튼의 호버 색상을 #989BBE로 설정 */
@@ -141,7 +145,7 @@
         <textarea id="content" class="form-control" rows="10" placeholder="챌린지 내용을 입력하세요"></textarea>
       </div>
       <div class="text-end">
-        <button type="submit" class="btn btn-theme">저장</button>
+        <button type="submit" class="btn-theme">저장</button>
       </div>
     </form>
   </div>
