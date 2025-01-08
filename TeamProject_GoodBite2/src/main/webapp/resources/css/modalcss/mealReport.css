@@ -1,0 +1,52 @@
+@charset "UTF-8";
+body {
+	background-color: white; /* 전체 배경 흰색 */
+	font-family: Arial, sans-serif;
+}
+/* 페이지 고유한 컨테이너 스타일 */
+.diagnosis-container {
+	max-width: 600px;
+	margin: 30px auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border: 2px solid #CDC6E7;
+}
+
+.diagnosis-container .btn-custom {
+	background-color: #CDC6E7;
+	color: #333;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.diagnosis-container .btn-custom:hover {
+	background-color: #989BBE;
+}
+
+.diagnosis-container .form-section {
+	display: none;
+	width: 80%; /* 너비를 화면의 80%로 설정 */
+	max-width: 500px; /* 최대 너비 제한 */
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 3px solid #CDC6E7;
+	border-radius: 5px;
+	margin: 20px auto; /* 화면 중앙 배치 */
+	padding: 15px 20px; /* 내부 여백 */
+}
+
+.diagnosis-container select, .diagnosis-container input {
+	border: 1px solid #CDC6E7;
+	border-radius: 5px;
+}
+
+.diagnosis-container h3 {
+	color: #333;
+}

@@ -1,32 +1,55 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="foodSearchModal.jsp" %> <!-- 검색 모달 JSP 포함 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="foodSearchModal.jsp"%>
+<!-- 검색 모달 JSP 포함 -->
 <!DOCTYPE html>
-<div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="itemModalLabel">식재료 추가</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row align-items-center mb-3">
-          <div class="col-6">
-            <input type="text" class="form-control" id="ingredientName" placeholder="식재료 이름">
-          </div>
-          <div class="col-4">
-            <input type="number" class="form-control" id="ingredientQuantity" placeholder="수량">
-          </div>
-          <div class="col-2">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#searchModal">검색</button>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-        <button type="button" class="btn btn-primary" id="saveIngredient">저장</button>
-      </div>
-    </div>
-  </div>
+<link rel="stylesheet" type="text/css"
+	href="../resources/css/modalcss/fridgemodal.css">
+<div class="modal fade" id="itemModal" tabindex="-1"
+	aria-labelledby="itemModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="itemModalLabel">식재료 추가</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<!-- 이미 선택된 재료 목록 -->
+				<div class="selected-ingredients mb-3">
+					<h6>선택된 재료</h6>
+					<ul class="list-group">
+						<!-- 하드코딩된 재료 -->
+						<li class="list-group-item d-flex align-items-center"><img
+							src="../resources/img/mealReportSY/rice.png" alt="쌀" class="ingredient-thumb me-3">
+							<span>쌀 (200g)</span></li>
+						<li class="list-group-item d-flex align-items-center"><img
+							src="../resources/img/mealReportSY/tofu.png" alt="두부" class="ingredient-thumb me-3">
+							<span>두부 (3개)</span></li>
+					</ul>
+				</div>
+				<div class="row align-items-center mb-3">
+					<div class="col-6">
+						<input type="text" class="form-control" id="ingredientName"
+							placeholder="식재료 이름">
+					</div>
+					<div class="col-4">
+						<input type="number" class="form-control" id="ingredientQuantity"
+							placeholder="수량">
+					</div>
+					<div class="col-2">
+						<button class="btn btn-primary" data-bs-toggle="modal"
+							data-bs-target="#searchModal">검색</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">닫기</button>
+				<button type="button" class="btn btn-primary" id="saveIngredient">저장</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script>
