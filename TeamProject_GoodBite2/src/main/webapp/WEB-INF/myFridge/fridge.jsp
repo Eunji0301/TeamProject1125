@@ -61,7 +61,7 @@
 				<div class="ingredient-item">
 					<img src="../resources/img/mealReportSY/meat.png" alt="돼지고기"
 						class="ingredient-img">
-					<p>돼지고기 (1kg)</p>
+					<p>닭고기 (1kg)</p>
 				</div>
 				<p class="text-muted">냉동고에 식재료를 추가하세요</p>
 			</div>
@@ -116,7 +116,7 @@
       }
 
       // 모달 닫기
-      const modal = bootstrap.Modal.getInstance(document.getElementById("itemModal"));
+      const modal = bootstrap.Modal.getInstance(document.getElementById("fridgeModal"));
       modal.hide();
     } else {
       alert("식재료 이름과 수량을 입력하세요!");

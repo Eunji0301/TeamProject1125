@@ -86,7 +86,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.5em; /* 텍스트 크기 */
+	font-size: 30px !important; /* 텍스트 크기 */
 	cursor: pointer; /* 포인터 모양 변경 */
 	transition: background-color 0.3s ease, color 0.3s ease;
 	/* 부드러운 색상 전환 효과 */

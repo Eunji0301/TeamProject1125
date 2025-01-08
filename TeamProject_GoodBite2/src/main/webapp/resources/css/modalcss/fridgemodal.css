@@ -1,11 +1,11 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 .selected-ingredients {
   margin-bottom: 15px;
 }
 
 .ingredient-thumb {
-  width: 40px; /* ÀÌ¹ÌÁö ³Êºñ */
-  height: 40px; /* ÀÌ¹ÌÁö ³ôÀÌ */
-  border-radius: 5px; /* µÕ±Ù ¸ğ¼­¸® */
-  object-fit: cover; /* ºñÀ² À¯Áö */
+  width: 40px; /* ì´ë¯¸ì§€ ë„ˆë¹„ */
+  height: 40px; /* ì´ë¯¸ì§€ ë†’ì´ */
+  border-radius: 5px; /* ë‘¥ê·¼ ëª¨ì„œë¦¬ */
+  object-fit: cover; /* ë¹„ìœ¨ ìœ ì§€ */
 }

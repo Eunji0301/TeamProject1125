@@ -144,7 +144,7 @@
 						<div class="d-flex align-items-center text-center pe-2">
 							<div class="d-flex align-items-center">
 								<div class="mx-3">
-									<img src="../resources/img/dQimg/dairyProducts.png"> <strong>유재품</strong>
+									<img src="../resources/img/dQimg/dairyProducts.png"> <strong>유제품</strong>
 								</div>
 								<select>
 									<option value="0회" selected>0회</option>
