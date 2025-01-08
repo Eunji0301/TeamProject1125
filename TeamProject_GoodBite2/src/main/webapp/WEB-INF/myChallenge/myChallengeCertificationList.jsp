@@ -97,7 +97,6 @@ body {
 
 .recipe-images .section img {
 	width: 100%;
-	height: 95%;
 	border-radius: 8px;
 	border: 2px solid #CDC8E7;
 }

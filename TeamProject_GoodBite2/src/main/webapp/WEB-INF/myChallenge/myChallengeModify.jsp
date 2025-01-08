@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>마이챌린지 인증글 작성</title>
+<title>마이챌린지 인증글 수정</title>
 <style>
 body {
     font-family: 'Arial', sans-serif;
@@ -233,7 +233,7 @@ hr {
 <body>
     <%@ include file="../common/headerBefore.jsp"%>
     <div class="container">
-        <div class="header">챌린지 인증 작성</div>
+        <div class="header">챌린지 인증 수정</div>
         <form action="challengeCertificationAction.jsp" method="post" enctype="multipart/form-data">
             <!-- 챌린지명 -->
             <div class="form-section">
@@ -267,7 +267,7 @@ hr {
             </div>
             <!-- 버튼 -->
             <div class="button-group">
-                <button type="submit" class="btn-submit">등록</button>
+                <button type="submit" class="btn-submit">수정</button>
                 <button type="reset" class="btn-cancel">취소</button>
             </div>
         </form>
