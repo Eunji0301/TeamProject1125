@@ -183,7 +183,7 @@ buttons.forEach(button => {
   </div>
 
   <!-- 오른쪽: 챌린지와 라디오 박스 -->
-  <div class="d-flex justify-content-between w-40" style="margin-bottom: 30px; gap: 20px;">
+  <div class="d-flex justify-content-between w-40" style="margin-bottom: 30px; gap: 0px;">
     <!-- 챌린지들 -->
     <div class="d-flex w-60" style="padding-right: 10px;">
       <div class="board" style="border: 5px solid #CDC8E7; border-radius: 5px; background-color: #FFFFFF;">
@@ -211,15 +211,15 @@ buttons.forEach(button => {
     </div>
 
     <!-- 옵션 버튼들 -->
-    <div class="d-flex flex-column align-items-start w-40" style="margin-left: 10px;">
+    <div class="d-flex flex-column align-items-start w-40" style="margin-left: -10px;">
       <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px;">
-        <span style="height: 137px; width: 90px; text-align: center; display: flex; justify-content: center; align-items: center;">1주</span>
+        <span style="height: 155px; width: 120px; text-align: center; display: flex; justify-content: center; align-items: center;">1주</span>
       </button>
       <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px;">
-        <span style="height: 137px; width: 90px; text-align: center; display: flex; justify-content: center; align-items: center;">2주</span>
+        <span style="height: 155px; width: 120px; text-align: center; display: flex; justify-content: center; align-items: center;">2주</span>
       </button>
       <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px;">
-        <span style="height: 139px; width: 90px; text-align: center; display: flex; justify-content: center; align-items: center;">한달</span>
+        <span style="height: 161px; width: 120px; text-align: center; display: flex; justify-content: center; align-items: center;">한달</span>
       </button>
     </div>
   </div>
