@@ -119,8 +119,8 @@ body {
 }
 
 .ingredient-img {
-	width: 70px;
-	height: 70px;
+	width: 150px;
+	height: 150px;
 	margin-right: 5px;
 	border-radius: 5px; /* 이미지 모서리를 둥글게 */
 	object-fit: cover; /* 이미지 비율 유지 */
@@ -149,9 +149,8 @@ body {
 }
 
 .recipe-img {
-  width: 80px; /* 이미지 크기 */
-  height: 80px;
-  border-radius: 5px;
+  width: 150px; /* 이미지 크기 */
+  height: 150px;
   object-fit: cover;
 }
 

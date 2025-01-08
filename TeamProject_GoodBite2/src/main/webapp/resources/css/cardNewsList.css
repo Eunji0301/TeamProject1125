@@ -1,18 +1,25 @@
 @charset "UTF-8";
 /* 전체 페이지 스타일 */
+body {
+	overflow-x: hidden; /* 수평 스크롤 방지 */
+    overflow-y: auto; /* 수직 스크롤을 가능하게 하여 콘텐츠가 길어지면 스크롤되도록 */
+}
+
 tap {
-    margin: 20px auto; /* 상하 20px, 좌우 자동으로 설정 */
+    margin: 20px auto;
     font-family: var(--bs-body-font-family);
     font-size: var(--bs-body-font-size);
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
+    background-color: #FFFFFF;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-    width: 65%; /* 너비를 설정해야 적용됨 */
-    height: 60%;
+    width: 100%;
+    min-height: 100vh; /* 페이지가 화면을 채우도록 설정 */
+    margin: 0;
+    padding: 0;
 }
 
 header { 
@@ -33,13 +40,18 @@ header .search {
 	margin-bottom: 10px; 
 }
 
+svg {
+  max-width: 100%;
+  height: auto; /* SVG 크기 조정 */
+}
+
 /* 페이지네이션 스타일 */
 .pagination {
     list-style: none;
     margin: 0;
     display: flex; /* 가로로 배치 */
     justify-content: center; /* 수평 가운데 정렬 */
-    margin-bottom: 40px;
+    flex-wrap: wrap; /* 화면 크기에 맞춰서 페이지 번호가 줄 바꿈 */
 }
 
 .pagination .page-item {
@@ -47,13 +59,12 @@ header .search {
 }
 
 .pagination .page-link {
-    display: inline-block; /* a 태그를 인라인 블록으로 설정 */
-    padding: 10px 15px; /* 버튼 크기 */
-    text-decoration: none; /* 링크 밑줄 제거 */
-    color: black; /* 버튼 텍스트 색상 */
-    background-color: #fff; /* 배경색 */
-    border-radius: 5px; /* 테두리 라운드 */
-    text-align: center; /* 텍스트 정렬 */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .pagination .page-link:hover {
@@ -85,9 +96,9 @@ header .search {
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-0.5 * var(--bs-gutter-x));
-    margin-left: calc(-0.5 * var(--bs-gutter-x));
+    margin-top: 0; /* 불필요한 여백 제거 */
+    margin-right: 0;
+    margin-left: 0;
 }
 
 /* Flex 관련 */
@@ -171,16 +182,19 @@ p {
     background-color: var(--bs-card-bg);
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
+    width: 100%; /* 카드의 너비를 부모로 맞추기 */
+    box-sizing: border-box;
 }
 
 .card-img, .card-img-top {
     border-top-left-radius: var(--bs-card-inner-border-radius);
     border-top-right-radius: var(--bs-card-inner-border-radius);
     border: 5px solid #CDC8E7; /* 테두리 선 추가 */
-    width: 25%; /* 너비를 설정해야 적용됨 */
     margin: 0 auto; /* 상하 마진 0, 좌우 자동으로 설정 */
     background-color: #FFFFFF;
     height:400px;
+    width: 100%; /* SVG 이미지가 카드 너비에 맞게 조정 */
+    object-fit: cover; /* 이미지 비율 유지 */
 }
 
 .card-img, .card-img-bottom, .card-img-top {
@@ -291,7 +305,8 @@ p {
 
 	  .fix {
 	    position: static;
-	    width: auto;
+	    width: 100%; /* fix 클래스에 대해 부모 너비 맞추기 */
+  		box-sizing: border-box;
 	    max-width: 645px;
 	    margin: 0 auto;
 	  }

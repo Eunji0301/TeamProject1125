@@ -218,8 +218,8 @@ $(document).ready(function(){
 	<div class="content">
 		${bv.contents}	
 		<div class="image-gallery">
-        <img src="https://via.placeholder.com/150x300" alt="Image 1" class="content-image">
-        <img src="https://via.placeholder.com/150x300" alt="Image 2" class="content-image">
+        <img src="/resources/img/indexSO/profile.png" alt="Image 1" class="content-image">
+        <img src="/resources/img/indexSO/profile.png" alt="Image 2" class="content-image">
     	</div>
 	</div>	
 	<c:if test="${!empty bv.filename}">
