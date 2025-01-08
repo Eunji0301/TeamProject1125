@@ -47,6 +47,20 @@ window.onload = function() {
   showContent(1, 1); // 처음에 최다 도전 챌린지 1주 보이도록
   showContent(2, 1); // 최다 성공 챌린지 1주 보이도록
 };
+
+// JavaScript로 버튼 클릭 시 스타일 변경하기
+const buttons = document.querySelectorAll('.btn-option');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // 모든 버튼의 스타일 초기화
+    buttons.forEach(btn => btn.style.backgroundColor = '#8475BC');
+
+    // 클릭한 버튼만 강조
+    button.style.backgroundColor = '#5D4F99';
+  });
+});
+
 </script>
 
 
@@ -54,286 +68,233 @@ window.onload = function() {
 <body>
 <%@ include file="WEB-INF/common/headerBefore.jsp"%>
 
-<%-- 	<a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
-	<a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
-	<a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/common/footer.do">footer</a><br>
-	<a href="<%=request.getContextPath()%>/common/headerAfter.do">headerAfter</a><br>
-	<a href="<%=request.getContextPath()%>/common/headerBefore.do">headerBefore</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodDetail.do">foodTrackerFoodDetail</a><br>
-	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodList.do">foodTrackerFoodList</a><br>
-	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMain.do">foodTrackerMain</a><br>
-	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMealLog.do">foodTrackerMealLog</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsContents.do">cardNewsContents</a><br>
-	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsList.do">cardNewsList</a><br>
-	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWrite.do">cardNewsWrite</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/mealReport/dietaryQuestionnaire.do">dietaryQuestionnaire</a><br>
-	<a href="<%=request.getContextPath()%>/mealReport/healthCheckup.do">healthCheckup</a><br>
-	<a href="<%=request.getContextPath()%>/mealReport/mealreportResult.do">mealreportResult</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
-	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeContents.do">myChallengeContents</a><br>
-	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeList.do">myChallengeList</a><br>
-	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeWrite.do">myChallengeWrite</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
-	<a href="<%=request.getContextPath()%>/recipe/recipeList.do">recipeList</a><br>
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/user/changePwd.do">changePwd</a><br>
-	<a href="<%=request.getContextPath()%>/user/foundId.do">foundId</a><br>
-	<a href="<%=request.getContextPath()%>/user/foundPwd.do">foundPwd</a><br>
-	<a href="<%=request.getContextPath()%>/user/join.do">join</a><br>
-	<a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
-	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
-	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
-
-	<br><br><br>
-	<a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
-	<a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br>
-	<a href="<%=request.getContextPath()%>/mealReport/mealreportResult.do">mealreportResult</a><br>
+    <a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
+   <a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
+   <a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/common/footer.do">footer</a><br>
+   <a href="<%=request.getContextPath()%>/common/headerAfter.do">headerAfter</a><br>
+   <a href="<%=request.getContextPath()%>/common/headerBefore.do">headerBefore</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodDetail.do">foodTrackerFoodDetail</a><br>
+   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodList.do">foodTrackerFoodList</a><br>
+   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMain.do">foodTrackerMain</a><br>
+   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMealLog.do">foodTrackerMealLog</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/infoCardNews/cardNewsContents.do">cardNewsContents</a><br>
+   <a href="<%=request.getContextPath()%>/infoCardNews/cardNewsList.do">cardNewsList</a><br>
+   <a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWriteAndModify.do">cardNewsWriteAndModify</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/mealReport/dietaryQuestionnaire.do">dietaryQuestionnaire</a><br>
+   <a href="<%=request.getContextPath()%>/mealReport/healthCheckup.do">healthCheckup</a><br>
+   <a href="<%=request.getContextPath()%>/mealReport/mealreportResult.do">mealreportResult</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
+   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeContents.do">myChallengeContents</a><br>
+   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeList.do">myChallengeList</a><br>
+   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeWrite.do">myChallengeWrite</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
+   <a href="<%=request.getContextPath()%>/recipe/recipeList.do">recipeList</a><br>
+   <br><br><br>
+   <a href="<%=request.getContextPath()%>/user/changePwd.do">changePwd</a><br>
+   <a href="<%=request.getContextPath()%>/user/foundId.do">foundId</a><br>
+   <a href="<%=request.getContextPath()%>/user/foundPwd.do">foundPwd</a><br>
+   <a href="<%=request.getContextPath()%>/user/join.do">join</a><br>
+   <a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
+   <a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
+   <a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
+   <br><br><br> 
 
 <main class="container">
-<div class="inner">
-<div class="row mb-2" style="margin-top:30px; margin-left:-70px; display: flex; gap: 10px; flex-wrap: nowrap;">
-  <!-- 첫 번째 썸네일 (넓이와 높이 확장) -->
-  <div style="flex: 0 0 58%;"> <!-- 첫 번째 영역 58%로 설정 -->
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="235%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#55595c"/>
-          <text x="45%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <!-- 두 번째 썸네일 (넓이만 확장) -->
-  <div style="flex: 0 0 45.5%;"> <!-- 두 번째 영역 42%로 설정 -->
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="183%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#55595c"/>
-          <text x="45%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container mt-3">
-<div class="d-flex" style="width: 100%; gap: 20px;">
-  
-  <!-- 왼쪽: 최강 챌린저 섹션 -->
-  <div class="border-5 rounded  shadow-sm" style="width: 100%; margin-bottom:30px;">
-    <div class="rounded p-4 shadow-sm" style="width: 627px; height:488px; border: 5px solid #CDC8E7; margin-left:-70px;">
-      <!-- 상단 제목: 보드 처리 및 색상 변경 -->
-      <div class="border-bottom mb-4 pb-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
-        <h2 class="text-center mb-0" style="color: #8475BC;">최강 챌린저</h2>
-      </div>
-
-      <!-- 사진과 이름 나열 -->
-      <div class="row mb-4">
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-2 text-center">
-            <img src="/resources/image/cat.jpg" alt="사진 1" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-            <p>1.홍길동</p>
-          </div>
-          <div class="col-md-2 text-center">
-            <img src="/resources/image/cat.jpg" alt="사진 2" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-            <p>2.홍길동</p>
-          </div>
-          <div class="col-md-2 text-center">
-            <img src="/resources/image/cat.jpg" alt="사진 3" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-            <p>3.홍길동</p>
-          </div>
-          <div class="col-md-2 text-center">
-            <img src="/resources/image/cat.jpg" alt="사진 4" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-            <p>4.홍길동</p>
-          </div>
-          <div class="col-md-2 text-center">
-            <img src="/resources/image/cat.jpg" alt="사진 5" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
-            <p>5.홍길동</p>
+  <div class="inner">
+    <div class="row mb-2" style="margin-top:30px; margin-left:-70px; display: flex; gap: 10px; flex-wrap: nowrap;">
+      <!-- 첫 번째 썸네일 (넓이와 높이 확장) -->
+      <div style="flex: 0 0 58%; width: 58%;"> <!-- 첫 번째 영역 58%로 설정 -->
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="235%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"/>
+              <text x="45%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
           </div>
         </div>
       </div>
 
-      <!-- 완료 메시지 나열 -->
-      <div class="mb-4">
-        <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+      <!-- 두 번째 썸네일 (넓이만 확장) -->
+      <div style="flex: 0 0 45.5%; width: 45.5%;"> <!-- 두 번째 영역 45.5%로 설정 -->
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="183%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"/>
+              <text x="45%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="d-flex" style="width: 100%; gap: 40px;">
+
+        <!-- 왼쪽: 최강 챌린저 섹션 -->
+        <div class="border-5 rounded" style="width: 100%; margin-bottom:30px;">
+          <div class="rounded p-4" style="width: 627px; height:488px; border: 5px solid #CDC8E7; margin-left:-70px;">
+            <!-- 상단 제목: 보드 처리 및 색상 변경 -->
+            <div class="border-bottom mb-4 pb-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
+              <h2 class="text-center mb-0" style="color: #8475BC;">최강 챌린저</h2>
+            </div>
+
+            <!-- 사진과 이름 나열 -->
+            <div class="row mb-4">
+              <div class="row justify-content-center mb-4">
+                <div class="col-md-2 text-center">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 1" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                  <p>1.홍길동</p>
+                </div>
+                <div class="col-md-2 text-center">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 2" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                  <p>2.홍길동</p>
+                </div>
+                <div class="col-md-2 text-center">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 3" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                  <p>3.홍길동</p>
+                </div>
+                <div class="col-md-2 text-center">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                  <p>4.홍길동</p>
+                </div>
+                <div class="col-md-2 text-center">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 5" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                  <p>5.홍길동</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 완료 메시지 나열 -->
+            <div class="mb-4">
+              <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+              <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+              <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽: 챌린지와 라디오 박스 -->
+        <div class="d-flex flex-column" style="width: 100%; margin-bottom:30px;">
+          <div class="board" style="border: 5px solid #CDC8E7; border-radius: 5px;  background-color: #FFFFFF; width:500px;">
+
+            <!-- 최다 도전 챌린지 -->
+            <div class="challenge-box mb-4" id="challenge-1" style="padding:5px;">
+              <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top:10px; width:475px; margin-left: auto; margin-right: auto; margin-bottom:10px;">
+                최다 도전 챌린지
+              </div>
+
+              <!-- 1주 -->
+              <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
+                <div class="d-flex align-items-center" style="padding:5px;">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
+                  <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+                </div>
+              </div>
+
+              <!-- 페이지 버튼 -->
+              <div class="pagination d-flex justify-content-center">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 최다 성공 챌린지 -->
+            <div class="challenge-box" id="challenge-2" style="padding:5px;">
+              <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top:10px; width:475px; margin-left: auto; margin-right: auto; margin-bottom:10px;">
+                최다 성공 챌린지
+              </div>
+
+              <!-- 1주 -->
+              <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
+                <div class="d-flex align-items-center" style="padding:5px;">
+                  <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
+                  <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
+                </div>
+              </div>
+
+              <!-- 페이지 버튼 -->
+              <div class="pagination d-flex justify-content-center">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 옵션 버튼들 -->
+        <div class="list-group d-flex flex-column align-items-start" style="width: 100%; margin-left:-45px;">
+          <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #8475BC; background-color: #8475BC; color: #FFFFFF; font-size: 30px;">
+            <span style="height: 137px; width: 90px; text-align: center;">1주</span>
+          </button>
+          <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #8475BC; background-color: #8475BC; color: #FFFFFF; font-size: 30px;">
+            <span style="height: 137px; width: 90px; text-align: center;">2주</span>
+          </button>
+          <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #8475BC; background-color: #8475BC; color: #FFFFFF; font-size: 30px;">
+            <span style="height: 137px; width: 90px; text-align: center;">3주</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-
-<!-- 오른쪽: 챌린지와 라디오 박스 -->
-<div class="d-flex flex-column" style="width: 100%; margin-bottom:30px;">
-
-  <!-- 보드 시작 -->
-  <div class="board" style="border: 5px solid #CDC8E7; border-radius: 5px;  background-color: #FFFFFF; width:500px;">
-  
-    <!-- 최다 도전 챌린지 -->
-    <div class="challenge-box mb-4" id="challenge-1" style="padding:5px;">
-      <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top:10px; width:475px; margin-left: auto; margin-right: auto; margin-bottom:10px;">
-        최다 도전 챌린지
-      </div>
-  
-      <!-- 1주 -->
-      <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
-        <div class="d-flex align-items-center" style="padding:5px;">
-          <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-          <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        </div>
-      </div>
-  
-      <!-- 2주 -->
-      <div id="week-2-2" class="photo-wrapper" style="display: none; border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
-        <div class="d-flex align-items-center" style="padding:5px;">
-          <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-          <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        </div>
-      </div>
-  
-      <!-- 3주 -->
-      <div id="week-2-3" class="photo-wrapper" style="display: none; border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
-        <div class="d-flex align-items-center" style="padding:5px;">
-          <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-          <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        </div>
-      </div>
-  
-		<!-- 페이지 버튼 -->
-		<div class="pagination d-flex justify-content-center">
-		  <ul class="pagination">
-		    <li class="page-item">
-		      <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
-		    </li>
-		    <li class="page-item">
-		      <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
-		    </li>
-		    <li class="page-item">
-		      <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
-		    </li>
-		  </ul>
-		</div>
-    </div>
-  
-    <!-- 최다 성공 챌린지 -->
-    <div class="challenge-box" id="challenge-2" style="padding:5px;">
-      <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top:10px; width:475px; margin-left: auto; margin-right: auto; margin-bottom:10px;">
-        최다 성공 챌린지
-      </div>
-  
-      <!-- 1주 -->
-      <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
-        <div class="d-flex align-items-center" style="padding:5px;">
-          <img src="/resources/image/cat.jpg" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-          <p>1주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        </div>
-      </div>
-  
-      <!-- 2주 -->
-      <div id="week-2-2" class="photo-wrapper" style="display: none; border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
-        <div class="d-flex align-items-center" style="padding:5px;">
-          <img src="/resources/image/cat.jpg" alt="사진 5" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-          <p>2주: 홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        </div>
-      </div>
-  
-      <!-- 3주 -->
-      <div id="week-2-3" class="photo-wrapper" style="display: none; border: 5px solid #CDC8E7;  margin-bottom: 10px; background-color: #F9F9F9;">
-        <div class="d-flex align-items-center" style="padding:5px;">
-          <img src="/resources/image/cat.jpg" alt="사진 6" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-          <p>3주: 박지민님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
-        </div>
-      </div>
-  
-		<!-- 페이지 버튼 -->
-		<div class="pagination d-flex justify-content-center">
-		  <ul class="pagination">
-		    <li class="page-item">
-		      <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
-		    </li>
-		    <li class="page-item">
-		      <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
-		    </li>
-		    <li class="page-item">
-		      <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
-		    </li>
-		  </ul>
-		</div>
-    </div>
-  
-  </div>
-  <!-- 보드 끝 -->
-</div>
-
-
-
-
-	<!-- 라디오 박스 -->
-	<div class="list-group d-flex flex-column align-items-start" style=" width: 100%; margin-left:-25px;">
-	  <label class="list-group-item d-flex align-items-center gap-2" style="boder:5px solid #8475BC; background-color:#8475BC; color: #FFFFFF; font-size:30px;">
-	    <span>1주</span>
-	    <input class="flex-shrink-0" style="height: 145px; width: 80px; appearance: none; border: none;" type="radio" name="listGroupRadios" id="listGroupRadios3" value="" checked>
-	  </label>
-	  <label class="list-group-item d-flex align-items-center gap-2" style="boder:5px solid #8475BC; background-color:#8475BC; color: #FFFFFF; font-size:30px;">
-	  	<span>2주</span>
-	    <input class="flex-shrink-0" style="height: 145px; width: 80px; appearance: none; border: none;" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
-	  </label>
-	  <label class="list-group-item d-flex align-items-center gap-2" style="boder:5px solid #8475BC; background-color:#8475BC; color: #FFFFFF; font-size:30px;">
-	    <span>3주</span>
-	    <input class="flex-shrink-0" style="height: 145px; width: 80px; appearance: none; border: none;" type="radio" name="listGroupRadios" id="listGroupRadios3" value="">
-	  </label>
-	</div>
-  </div>
-
-</div>
-</div>
-
-
-
-<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <div class="row">
         <!-- 첫 번째 사진 -->
         <div class="col-lg-3 px-0">
-            <img src="/resourcesSO/image/cat.jpg" alt="사진 1" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 1" class="img-fluid" style="border-radius: 15px; width: 50%;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">팀장</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
 
         <!-- 두 번째 사진 -->
         <div class="col-lg-3 px-0">
-            <img src="/resourcesSO/image/cat.jpg" alt="사진 2" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 2" class="img-fluid" style="border-radius: 15px; width: 50%;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">팀원</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
 
         <!-- 세 번째 사진 -->
         <div class="col-lg-3 px-0">
-            <img src="/resourcesSO/image/cat.jpg" alt="사진 3" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 3" class="img-fluid" style="border-radius: 15px; width: 50%;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">팀원</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
 
         <!-- 네 번째 사진 -->
         <div class="col-lg-3 px-0">
-            <img src="/resourcesSO/image/cat.jpg" alt="사진 4" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="img-fluid" style="border-radius: 15px; width: 50%;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">팀원</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
     </div>
 </div>
 
-
-  
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <!-- 제목을 담은 보드 -->
     <div class="border-bottom mb-4 pb-2" style="background-color: #8475BC;">
@@ -383,9 +344,16 @@ window.onload = function() {
 
 </div>
 
+
 </main>
+
 
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
-
+<%--    <a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
+   <a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br> --%>
+   
+<%@ include file="WEB-INF/common/footer.jsp"%>
+</body>
+</html>
