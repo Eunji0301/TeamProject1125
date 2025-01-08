@@ -1,0 +1,11 @@
+@charset "EUC-KR";
+.selected-ingredients {
+  margin-bottom: 15px;
+}
+
+.ingredient-thumb {
+  width: 40px; /* 이미지 너비 */
+  height: 40px; /* 이미지 높이 */
+  border-radius: 5px; /* 둥근 모서리 */
+  object-fit: cover; /* 비율 유지 */
+}
