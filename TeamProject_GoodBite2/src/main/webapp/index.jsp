@@ -69,44 +69,44 @@ buttons.forEach(button => {
 <body>
 <%@ include file="WEB-INF/common/headerBefore.jsp"%>
 
-    <a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
-   <a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
-   <a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/common/footer.do">footer</a><br>
-   <a href="<%=request.getContextPath()%>/common/headerAfter.do">headerAfter</a><br>
-   <a href="<%=request.getContextPath()%>/common/headerBefore.do">headerBefore</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodDetail.do">foodTrackerFoodDetail</a><br>
-   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodList.do">foodTrackerFoodList</a><br>
-   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMain.do">foodTrackerMain</a><br>
-   <a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMealLog.do">foodTrackerMealLog</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/infoCardNews/cardNewsContents.do">cardNewsContents</a><br>
-   <a href="<%=request.getContextPath()%>/infoCardNews/cardNewsList.do">cardNewsList</a><br>
-   <a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWriteAndModify.do">cardNewsWriteAndModify</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/mealReport/dietaryQuestionnaire.do">dietaryQuestionnaire</a><br>
-   <a href="<%=request.getContextPath()%>/mealReport/healthCheckup.do">healthCheckup</a><br>
-   <a href="<%=request.getContextPath()%>/mealReport/mealreportResult.do">mealreportResult</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
-   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeContents.do">myChallengeContents</a><br>
-   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeList.do">myChallengeList</a><br>
-   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeModify.do">myChallengeModify</a><br>
-   <a href="<%=request.getContextPath()%>/myChallenge/myChallengeWrite.do">myChallengeWrite</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
-   <a href="<%=request.getContextPath()%>/recipe/recipeList.do">recipeList</a><br>
-   <br><br><br>
-   <a href="<%=request.getContextPath()%>/user/changePwd.do">changePwd</a><br>
-   <a href="<%=request.getContextPath()%>/user/foundId.do">foundId</a><br>
-   <a href="<%=request.getContextPath()%>/user/foundPwd.do">foundPwd</a><br>
-   <a href="<%=request.getContextPath()%>/user/join.do">join</a><br>
-   <a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
-   <a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
-   <a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
-   <br><br><br> 
+ 	<a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
+	<a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
+	<a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
+	<a href="<%=request.getContextPath()%>/challenge/challengeModify.do">challengeModify</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/common/footer.do">footer</a><br>
+	<a href="<%=request.getContextPath()%>/common/headerAfter.do">headerAfter</a><br>
+	<a href="<%=request.getContextPath()%>/common/headerBefore.do">headerBefore</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodDetail.do">foodTrackerFoodDetail</a><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerFoodList.do">foodTrackerFoodList</a><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMain.do">foodTrackerMain</a><br>
+	<a href="<%=request.getContextPath()%>/foodTracker/foodTrackerMealLog.do">foodTrackerMealLog</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsContents.do">cardNewsContents</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsList.do">cardNewsList</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWriteAndModify.do">cardNewsWriteAndModify</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/mealReport/dietaryQuestionnaire.do">dietaryQuestionnaire</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/healthCheckup.do">healthCheckup</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/mealreportResult.do">mealreportResult</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
+	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeContents.do">myChallengeContents</a><br>
+	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeList.do">myChallengeList</a><br>
+	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeWrite.do">myChallengeWrite</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
+	<a href="<%=request.getContextPath()%>/recipe/recipeList.do">recipeList</a><br>
+	<br><br><br>
+	<a href="<%=request.getContextPath()%>/user/changePwd.do">changePwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/foundId.do">foundId</a><br>
+	<a href="<%=request.getContextPath()%>/user/foundPwd.do">foundPwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/join.do">join</a><br>
+	<a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
+	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
+	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
+	<br><br><br> 
 
 <main class="container">
   <div class="inner">
@@ -313,9 +313,9 @@ buttons.forEach(button => {
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
-<%--    <a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
-   <a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br> --%>
-   
+<%-- 	<a href="<%=request.getContextPath()%>/myFridge/fridge.do">myFridge</a><br>
+	<a href="<%=request.getContextPath()%>/mealReport/mealreport.do">mealReport</a><br> --%>
+	
 <%@ include file="WEB-INF/common/footer.jsp"%>
 </body>
 </html>

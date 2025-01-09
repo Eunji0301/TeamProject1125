@@ -202,17 +202,13 @@ $(document).ready(function(){
 </head>
 <body>
 <%@ include file="../common/headerBefore.jsp"%>
+<div class="inner">
 <div class="tap">
 <header>
-	<div class="inner">
-		<h1 class="mainTitle">카드 뉴스</h1>
-	</div>
+<h1 class="mainTitle">카드 뉴스</h1>
 </header>
-<div class="inner">
-	<a class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></a> <!-- 수정사항 -->
-</div>
+<a class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></a> <!-- 수정사항 -->
 <article class="detailContents">
-	<div class="inner">
 	<h2 class="contentTitle">${bv.subject}</h2>	
 	<p class="write">${bv.writer}</p>
 	<div class="content">
@@ -228,9 +224,8 @@ $(document).ready(function(){
 	<a id="dUrl"  href="#"  class="fileDown">첨부파일 다운로드</a>
 	</p>		
 	</c:if>
-</div>
 </article>	
-<div class="inner">
+
 	<div class="btnBox">
 		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardDelete.aws?bidx=${bv.bidx}">삭제</a>
 		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardModify.aws?bidx=${bv.bidx}">수정</a>

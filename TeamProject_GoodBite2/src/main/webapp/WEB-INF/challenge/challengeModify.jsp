@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>챌린지 작성</title>
+  <title>챌린지 수정</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -131,7 +131,7 @@
 <%@ include file="../common/headerBefore.jsp"%>
   <!-- 챌린지 작성 Form -->
   <div class="form-container">
-    <div class="form-header text-color">챌린지 작성</div>
+    <div class="form-header text-color">챌린지 수정</div>
     <form>
       <!-- 제목 -->
       <div class="form-group">

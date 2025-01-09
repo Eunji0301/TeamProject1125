@@ -1,4 +1,29 @@
 @charset "UTF-8";
+/*공통 css*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a{
+	display:inline-block;
+	text-decoration: none;
+	color : black;
+}
+#header, #footer{
+    position: relative;
+    z-index: 2;
+    background: #CDC8E7;
+}
+.inner {
+	
+width:1180px; 
+margin:0 auto; 
+position:relative;
+ }
+@media (max-width: 1180px){
+	.inner {width:100%;}
+}
 /* 전체 페이지 스타일 */
 body {
 	overflow-x: hidden; /* 수평 스크롤 방지 */
@@ -22,22 +47,11 @@ tap {
     padding: 0;
 }
 
-header { 
-	border-bottom: 2px solid #8475BC; 
-	margin-bottom: 20px;
-}
-
-header .mainTitle { 
+.mainTitle { 
 	margin-top:60px;
 	margin-bottom: 20px;
-	margin-left:-300px;
 	font-size: 40px; 
 	color:#8475BC;
-}
-
-header .search { 
-	text-align: right; 
-	margin-bottom: 10px; 
 }
 
 svg {
@@ -213,9 +227,9 @@ p {
 .card-text {
     flex: 1 1 auto;
     color: var(--bs-card-color);
-    background-color: #FFFFFF;
-    width:600px;
-    height:40px;
+    background-color: var(--bs-card-bg);
+    width:auto;
+    height:auto;
     display: flex;
     align-items: center; /* 세로 정렬 */
 }

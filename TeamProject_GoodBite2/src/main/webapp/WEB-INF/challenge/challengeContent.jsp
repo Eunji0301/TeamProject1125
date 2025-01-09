@@ -106,11 +106,6 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .period-button:hover {
-      background-color: #AED7ED;
-      color: white;
-    }
-
     .period-button.active {
       background-color: #AED7ED;
       color: white;
@@ -173,16 +168,11 @@
 <body>
 <%@ include file="../common/headerBefore.jsp"%>
   <div class="container">
-    <div class="header">사진</div>
+    <div class="header">챌린지 제목</div>
     <div class="card">
     	<img src="/resources/img/indexSO/profile.png" alt="챌린지 이미지">
     </div>
-    <div class="separator"></div>
 
-    <div class="form-group">
-      <div class="label">제목</div>
-      <div class="content">챌린지 제목</div>
-    </div>
     <div class="separator"></div>
 
     <div class="form-group">
