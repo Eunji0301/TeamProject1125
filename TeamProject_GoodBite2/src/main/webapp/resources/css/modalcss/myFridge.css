@@ -169,7 +169,6 @@ body, .ingredient-list, .ingredient-item {
     margin-bottom: 12px;
     color: #3681AB; /* 강조된 색상 */
 }
-
 .text-muted {
     font-size: 14px;
     color: #6c757d; /* 회색 텍스트 */
@@ -198,9 +197,8 @@ body, .ingredient-list, .ingredient-item {
 }
 
 .recipe-img {
-  width: 80px; /* 이미지 크기 */
-  height: 80px;
-  border-radius: 5px;
+  width: 150px; /* 이미지 크기 */
+  height: 150px;
   object-fit: cover;
 }
 

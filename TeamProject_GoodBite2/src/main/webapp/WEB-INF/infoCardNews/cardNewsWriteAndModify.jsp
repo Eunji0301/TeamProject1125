@@ -17,8 +17,8 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>cardNewsWrite</title>
-<link href="${pageContext.request.contextPath}/resourcesSO/css/socss/cardNewsWrite.css" rel="stylesheet">
+<title>cardNewsWriteAndModify</title>
+<link href="${pageContext.request.contextPath}/resources/css/cardNews.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 <script>
@@ -202,6 +202,8 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<%@ include file="../common/headerBefore.jsp"%>
+<div class="tap">
 <header>
 	<div class="inner">
 		<h1 class="mainTitle">카드 뉴스</h1>
@@ -229,10 +231,12 @@ $(document).ready(function(){
 		</article>
 
 		<div class="btnBox">
-			<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardDelete.aws?bidx=${bv.bidx}">삭제</a>
-			<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardModify.aws?bidx=${bv.bidx}">저장</a>
+			<a class="btn aBtn" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; background-color: #CDC8E7; color: #8475BC; transition: background-color 0.3s, border-color 0.3s;">삭제</a>
+			<a class="btn aBtn" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; background-color: #CDC8E7; color: #8475BC; transition: background-color 0.3s, border-color 0.3s;">저장</a>
 		</div>
 	</div>
 </div>
+</div>
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>

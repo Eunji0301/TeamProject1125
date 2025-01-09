@@ -130,11 +130,13 @@ body {
 </head>
 <body>
 	<%@ include file="../common/headerBefore.jsp"%>
+	
 		<div class="container">
 			<h2 class="challenge-title">MY CHALLENGE</h2>
-
-			<div class="challenge-banner">
-				<img src="" alt="챌린지 배너 이미지">
+			<div class="challenge-banner" style="text-align: center;">
+				<a href="myChallengeContents.do">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmVhlrwH4pVkejAZ7dLlAZlpUdQMPyic4ZxA&s" alt="챌린지 배너 이미지">
+				</a>
 				<div class="challenge-status">
 					<p>1일차 챌린지 진행 중</p>
 					<p>20명이 챌린지를 진행중입니다.</p>
@@ -155,40 +157,32 @@ body {
 			<div class="challenge-row">
 				<div class="challenge-section">
 					<h3>완료된 챌린지</h3>
-					<div id="completedChallenges" class="carousel slide"
-						data-bs-ride="carousel">
+					<div id="completedChallenges" class="carousel slide" data-bs-ride="carousel">
 						<!-- Indicators -->
 						<div class="carousel-indicators">
-							<button type="button" data-bs-target="#completedChallenges"
-								data-bs-slide-to="0" class="active" aria-current="true"
-								aria-label="Completed 1"></button>
-							<button type="button" data-bs-target="#completedChallenges"
-								data-bs-slide-to="1" aria-label="Completed 2"></button>
-							<button type="button" data-bs-target="#completedChallenges"
-								data-bs-slide-to="2" aria-label="Completed 3"></button>
+							<button type="button" data-bs-target="#completedChallenges" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Completed 1"></button>
+							<button type="button" data-bs-target="#completedChallenges" data-bs-slide-to="1" aria-label="Completed 2"></button>
+							<button type="button" data-bs-target="#completedChallenges" data-bs-slide-to="2" aria-label="Completed 3"></button>
 						</div>
 
 						<!-- Slideshow -->
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="https://via.placeholder.com/1180x300"
-									class="d-block w-100" alt="완료 챌린지">
+								<img src="https://via.placeholder.com/1180x300" class="d-block w-100" alt="완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
 									<h5>완료챌린지1</h5>
 									<p>챌린지를 성공적으로 완료했습니다!</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="https://via.placeholder.com/1180x300"
-									class="d-block w-100" alt="완료 챌린지">
+								<img src="https://via.placeholder.com/1180x300" class="d-block w-100" alt="완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
 									<h5>완료챌린지2</h5>
 									<p>챌린지를 성공적으로 완료했습니다!</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="https://via.placeholder.com/1180x300"
-									class="d-block w-100" alt="완료 챌린지">
+								<img src="https://via.placeholder.com/1180x300" class="d-block w-100" alt="완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
 									<h5>완료챌린지3</h5>
 									<p>챌린지를 성공적으로 완료했습니다!</p>
@@ -197,13 +191,11 @@ body {
 						</div>
 
 						<!-- Navigation controls -->
-						<button class="carousel-control-prev" type="button"
-							data-bs-target="#completedChallenges" data-bs-slide="prev">
+						<button class="carousel-control-prev" type="button" data-bs-target="#completedChallenges" data-bs-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">이전</span>
 						</button>
-						<button class="carousel-control-next" type="button"
-							data-bs-target="#completedChallenges" data-bs-slide="next">
+						<button class="carousel-control-next" type="button" data-bs-target="#completedChallenges" data-bs-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">다음</span>
 						</button>
@@ -212,40 +204,32 @@ body {
 
 				<div class="challenge-section">
 					<h3>미완료된 챌린지</h3>
-					<div id="incompleteChallenges" class="carousel slide"
-						data-bs-ride="carousel">
+					<div id="incompleteChallenges" class="carousel slide" data-bs-ride="carousel">
 						<!-- Indicators -->
 						<div class="carousel-indicators">
-							<button type="button" data-bs-target="#incompleteChallenges"
-								data-bs-slide-to="0" class="active" aria-current="true"
-								aria-label="Incomplete 1"></button>
-							<button type="button" data-bs-target="#incompleteChallenges"
-								data-bs-slide-to="1" aria-label="Incomplete 2"></button>
-							<button type="button" data-bs-target="#incompleteChallenges"
-								data-bs-slide-to="2" aria-label="Incomplete 3"></button>
+							<button type="button" data-bs-target="#incompleteChallenges" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Incomplete 1"></button>
+							<button type="button" data-bs-target="#incompleteChallenges" data-bs-slide-to="1" aria-label="Incomplete 2"></button>
+							<button type="button" data-bs-target="#incompleteChallenges" data-bs-slide-to="2" aria-label="Incomplete 3"></button>
 						</div>
 
 						<!-- Slideshow -->
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="https://via.placeholder.com/1180x300"
-									class="d-block w-100" alt="미완료 챌린지">
+								<img src="https://via.placeholder.com/1180x300" class="d-block w-100" alt="미완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
 									<h5>미완료챌린지1</h5>
 									<p>아주 잘하고 있어요 !!!!</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="https://via.placeholder.com/1180x300"
-									class="d-block w-100" alt="미완료 챌린지">
+								<img src="https://via.placeholder.com/1180x300" class="d-block w-100" alt="미완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
 									<h5>미완료챌린지2</h5>
 									<p>끝까지 화이팅 !!!!!</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="https://via.placeholder.com/1180x300"
-									class="d-block w-100" alt="미완료 챌린지">
+								<img src="https://via.placeholder.com/1180x300" class="d-block w-100" alt="미완료 챌린지">
 								<div class="carousel-caption d-none d-md-block">
 									<h5>미완료챌린지3</h5>
 									<p>끝까지 화이팅 !!!!!</p>
@@ -254,13 +238,11 @@ body {
 						</div>
 
 						<!-- Navigation controls -->
-						<button class="carousel-control-prev" type="button"
-							data-bs-target="#incompleteChallenges" data-bs-slide="prev">
+						<button class="carousel-control-prev" type="button" data-bs-target="#incompleteChallenges" data-bs-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">이전</span>
 						</button>
-						<button class="carousel-control-next" type="button"
-							data-bs-target="#incompleteChallenges" data-bs-slide="next">
+						<button class="carousel-control-next" type="button" data-bs-target="#incompleteChallenges" data-bs-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">다음</span>
 						</button>
@@ -268,6 +250,7 @@ body {
 				</div>
 			</div>
 		</div>
+		
 	<%@ include file="../common/footer.jsp"%>
 </body>
 </html>

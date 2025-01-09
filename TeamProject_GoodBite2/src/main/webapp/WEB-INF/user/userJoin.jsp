@@ -8,76 +8,189 @@
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../resources/css/user.css">
+<script>
+
+
+function joinCheck(){
+	
+	var fm = document.userForm;
+	    
+	const email = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,}$/i;
+	const phone = /^(01[016789]|02|0[3-9]\d{1})(\d{3,4})(\d{4})$/;
+	
+	if (fm.uId.value == ""){
+		alert("아이디를 입력해주세요");
+		fm.uId.focus(); 
+		return;
+	}/* else if(fm.btn.value == "N"){
+		alert("아이디중복체크를 해주세요");
+		fm.memberid.focus(); // 팝업창이 키고 깜빡거리게 
+		return; 
+	}*/else if(fm.uPwd.value == ""){
+		alert("비밀번호를 입력해주세요");
+		fm.uPwd.focus(); 
+		return;
+	}else if(fm.uPwdRight.value == ""){
+		alert("비밀번호 확인을 입력해주세요");
+		fm.uPwdRight.focus(); 
+		return;
+	}else if(fm.uPwd.value != fm.uPwdRight.value){
+		alert("비밀번호가 일치하지 않습니다.");
+		fm.uPwdRight.value = "";
+		fm.uPwdRight.focus(); 
+		return;
+	}else if(fm.uName.value == ""){
+		alert("이름을 입력해주세요");
+		fm.uName.focus(); 
+		return;
+	}else if(fm.uPhone.value == ""){
+		alert("연락처를 입력해주세요");
+		fm.uPhone.focus(); 
+		return;
+	}else if(phone.test(fm.uPhone.value) == false){
+		alert("연락처 형식이 올바르지 않습니다.");
+		fm.uPhone.value = "";
+		fm.uPhone.focus(); 
+		return;
+	}else if(fm.uBirth.value == ""){
+		alert("생년월일을 입력해주세요");
+		fm.uBirth.focus(); 
+		return;
+	}else if(fm.uMail.value == ""){
+		alert("이메일을 입력해주세요");
+		fm.uMail.focus(); 
+		return;
+	}else if(email.test(fm.uMail.value) == false){
+		alert("이메일 형식이 올바르지 않습니다.");
+		fm.uMail.value = "";
+		fm.uMail.focus(); 
+		return;
+	}else if(fm.uNickName.value == ""){
+		alert("닉네임을 입력해주세요");
+		fm.uNickName.focus(); 
+		return;
+	}else if(fm.uGender.value == ""){
+		alert("성별을 선택해주세요");
+		return;
+	}else if(!document.getElementById("uTOSAgreement").checked){
+		alert("이용 약관 동의해주세요");
+		return;
+	}else if(!document.getElementById("uPIPConsent").checked){
+		alert("개인 정보 수집·이용 동의해주세요.");
+		return;
+	}
+	
+	var ans = confirm("저장하시겠습니까?")
+	
+	if(ans == true){
+
+		fm.action="<%=request.getContextPath()%>/user/userJoinAction.do" ;  
+		fm.method="post"; 
+		fm.submit();
+	}
+
+	return; 
+}
+$(document).ready(function(){
+	$("#idCheckBtn").click(function(){
+		let uId = $("#uId").val();
+		if(uId==""){
+			alert("아이디를 입력해주세요")
+			return;
+		}
+		$.ajax({ // HTML과 JSON을 연결한다.
+			type : "post", 
+			url : "<%=request.getContextPath()%>/user/idcheck.do", 
+			dataType : "json", 
+			data : {"memberId" : memberId},
+			success : function(result){
+				if(result.cnt==0){
+					alert("사용할 수 있는 아이디 입니다.");
+					$("#btn").val("Y");
+				}else{
+					alert("사용할 수 없는 아이디 입니다.");
+					$("#memberid").val("");
+				}
+			},
+			error : function(result){
+				alert("전송 실패 테스트")
+			} 
+		});
+
+	});
+});
+
+</script>
 </head>
 <body>
 <%@ include file="../common/headerBefore.jsp"%>
     <main id="join">
         <div class="inner my-5">
                 <h1 class="title">회원가입</h1>
-	            <form class="join-form mt-3">
+	            <form name="userForm"class="join-form mt-3">
 		            <div class="writeTitle">
 		            	<strong >아이디</strong>
 		            	<div class="d-flex align-items-center">
-			            	<input type="text" placeholder="아이디" required>
-			            	<button type="button" class="joinCheckButton">중복체크<br>확인</button>
+			            	<input type="text" id="uId" name="uId" maxlength = "50" placeholder="아이디" required>
+			            	<button type="button" class="joinCheckButton" id="idCheckBtn" name="idCheckBtn" value="N">중복체크<br>확인</button>
 		            	</div>
 					</div>
 		            <div class="writeTitle">
 		            	<strong >비밀번호</strong>
 		            	<div>
-		            	<input type="password" placeholder="비밀번호" required>
+		            	<input type="password" name="uPwd" maxlength = "50" placeholder="비밀번호" required>
 		            	</div>
 					</div>
 		            <div class="writeTitle">
 		            	<strong >비밀번호 확인</strong>
 		            	<div>
-		            	<input type="password" placeholder="비밀번호 확인" required>
+		            	<input type="password" name="uPwdRight" placeholder="비밀번호 확인" required>
 		            	</div>
 					</div>
 		            <div class="writeTitle">
 		            	<strong >이름</strong>
 		            	<div>
-		            	<input type="text" placeholder="실명 입력" required>
+		            	<input type="text" name="uName"  placeholder="실명 입력" required>
 		            	</div>
 					</div>
 		            <div class="writeTitle">
-		            	<strong >휴대폰 번호</strong>
+		            	<strong >휴대폰 번호</strong> <span id="phoneValidationMessage"></span>
 		            	<div>
-		            	<input type="text" placeholder="‘-’ 구분없이 입력" required>
+		            	<input type="text" name="uPhone" id="uPhone"  maxlength = "11" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"  placeholder="‘-’ 구분없이 입력" required>
 		            	</div>
 					</div>
 		            <div class="writeTitle">
 		            	<strong >생년월일</strong>
 		            	<div>
-		            	<input type="text" placeholder="8자리 입력" required>
+		            	<input type="date" name="uBirth" maxlength = "8" placeholder="8자리 입력" required>
 		            	</div>
 					</div>
 		            <div class="writeTitle">
-		            	<strong >이메일</strong>
+		            	<strong >이메일</strong><span id="emailValidationMessage"></span>
 		            	<div class="d-flex align-items-center">
-		            	<input type="email" placeholder="이메일 입력" required>
-		            	<button type="button" class="joinCheckButton">중복체크<br>확인</button>
+		            		<input type="email"name="uMail"  id="uMail"  placeholder="이메일 입력" required>
+		            		<button type="button" class="joinCheckButton">중복체크<br>확인</button>
 		            	</div>
 					</div>
 		            <div  class="writeTitle">
 		            	<strong >닉네임</strong>
 		            	<div class="d-flex align-items-center">
-			            	<input type="text" placeholder="닉네임 입력" required>
+			            	<input type="text" name="uNickName" placeholder="닉네임 입력" required>
 			            	<button type="button" class="joinCheckButton">중복체크<br>확인</button>
 		            	</div>
 					</div>
 					<div  class="writeTitle">
 		            	<strong >성별</strong>
 		            	<div class="d-flex align-items-center">
-						<input type = "radio" name = "membergender" value = "M" style="transform: scale(0.5);"><div>남성</div>
-						<input type = "radio" name = "membergender" value = "F" style="transform: scale(0.5);"><div >여성</div>
+						<input type = "radio" name = "uGender" value = "M" style="transform: scale(0.5);"><div>남성</div>
+						<input type = "radio" name = "uGender" value = "F" style="transform: scale(0.5);"><div >여성</div>
 						</div>
 					</div>
 					<div>
 		            	<div class="writeTitle"><strong >서비스 이용약관</strong></div>
 						<div class="d-flex align-items-center">
-						    <input type="checkbox" id="male1" name="membergender" value="M" style="transform: scale(0.5);">
-						    <label for="male1">이용 약관 동의   ></label>
+						    <input type="checkbox" id="uTOSAgreement" name="uTOSAgreement" value="Y" style="transform: scale(0.5);">
+						    <label for="uTOSAgreement">이용 약관 동의   ></label>
 						</div>
 						<div class="joinConditionBox" tabindex="0">
 						<div class="joinConditionBoxInBox">
@@ -124,8 +237,8 @@
 						</div>
 
 						<div class="d-flex align-items-center">
-					    <input type="checkbox" id="female1" name="membergender" value="F" style="transform: scale(0.5);">
-					    <label for="female1">개인 정보 수집·이용 동의 ></label>
+					    <input type="checkbox" id="uPIPConsent" name=uPIPConsent value="Y" style="transform: scale(0.5);">
+					    <label for="uPIPConsent">개인 정보 수집·이용 동의 ></label>
 					    </div>
 						<div class="joinConditionBox" tabindex="0">	
 						<div class="joinConditionBoxInBox">
@@ -153,13 +266,61 @@
 						</div>
 					</div>
 					</div>
-					<button type="button" class="joinButton mt-5 ">굿바이트 시작하기</button>
+					<button type="button" class="joinButton mt-5 " name="userInfoSaveBtn" onclick="joinCheck();">굿바이트 시작하기</button>
 	            </form>
             		</div>
     </main>
 <%@ include file="../common/footer.jsp"%>
 </body>
-<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
-<script type="text/javascript" src="../resource/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+// uphone으로 전화를 입력받으면 유효한지 알려주는 태크
+const phoneInput = document.getElementById('uPhone');
+const validationPhoneMessage = document.getElementById('phoneValidationMessage');
+
+function validatePhoneNumber(phone) {
+    const phoneRegex = /^(01[016789]|02|0[3-9]\d{1})(\d{3,4})(\d{4})$/;
+    return phoneRegex.test(phone);
+}
+
+phoneInput.addEventListener('input', function() {
+    const phoneNumber = this.value;
+    if (phoneNumber.length >= 2) {
+        if (validatePhoneNumber(phoneNumber)) {
+        	validationPhoneMessage.textContent = "유효한 전화번호 형식입니다.";
+        	validationPhoneMessage.style.color = "green";
+        } else {
+        	validationPhoneMessage.textContent = "올바른 전화번호 형식이 아닙니다.";
+        	validationPhoneMessage.style.color = "red";
+        }
+    } else {
+    	validationPhoneMessage.textContent = "";
+    }
+});
+const emailInput = document.getElementById('uMail');
+const validationEmailMessage = document.getElementById('emailValidationMessage');
+
+function validateEmailNumber(email) {
+    const emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,}$/i;
+    return emailRegex.test(email);
+}
+
+emailInput.addEventListener('input', function() {
+    const emailNumber = this.value;
+    if (emailNumber.length >= 2) {
+        if (validateEmailNumber(emailNumber)) {
+            validationEmailMessage.textContent = "유효한 이메일 형식입니다.";
+            validationEmailMessage.style.color = "green";
+        } else {
+            validationEmailMessage.textContent = "올바른 이메일 형식이 아닙니다.";
+            validationEmailMessage.style.color = "red";
+        }
+    } else {
+        validationEmailMessage.textContent = "";
+    }
+});
+ 
+</script>
+<script type="text/javascript" src="../resources/css/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../resources/css/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 
 </html>
