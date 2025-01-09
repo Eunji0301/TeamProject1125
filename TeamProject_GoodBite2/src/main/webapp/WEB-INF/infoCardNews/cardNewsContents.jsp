@@ -204,7 +204,9 @@ $(document).ready(function(){
 <%@ include file="../common/headerBefore.jsp"%>
 <div class="inner">
 <header>
+
 <h1 class="mainTitle" style="margin-top:25px; margin-bottom:15px;">카드 뉴스</h1>
+
 </header>
 <div class="headers-line" style="height: 5px; width: 1150px; margin: 0 auto; border-top: 5px solid #8475BC;"></div>
 <br>

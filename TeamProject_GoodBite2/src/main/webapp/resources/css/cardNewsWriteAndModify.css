@@ -96,7 +96,6 @@ body {
     vertical-align: middle; /* 수직 정렬 보조 */
 }
 
-
 .sys:hover {
 	background-color: #3681AB; /* 호버 상태에서 배경색 */
 	border-color: #3681AB; /* 호버 상태에서 테두리 색상 */

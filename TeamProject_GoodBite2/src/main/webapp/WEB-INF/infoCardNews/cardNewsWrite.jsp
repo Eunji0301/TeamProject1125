@@ -232,7 +232,6 @@ $(document).ready(function(){
 			<a class="sys" >삭제</a>
 			<a class="sys" >저장</a>
 		</div>
-	
 </div>
 </div>
 <%@ include file="../common/footer.jsp"%>
