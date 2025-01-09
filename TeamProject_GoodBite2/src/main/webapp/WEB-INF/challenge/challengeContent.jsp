@@ -177,7 +177,7 @@
 
     <div class="form-group">
       <div class="label">기간</div>
-      <div class="content period-button-group">
+      <div class="content period-button-group" style="pointer-events: none;">
         <div class="period-button active">7일</div>
         <div class="period-button">14일</div>
         <div class="period-button">30일</div>

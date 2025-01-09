@@ -108,7 +108,7 @@ buttons.forEach(button => {
 	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
 	<br><br><br> 
 
-<main class="container">
+<main id="container">
   <div class="inner">
     <div class="row mb-2" style="margin-top:30px; display: block; gap: 10px; flex-wrap: nowrap;">
 
