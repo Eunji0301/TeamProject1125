@@ -94,6 +94,7 @@ buttons.forEach(button => {
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeContents.do">myChallengeContents</a><br>
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeList.do">myChallengeList</a><br>
+	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeModify.do">myChallengeModify</a><br>
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeWrite.do">myChallengeWrite</a><br>
 	<br><br><br>
 	<a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
