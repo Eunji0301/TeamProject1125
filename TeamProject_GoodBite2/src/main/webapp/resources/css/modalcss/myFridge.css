@@ -140,7 +140,7 @@ body, .ingredient-list, .ingredient-item {
 /* LI 항목 스타일 */
 .ingredient-item {
     flex: 1 1 calc(33.333% - 10px); /* 3열 레이아웃 */
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
