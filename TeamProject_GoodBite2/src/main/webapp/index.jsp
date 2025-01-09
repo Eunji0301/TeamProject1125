@@ -110,72 +110,69 @@ buttons.forEach(button => {
 
 <main class="container">
   <div class="inner">
-    <div class="row mb-2" style="margin-top:30px; display: flex; gap: 10px; flex-wrap: nowrap;">
-  <!-- 첫 번째 썸네일 (넓이와 높이 확장) -->
-  <div style="flex: 1 1 60%; width: 60%;">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <text x="45%" y="50%" dy=".3em">광고</text>
-        </svg>
-      </div>
+    <div class="row mb-2" style="margin-top:30px; display: block; gap: 10px; flex-wrap: nowrap;">
+
+		<div id="thum-box" class="d-flex justify-content-between w-100" style="margin-bottom: 20px; gap: 40px;">
+		<!-- 첫 번째 썸네일 (넓이와 높이 확장) -->
+		<div style="flex: 1 1 55%; width: 55%; height: auto; display: block; justify-content: center; align-items: center;">
+		  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
+		    <div class="col-auto d-none d-lg-block" style="max-width: 100%; max-height: 100%; display: flex; justify-content: center; align-items: center;">
+		      <img src="/resources/img/indexSO/profile.png" alt="광고 이미지" style="width: auto; height: auto; object-fit: cover;">
+		    </div>
+		  </div>
+		</div>
+		
+		<!-- 두 번째 썸네일 (넓이만 확장) -->
+		<div style="flex: 1 1 40%; width: 40%; height: auto; display: block; justify-content: center; align-items: center;">
+		  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
+		    <div class="col-auto d-none d-lg-block" style="max-width: 100%; max-height: 100%; display: flex; justify-content: center; align-items: center;">
+		      <img src="/resources/img/indexSO/profile.png" alt="카드 뉴스" style="width: auto; height: auto; object-fit: cover;">
+		    </div>
+		  </div>
+		</div>
+		</div>
     </div>
-  </div>
-
-  <!-- 두 번째 썸네일 (넓이만 확장) -->
-  <div style="flex: 1 1 45.5%; width: 45.5%;">
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
-      <div class="col-auto d-none d-lg-block">
-        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <text x="45%" y="50%" dy=".3em">카드뉴스</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 <div class="container mt-3">
-  <div class="d-flex flex-wrap justify-content-between" style="gap: 20px;">
+  <div class="d-flex flex-wrap justify-content-between" style="">
 
-<div class="d-flex justify-content-between w-100" style="margin-bottom: 30px;">
+<div class="d-flex justify-content-between w-100" style="margin-bottom: 30px; gap: 40px;">
   <!-- 왼쪽: 최강 챌린저 섹션 -->
-  <div class="border-5 rounded w-60" style="margin-bottom: 30px;">
+  <div class="border-5 rounded w-60" style="margin-bottom: 30px; margin-left:-10px;">
     <div class="rounded p-4" style="border: 5px solid #CDC8E7;">
       <!-- 상단 제목: 보드 처리 및 색상 변경 -->
-      <div class="border-bottom mb-4 pb-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
-        <h5 class="text-center mb-0" style="color: #8475BC;">최강 챌린저</h5>
+      <div class="border-bottom mb-4 p-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
+        <h5 class="text-center mb-1" style="color: #8475BC;">최강 챌린저</h5>
       </div>
 
       <!-- 사진과 이름 나열 -->
       <div class="row mb-4">
-        <div class="row justify-content-center mb-4">
-          <div class="col-4 col-md-2 text-center">
+        <div class="row justify-content-center mb-2">
+          <div class=" col-md-2 text-center">
             <img src="/resources/img/indexSO/profile.png" alt="사진 1" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>1.홍길동</p>
           </div>
-          <div class="col-4 col-md-2 text-center">
+          <div class=" col-md-2 text-center">
             <img src="/resources/img/indexSO/profile.png" alt="사진 2" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>2.홍길동</p>
           </div>
-          <div class="col-4 col-md-2 text-center">
+          <div class=" col-md-2 text-center">
             <img src="/resources/img/indexSO/profile.png" alt="사진 3" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>3.홍길동</p>
           </div>
-          <div class="col-4 col-md-2 text-center">
+          <div class=" col-md-2 text-center">
             <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>4.홍길동</p>
           </div>
-          <div class="col-4 col-md-2 text-center">
+          <div class=" col-md-2 text-center">
             <img src="/resources/img/indexSO/profile.png" alt="사진 5" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>5.홍길동</p>
           </div>
         </div>
       </div>
-
+	<div class="line" style="height: 5px; width: auto; margin-bottom:10px; border-top: 5px solid #8475BC;"></div>
       <!-- 완료 메시지 나열 -->
-      <div class="mb-4">
+      <div class="mb-2">
         <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
         <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
         <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
@@ -184,52 +181,94 @@ buttons.forEach(button => {
   </div>
 
   <!-- 오른쪽: 챌린지와 라디오 박스 -->
-  <div class="d-flex justify-content-between w-40" style="margin-bottom: 30px; gap: 0px;">
+  <div class="d-flex justify-content-between w-50" style="margin-bottom: 30px; gap: 0px; margin-left:10px; margin-right:-10px;">
     <!-- 챌린지들 -->
-    <div class="d-flex w-60" style="padding-right: 10px;">
+    <div class="d-flex w-100" style="height: 100%; flex-grow: 1;">
       <div class="board" style="border: 5px solid #CDC8E7; border-radius: 5px; background-color: #FFFFFF;">
-        <!-- 최다 도전 챌린지 -->
-        <div class="challenge-box mb-4" id="challenge-1" style="padding: 5px;">
-          <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top: 10px; width: 100%; margin-bottom: 10px; text-align: center; font-size: 17px;">최다 도전 챌린지</div>
-          <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7; margin-bottom: 10px; background-color: #F9F9F9;">
-            <div class="d-flex align-items-center" style="padding: 5px;">
-              <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-              <p>배달음식 없는 하루 챌린지</p>
+      <div class="d-flex">
+      <div id="box-1">
+          <!-- 최다 도전 챌린지 -->
+          <div class="challenge-box mb-4" id="challenge-1" style="padding: 5px; flex-grow: 1;">
+            <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top: 10px; width: 100%; margin-bottom: 10px; text-align: center; font-size: 17px;">
+              최다 도전 챌린지
+            </div>
+            <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7; margin-bottom: 10px; background-color: #F9F9F9;">
+              <div class="d-flex align-items-center" style="padding: 5px;">
+                <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
+                <p>배달음식 없는 하루 챌린지</p>
+              </div>
+            </div>
+            <!-- 페이지 버튼 -->
+            <div class="pagination d-flex justify-content-center">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
+                </li>
+              </ul>
             </div>
           </div>
+        
+        <div style="padding: 5px;">
+        <div class="line" style="height: auto; width: auto; border-top: 5px solid #8475BC; padding: 0px;"></div>
         </div>
-        <!-- 최다 성공 챌린지 -->
-        <div class="challenge-box" id="challenge-2" style="padding: 5px;">
-          <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top: 10px; width: 100%; margin-bottom: 10px; text-align: center; font-size: 17px;">최다 성공 챌린지</div>
-          <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7; margin-bottom: 10px; background-color: #F9F9F9;">
-            <div class="d-flex align-items-center" style="padding: 5px;">
-              <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-              <p>하루 음식 메뉴 인증 챌린지</p>
+        
+          <!-- 최다 성공 챌린지 -->
+          <div class="challenge-box" id="challenge-2" style="padding: 5px;">
+            <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; width: 100%; margin-bottom: 10px; text-align: center; font-size: 17px;">
+              최다 성공 챌린지
+            </div>
+            <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7; margin-bottom: 10px; background-color: #F9F9F9;">
+              <div class="d-flex align-items-center" style="padding: 5px;">
+                <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
+                <p>하루 음식 메뉴 인증 챌린지</p>
+              </div>
             </div>
           </div>
+          <!-- 페이지 버튼 -->
+          <div class="pagination d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
+	        <div id="box-2" style="flex-grow: 1;">
+	          <!-- 옵션 버튼들 -->
+	          <div class="flex-column align-items-start w-100" style="display: flex; flex-direction: column; gap: 0px; height: 100%; width: 100%; ">
+	            <button class="list-group-item align-items-center btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px; display: block; justify-content: center; align-items: center; flex-grow: 1; min-width:180px; width: 100%;">
+	              <span>1주</span>
+	            </button>
+	            <button class="list-group-item align-items-center btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px; display: block; justify-content: center; align-items: center; flex-grow: 1; min-width:180px; width: 100%;">
+	              <span>2주</span>
+	            </button>
+	            <button class="list-group-item align-items-center btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px; display: block; justify-content: center; align-items: center; flex-grow: 1; min-width:180px; width: 100%;">
+	              <span>한달</span>
+	            </button>
+	          </div>
+	        </div>
+	      </div>
+ 	     </div>
+        </div>
+       </div>
       </div>
+     </div>
     </div>
 
-    <!-- 옵션 버튼들 -->
-    <div class="d-flex flex-column align-items-start w-40" style="margin-left: -10px;">
-      <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px;">
-        <span style="height: 155px; width: 120px; text-align: center; display: flex; justify-content: center; align-items: center;">1주</span>
-      </button>
-      <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px;">
-        <span style="height: 155px; width: 120px; text-align: center; display: flex; justify-content: center; align-items: center;">2주</span>
-      </button>
-      <button class="list-group-item d-flex align-items-center gap-2 btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px;">
-        <span style="height: 161px; width: 120px; text-align: center; display: flex; justify-content: center; align-items: center;">한달</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-  </div>
-</div>
-
-<!--   </div> -->
+<!--    -->
   <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <div class="row text-center">
         <div class="col-lg-3 px-0">
@@ -303,7 +342,7 @@ buttons.forEach(button => {
     <p class="text-center" style="font-size: 1.2em; margin-top: 30px;">"굿바이트는 질병을 예방하고 개인의 건강을 관리하는 혁신적인 플랫폼입니다."</p>
 
 </div>
-
+</div>
 
 </main>
 

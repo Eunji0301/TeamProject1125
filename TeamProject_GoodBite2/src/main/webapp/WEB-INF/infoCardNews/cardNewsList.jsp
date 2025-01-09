@@ -14,7 +14,7 @@
 
 	<header>
 	
-		<h1 class="mainTitle" style="margin-left: 15px; margin-bottom: 20px; ">카드 뉴스</h1>
+		<h1 class="mainTitle" style="margin-left: 15px; margin-bottom: 20px; margin-top: 20px;">카드 뉴스</h1>
 	
 	</header>
 	<div class="headers-line" style="height: 5px; width: 1150px; margin: 0 auto; border-top: 5px solid #8475BC;"></div>
