@@ -28,12 +28,20 @@ public class InfoCardNewsController {
 		return "WEB-INF/infoCardNews/cardNewsContents";
 	}
 	
-	@RequestMapping(value = "cardNewsWriteAndModify.do", method = RequestMethod.GET)
+	@RequestMapping(value = "cardNewsWrite.do", method = RequestMethod.GET)
+	public String cardNewsWrite() {
+
+		logger.info("cardNewsWrite 들어옴");
+
+		return "WEB-INF/infoCardNews/cardNewsWrite";
+	}
+	
+	@RequestMapping(value = "cardNewsModify.do", method = RequestMethod.GET)
 	public String cardNewsWriteAndModify() {
 
-		logger.info("cardNewsWriteAndModify 들어옴");
+		logger.info("cardNewsModify 들어옴");
 
-		return "WEB-INF/infoCardNews/cardNewsWriteAndModify";
+		return "WEB-INF/infoCardNews/cardNewsModify";
 	}
 
 }

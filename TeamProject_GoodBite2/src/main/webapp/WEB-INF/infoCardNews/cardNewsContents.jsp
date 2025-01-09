@@ -20,7 +20,7 @@
 <link href="${pageContext.request.contextPath}/resources/css/cardNews.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
-<script>
+<!-- <script>
 function checkImageType(fileName){	
 	var pattern = /jpg$|gif$|png$|jpeg$/i;    //자바스크립트의 정규표현식	
 	return fileName.match(pattern);
@@ -198,17 +198,17 @@ $(document).ready(function(){
 	
 	
 });
-</script>
+</script> -->
 </head>
 <body>
 <%@ include file="../common/headerBefore.jsp"%>
 <div class="inner">
 <header>
-<h1 class="mainTitle">카드 뉴스</h1>
+<h1 class="mainTitle" style="margin-top:25px; margin-bottom:15px;">카드 뉴스</h1>
 </header>
 <div class="headers-line" style="height: 5px; width: 1150px; margin: 0 auto; border-top: 5px solid #8475BC;"></div>
 <br>
-<div class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></div> <!-- 수정사항 -->
+<div class="board notice" style="margin-left:15px; margin-right:15px;"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></div> <!-- 수정사항 -->
 <article class="detailContents">
 	<h2 class="contentTitle">${bv.subject}</h2>	
 	<p class="write">${bv.writer}</p>
@@ -219,21 +219,21 @@ $(document).ready(function(){
         <img src="/resources/img/indexSO/profile.png" alt="Image 2" class="content-image">
     	</div>
 	</div>	
-	<c:if test="${!empty bv.filename}">
+<%-- 	<c:if test="${!empty bv.filename}">
 	<img src="${pageContext.request.contextPath}/board/displayFile.aws?fileName=${bv.filename}">	
 	<p>
 	<a id="dUrl"  href="#"  class="fileDown">첨부파일 다운로드</a>
 	</p>		
-	</c:if>
-</article>	
+	</c:if> --%>
+	
 <div class="headers-line" style="height: 5px; width: 1150px; margin: 0 auto; border-top: 5px solid #8475BC;"></div>
 <br>
-	<div class="btnBox">
-		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardDelete.aws?bidx=${bv.bidx}">삭제</a>
-		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardModify.aws?bidx=${bv.bidx}">수정</a>
-		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardList.aws">목록</a>
+	<div class="sysbtn-box">
+		<a class="sysbtn" href="${pageContext.request.contextPath}/board/boardDelete.aws?bidx=${bv.bidx}">삭제</a>
+		<a class="sysbtn" href="${pageContext.request.contextPath}/board/boardModify.aws?bidx=${bv.bidx}">수정</a>
+		<a class="sysbtn" href="${pageContext.request.contextPath}/board/boardList.aws">목록</a>
 	</div>
-
+</article>
 </div>
 <%@ include file="../common/footer.jsp"%>
 </body>

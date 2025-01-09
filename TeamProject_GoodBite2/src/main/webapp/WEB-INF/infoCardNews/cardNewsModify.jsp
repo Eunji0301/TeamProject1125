@@ -17,11 +17,11 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>cardNewsWriteAndModify</title>
-<link href="${pageContext.request.contextPath}/resources/css/cardNews.css" rel="stylesheet">
+<title>cardNewsModify</title>
+<link href="${pageContext.request.contextPath}/resources/css/cardNewsWriteAndModify.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
-<script>
+<!-- <script>
 function checkImageType(fileName){	
 	var pattern = /jpg$|gif$|png$|jpeg$/i;    //자바스크립트의 정규표현식	
 	return fileName.match(pattern);
@@ -199,19 +199,17 @@ $(document).ready(function(){
 	
 	
 });
-</script>
+</script> -->
 </head>
 <body>
 <%@ include file="../common/headerBefore.jsp"%>
-<div class="tap">
+<div class="inner">
 <header>
-	<div class="inner">
-		<h1 class="mainTitle">카드 뉴스</h1>
-	</div>
+	<h1 class="mainTitle">카드 뉴스</h1>
 </header>
-
+<div class="headers-line" style="height: 5px; width: auto; margin-top: 20px; margin-bottom: 20px; border: 3px solid #8475BC;"></div>
 <div class="board write"> <!-- 수정사항 -->
-	<div class="inner">
+	
 		<article class="detailContents">
 			<div class="contentTitle">
 		    	<p class="title">제목</p>
@@ -230,11 +228,11 @@ $(document).ready(function(){
 			</c:if>
 		</article>
 
-		<div class="btnBox">
-			<a class="btn aBtn" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; background-color: #CDC8E7; color: #8475BC; transition: background-color 0.3s, border-color 0.3s;">삭제</a>
-			<a class="btn aBtn" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px; background-color: #CDC8E7; color: #8475BC; transition: background-color 0.3s, border-color 0.3s;">저장</a>
+		<div class="sysbox">
+			<a class="sys" >삭제</a>
+			<a class="sys" >저장</a>
 		</div>
-	</div>
+	
 </div>
 </div>
 <%@ include file="../common/footer.jsp"%>

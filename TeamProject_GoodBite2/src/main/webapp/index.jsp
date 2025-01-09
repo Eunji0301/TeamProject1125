@@ -85,7 +85,8 @@ buttons.forEach(button => {
 	<br><br><br>
 	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsContents.do">cardNewsContents</a><br>
 	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsList.do">cardNewsList</a><br>
-	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWriteAndModify.do">cardNewsWriteAndModify</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsWrite.do">cardNewsWrite</a><br>
+	<a href="<%=request.getContextPath()%>/infoCardNews/cardNewsModify.do">cardNewsModify</a><br>
 	<br><br><br>
 	<a href="<%=request.getContextPath()%>/mealReport/dietaryQuestionnaire.do">dietaryQuestionnaire</a><br>
 	<a href="<%=request.getContextPath()%>/mealReport/healthCheckup.do">healthCheckup</a><br>
