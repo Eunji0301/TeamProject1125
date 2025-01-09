@@ -18,14 +18,37 @@
 				<!-- 이미 선택된 재료 목록 -->
 				<div class="selected-ingredients mb-3">
 					<h6>선택된 재료</h6>
-					<ul class="list-group">
-						<!-- 하드코딩된 재료 -->
-						<li class="list-group-item d-flex align-items-center"><img
-							src="../resources/img/mealReportSY/rice.png" alt="쌀" class="ingredient-thumb me-3">
-							<span>쌀 (200g)</span></li>
-						<li class="list-group-item d-flex align-items-center"><img
-							src="../resources/img/mealReportSY/tofu.png" alt="두부" class="ingredient-thumb me-3">
-							<span>두부 (3개)</span></li>
+					<ul class="list-group" id="selectedIngredients">
+						<li
+							class="list-group-item d-flex align-items-center justify-content-between">
+							<div class="d-flex align-items-center">
+								 <span>쌀</span>
+							</div>
+							<div>
+								<button class="btn btn-sm btn-outline-primary"
+									onclick="decreaseQuantity(this)">-</button>
+								<span class="mx-2 quantity">200g</span>
+								<button class="btn btn-sm btn-outline-primary"
+									onclick="increaseQuantity(this)">+</button>
+								<button class="btn btn-sm btn-outline-danger ms-3"
+									onclick="deleteIngredient(this)">삭제</button>
+							</div>
+						</li>
+						<li
+							class="list-group-item d-flex align-items-center justify-content-between">
+							<div class="d-flex align-items-center">
+								<span>두부</span>
+							</div>
+							<div>
+								<button class="btn btn-sm btn-outline-primary"
+									onclick="decreaseQuantity(this)">-</button>
+								<span class="mx-2 quantity">3개</span>
+								<button class="btn btn-sm btn-outline-primary"
+									onclick="increaseQuantity(this)">+</button>
+								<button class="btn btn-sm btn-outline-danger ms-3"
+									onclick="deleteIngredient(this)">삭제</button>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="row align-items-center mb-3">
@@ -54,50 +77,67 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const searchResults = document.getElementById("searchResults");
-  const searchInput = document.getElementById("searchInput");
+	  const searchResults = document.getElementById("searchResults");
+	  const searchInput = document.getElementById("searchInput");
 
-  // 가상 데이터 (실제로는 API를 통해 가져올 데이터)
-  const ingredients = ["대파", "쪽파", "양파", "마늘", "생강"];
+	  const ingredients = ["대파", "쪽파", "양파", "마늘", "생강"];
 
-  // 검색 기능
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    searchResults.innerHTML = ""; // 기존 결과 초기화
+	  searchInput.addEventListener("input", () => {
+	    const query = searchInput.value.toLowerCase();
+	    searchResults.innerHTML = "";
 
-    if (query) {
-      const filtered = ingredients.filter(item => item.includes(query));
-      filtered.forEach(item => {
-        const li = document.createElement("li");
-        li.classList.add("list-group-item", "list-group-item-action");
-        li.textContent = item;
-        li.addEventListener("click", () => selectIngredient(item)); // 클릭 시 선택
-        searchResults.appendChild(li);
-      });
-    }
-  });
+	    if (query) {
+	      const filtered = ingredients.filter(item => item.includes(query));
+	      filtered.forEach(item => {
+	        const li = document.createElement("li");
+	        li.classList.add("list-group-item", "list-group-item-action");
+	        li.textContent = item;
+	        li.addEventListener("click", () => selectIngredient(item));
+	        searchResults.appendChild(li);
+	      });
+	    }
+	  });
 
-  // 선택된 데이터를 부모 모달로 전달
-  const selectIngredient = (ingredient) => {
-    document.getElementById("ingredientName").value = ingredient;
+	  const selectIngredient = (ingredient) => {
+	    document.getElementById("ingredientName").value = ingredient;
+	    const searchModal = bootstrap.Modal.getInstance(document.getElementById("foodSearchModal"));
+	    searchModal.hide();
+	  };
 
-    // 검색 모달 닫기
-    const searchModal = bootstrap.Modal.getInstance(document.getElementById("searchModal"));
-    searchModal.hide();
-  };
+	  window.increaseQuantity = (button) => {
+	    const quantityElement = button.closest("div").querySelector(".quantity");
+	    if (!quantityElement) return;
 
-  // 저장 버튼 클릭
-  document.getElementById("saveIngredient").addEventListener("click", () => {
-    const name = document.getElementById("ingredientName").value;
-    const quantity = document.getElementById("ingredientQuantity").value;
+	    const currentQuantity = extractQuantity(quantityElement.textContent);
+	    const updatedQuantity = currentQuantity + 1;
+	    quantityElement.textContent = formatQuantity(updatedQuantity);
+	  };
 
-    if (name && quantity) {
-      alert(`식재료 저장: ${name} (${quantity})`);
-    } else {
-      alert("식재료 이름과 수량을 입력하세요!");
-    }
-  });
-});
+	  window.decreaseQuantity = (button) => {
+	    const quantityElement = button.closest("div").querySelector(".quantity");
+	    if (!quantityElement) return;
+
+	    const currentQuantity = extractQuantity(quantityElement.textContent);
+	    if (currentQuantity > 1) {
+	      const updatedQuantity = currentQuantity - 1;
+	      quantityElement.textContent = formatQuantity(updatedQuantity);
+	    }
+	  };
+
+	  window.deleteIngredient = (button) => {
+	    const ingredientItem = button.closest("li");
+	    ingredientItem.remove();
+	  };
+
+	  const extractQuantity = (quantityText) => {
+	    return parseInt(quantityText.replace(/[^\d]/g, ""), 10) || 0;
+	  };
+
+	  const formatQuantity = (quantity, unit = "g") => {
+	    return `${quantity}${unit}`;
+	  };
+	});
+
 </script>
 
 

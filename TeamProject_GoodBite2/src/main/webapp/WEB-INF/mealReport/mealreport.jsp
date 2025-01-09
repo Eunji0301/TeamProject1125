@@ -17,6 +17,7 @@
 </head>
 <body>
 	<%@ include file="../common/headerBefore.jsp"%>
+	<main>
 	<!-- 메인 컨테이너 -->
 	<div class="diagnosis-container">
 		<div class="text-center">
@@ -51,7 +52,6 @@
 					<option value="호흡기질환">호흡기 질환</option>
 					<option value="소화기질환">소화기 질환</option>
 					<option value="관절염">관절염</option>
-					<option value="기타">기타</option>
 				</select>
 			</div>
 
@@ -72,6 +72,8 @@
 			</div>
 		</div>
 	</div>
+</main>
+
 
 	<!-- 푸터 공간 -->
 	<%@ include file="../common/footer.jsp"%>
