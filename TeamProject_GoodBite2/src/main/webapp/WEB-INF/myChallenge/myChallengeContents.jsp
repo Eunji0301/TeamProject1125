@@ -23,7 +23,7 @@ body {
 	position: relative;
 }
 
-@media ( max-width : 1299px) {
+@media ( max-width : 768px) {
 	.inner {
 		padding-left: 16px;
 		padding-right: 16px;
@@ -419,6 +419,7 @@ h2 {
 					<div class="comment-date">2024-01-11</div>
 					<br>건강해질것같아요!!
 				</div>
+				<button class="delete-button" style="background-color: #CDC8E7; color: #8475BC; border: none; padding: 10px 20px; cursor: pointer; margin-left: auto; border-radius: 8px;">삭제</button>
 			</li>
 			<li>
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1KfVK6CMjDIZtF3wbcKB6dzmFshqiAcuOQ&s" alt="유저 사진">
@@ -426,6 +427,7 @@ h2 {
 					<div class="comment-date">2024-01-10</div>
 					<br>좋은 챌린지네요! 응원합니다!
 				</div>
+				<button class="delete-button" style="background-color: #CDC8E7; color: #8475BC; border: none; padding: 10px 20px; cursor: pointer; margin-left: auto; border-radius: 8px;">삭제</button>
 			</li>
 			<li>
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1KfVK6CMjDIZtF3wbcKB6dzmFshqiAcuOQ&s" alt="유저 사진">
@@ -433,6 +435,7 @@ h2 {
 					<div class="comment-date">2024-01-07</div>
 					<br>우와아아아!
 				</div>
+				<button class="delete-button" style="background-color: #CDC8E7; color: #8475BC; border: none; padding: 10px 20px; cursor: pointer; margin-left: auto; border-radius: 8px;">삭제</button>
 			</li>
 		</ul>
 
