@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <title>팀프로젝트</title>
 
 </head>
@@ -68,7 +68,6 @@ buttons.forEach(button => {
 
 <body>
 <%@ include file="WEB-INF/common/headerBefore.jsp"%>
-
  	<a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
 	<a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
 	<a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
@@ -120,9 +119,6 @@ buttons.forEach(button => {
           <text x="45%" y="50%" dy=".3em">광고</text>
         </svg>
       </div>
-    </div>
-  </div>
-
   <!-- 두 번째 썸네일 (넓이만 확장) -->
   <div style="flex: 1 1 45.5%; width: 45.5%;">
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
@@ -132,10 +128,9 @@ buttons.forEach(button => {
         </svg>
       </div>
     </div>
-  </div>
-</div>
 
-
+    <div class="container mt-3">
+      <div class="d-flex" style="width: 100%; gap: 40px;">
 
 <div class="container mt-3">
   <div class="d-flex flex-wrap justify-content-between" style="gap: 20px;">
@@ -173,8 +168,6 @@ buttons.forEach(button => {
             <p>5.홍길동</p>
           </div>
         </div>
-      </div>
-
       <!-- 완료 메시지 나열 -->
       <div class="mb-4">
         <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
@@ -309,6 +302,7 @@ buttons.forEach(button => {
 </main>
 
 
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
