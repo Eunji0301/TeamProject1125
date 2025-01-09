@@ -105,7 +105,6 @@
     </div>
     <a href="#" class="alert-button">홈으로 돌아가기</a>
     <div class="alert-detail">
-      자세한 사항은 "나의 처방전"에서 확인할 수 있습니다.
     </div>
   </div>
   </div>

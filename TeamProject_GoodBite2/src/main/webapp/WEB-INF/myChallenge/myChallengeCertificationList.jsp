@@ -97,7 +97,6 @@ body {
 
 .recipe-images .section img {
 	width: 100%;
-	height: auto;
 	border-radius: 8px;
 	border: 2px solid #CDC8E7;
 }
@@ -109,6 +108,7 @@ body {
 </head>
 <body>
 	<%@ include file="../common/headerBefore.jsp"%>
+	
 	<div class="container">
 		<div class="header">챌린지명</div>
 		<div class="recipe-details">
@@ -141,6 +141,7 @@ body {
 			</div>
 		</div>
 	</div>
+	
 	<%@ include file="../common/footer.jsp"%>
 </body>
 </html>

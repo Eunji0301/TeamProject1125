@@ -43,7 +43,7 @@
       border-radius: 10px;
       margin: 20px auto;
       background-color: white;
-      max-width: 800px;
+      max-width: 1320px;
       padding: 20px;
     }
 
@@ -66,7 +66,7 @@
 
     .card img {
       width: 100%;
-      height: 150px;
+      height: 350px;
       border-radius: 10px;
     }
 
@@ -95,22 +95,22 @@
   </style>
 </head>
 <body>
-
+<%@ include file="../common/headerBefore.jsp"%>
   <div class="content">
     <!-- 관리자 챌린지 리스트 -->
     <div class="challenge-container">
       <div class="header">챌린지 리스트 (관리자)</div>
       <div class="separator"></div>
       <div class="d-flex flex-wrap justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="https://via.placeholder.com/150" alt="챌린지 이미지">
+        <div class="card" style="width: 32rem;">
+          <img src="/resources/img/indexSO/profile.png" alt="챌린지 이미지">
           <div class="card-title">챌린지 1</div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 32rem;">
           <img src="https://via.placeholder.com/150" alt="챌린지 이미지">
           <div class="card-title">챌린지 2</div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 32rem;">
           <img src="https://via.placeholder.com/150" alt="챌린지 이미지">
           <div class="card-title">챌린지 3</div>
         </div>
@@ -124,15 +124,15 @@
       <div class="header">챌린지 리스트 (유저)</div>
       <div class="separator"></div>
       <div class="d-flex flex-wrap justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="https://via.placeholder.com/150" alt="챌린지 이미지">
+        <div class="card" style="width: 32rem;">
+          <img src="/resources/img/indexSO/profile.png" alt="챌린지 이미지">
           <div class="card-title">작성하기</div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 32rem;">
           <img src="https://via.placeholder.com/150" alt="챌린지 이미지">
           <div class="card-title">챌린지 1</div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 32rem;">
           <img src="https://via.placeholder.com/150" alt="챌린지 이미지">
           <div class="card-title">챌린지 2</div>
         </div>
@@ -141,7 +141,7 @@
       <button class="more-button">더보기</button>
     </div>
   </div>
-
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
 

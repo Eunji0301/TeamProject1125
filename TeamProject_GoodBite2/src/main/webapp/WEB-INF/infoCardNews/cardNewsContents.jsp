@@ -17,7 +17,7 @@
 <html>
 <head>
 <title>cardNewsContents</title>
-<link href="${pageContext.request.contextPath}/resourcesSO/css/socss/cardNewsContents.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/cardNews.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 <script>
@@ -201,23 +201,21 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<header>
-	<div class="inner">
-		<h1 class="mainTitle">카드 뉴스</h1>
-	</div>
-</header>
+<%@ include file="../common/headerBefore.jsp"%>
 <div class="inner">
-	<a class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></a> <!-- 수정사항 -->
-</div>
+<div class="tap">
+<header>
+<h1 class="mainTitle">카드 뉴스</h1>
+</header>
+<a class="board notice"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></a> <!-- 수정사항 -->
 <article class="detailContents">
-	<div class="inner">
 	<h2 class="contentTitle">${bv.subject}</h2>	
 	<p class="write">${bv.writer}</p>
 	<div class="content">
 		${bv.contents}	
 		<div class="image-gallery">
-        <img src="https://via.placeholder.com/150x300" alt="Image 1" class="content-image">
-        <img src="https://via.placeholder.com/150x300" alt="Image 2" class="content-image">
+        <img src="/resources/img/indexSO/profile.png" alt="Image 1" class="content-image">
+        <img src="/resources/img/indexSO/profile.png" alt="Image 2" class="content-image">
     	</div>
 	</div>	
 	<c:if test="${!empty bv.filename}">
@@ -226,14 +224,15 @@ $(document).ready(function(){
 	<a id="dUrl"  href="#"  class="fileDown">첨부파일 다운로드</a>
 	</p>		
 	</c:if>
-</div>
 </article>	
-<div class="inner">
+
 	<div class="btnBox">
 		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardDelete.aws?bidx=${bv.bidx}">삭제</a>
 		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardModify.aws?bidx=${bv.bidx}">수정</a>
 		<a class="btn aBtn" href="${pageContext.request.contextPath}/board/boardList.aws">목록</a>
 	</div>
 </div>
+</div>
+<%@ include file="../common/footer.jsp"%>
 </body>
 </html>
