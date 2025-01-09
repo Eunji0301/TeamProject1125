@@ -318,41 +318,6 @@ body {
   width: 500px;
 }
 
-.challenge-box {
-  padding: 5px;
-  background-color: #FFFFFF;
-  margin-bottom: 16px;
-  border: 5px solid #CDC8E7;
-}
-
-.challenge-header {
-  background-color: #CDC8E7;
-  color: #8475BC;
-  text-align: center;
-  font-size: 17px;
-  border: 5px solid #CDC8E7;
-  margin: 10px auto;
-  width: 475px;
-  padding: 5px;
-}
-
-.challenge-wrapper {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  background-color: #F9F9F9;
-  border: 5px solid #CDC8E7;
-  margin-bottom: 10px;
-}
-
-.challenge-img {
-  width: 100px;
-  height: 95px;
-  margin-right: 10px;
-  border-radius: 8px;
-  border: 5px solid #CDC8E7;
-}
-
 /* 페이지 버튼 */
 .pagination {
   display: flex;
@@ -503,14 +468,6 @@ body {
     border-bottom: 5px solid #8475BC;
 }
 
-/* 챌린지 박스 */
-.challenge-box {
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 5px solid #CDC8E7;
-    background-color: #F9F9F9;
-}
-
 /* 버튼 옵션 */
 .btn-option {
     border: 5px solid #CDC8E7;
@@ -600,20 +557,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* 챌린지 헤더 */
-.challenge-header {
-    border: 5px solid #CDC8E7;
-    background-color: #CDC8E7;
-    color: #8475BC;
-    margin-top: 10px;
-    width: 475px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 17px;
-}
-
 /* 카드뉴스 */
 .p-md-5 {
     padding: 2rem;
@@ -622,117 +565,4 @@ body {
 /* 배경 색상 */
 .bg-light {
     background-color: #FFFFFF;
-}
-
-
-/* 미디어 쿼리 - 화면 크기별 스타일 */
-@media (max-width: 1200px) {
-  .inner {
-    max-width: 90% !important;
-    min-width: 800px !important;
-  }
-
-  .mini-title {
-    font-size: 1rem !important;
-    padding: 8px 16px !important;
-  }
-
-  .p-5 {
-    padding: 2.5rem !important;
-  }
-
-  .btn-primary {
-    width: auto !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .inner {
-    max-width: 100% !important;
-    min-width: 700px !important;
-  }
-
-  .mini-title {
-    font-size: 1.1rem !important;
-    padding: 8px 16px !important;
-  }
-
-  .p-5 {
-    padding: 2rem !important;
-  }
-
-  .btn-primary {
-    width: 100% !important;
-  }
-
-  .challenge-box {
-    max-width: 450px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .inner {
-    max-width: 100% !important;
-    min-width: 100% !important;
-    padding: 0 15px !important;
-  }
-
-  .mini-title {
-    font-size: 1rem !important;
-    padding: 8px 15px !important;
-  }
-
-  .p-5 {
-    padding: 1.5rem !important;
-  }
-
-  .btn-primary {
-    width: 100% !important;
-  }
-
-  .challenge-box {
-    width: 100% !important;
-  }
-
-  .photo-wrapper img {
-    width: 80px !important;
-    height: 80px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .inner {
-    max-width: 100% !important;
-    min-width: 100% !important;
-    padding: 0 10px !important;
-  }
-
-  .mini-title {
-    font-size: 0.9rem !important;
-    padding: 6px 12px !important;
-  }
-
-  .p-5 {
-    padding: 1.2rem !important;
-  }
-
-  .btn-primary {
-    width: 100% !important;
-  }
-
-  .challenge-box {
-    width: 100% !important;
-    padding: 15px !important;
-  }
-
-  .photo-wrapper img {
-    width: 70px !important;
-    height: 70px !important;
-  }
-
-  .custom-btn {
-    width: 35px !important;
-    height: 35px !important;
-    font-size: 14px !important;
-  }
 }
