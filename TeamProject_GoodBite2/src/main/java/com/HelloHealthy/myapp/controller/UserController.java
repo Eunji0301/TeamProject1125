@@ -30,11 +30,11 @@ import com.HelloHealthy.myapp.util.UserIp;
 public class UserController {
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
-	@Autowired 
-	private UserIp userIp;
-
-	@Autowired 
-	private UserService userService;
+//	@Autowired 
+//	private UserIp userIp;
+//
+//	@Autowired 
+//	private UserService userService;
 	
 	@RequestMapping(value = "user/userLogin.do", method = RequestMethod.GET)
 	public String login() {
