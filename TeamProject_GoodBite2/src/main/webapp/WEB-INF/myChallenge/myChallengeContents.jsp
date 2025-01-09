@@ -24,9 +24,18 @@ body {
 }
 
 @media ( max-width : 768px) {
-	.inner {
+	/* .inner {
 		padding-left: 16px;
 		padding-right: 16px;
+	} */
+	.input-group {
+		gap: 10px; /* 요소 간격 줄이기 */
+	}
+	.input-group .form-section {
+		flex: 1; /* 유동적으로 너비 조정 */
+	}
+	.input-group img {
+		max-width: 48%; /* 이미지 폭 제한 */
 	}
 }
 
@@ -131,10 +140,20 @@ h2 {
 	justify-content: space-between;
 	align-items: flex-start;
 	gap: 20px;
+	flex-wrap: nowrap;
 }
 
 .input-group .form-section {
-	width: 48%; /* 인증사진과 내용을 50%씩 나누기 */
+	flex: 1;
+	min-width: 0;
+	/* width: 48%; /* 인증사진과 내용을 50%씩 나누기 */
+	*/
+}
+
+.input-group img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 .input-group textarea, .input-group input[type="file"] {
@@ -266,10 +285,10 @@ h2 {
 }
 
 .user-photo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* 원형으로 표시 */
-    object-fit: cover;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%; /* 원형으로 표시 */
+	object-fit: cover;
 }
 
 .comment-input-group textarea {
@@ -354,7 +373,7 @@ h2 {
 </head>
 <body>
 	<%@ include file="../common/headerBefore.jsp"%>
-	
+
 	<div class="container">
 		<div class="header">챌린지명</div>
 		<div class="user-info">
@@ -365,7 +384,8 @@ h2 {
 			</div>
 		</div>
 
-		<form action="challengeCertificationAction.jsp" method="post" enctype="multipart/form-data">
+		<form action="challengeCertificationAction.jsp" method="post"
+			enctype="multipart/form-data">
 			<!-- 제목 -->
 			<div class="form-section">
 				<div class="form-section-box">
@@ -417,7 +437,8 @@ h2 {
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1KfVK6CMjDIZtF3wbcKB6dzmFshqiAcuOQ&s" alt="유저 사진">
 				<div class="comment-text">
 					<div class="comment-date">2024-01-11</div>
-					<br>건강해질것같아요!!
+					<div class="usernickname">홍길동</div>
+					<div class="comment-contents">건강해질것같아요!!</div>
 				</div>
 				<button class="delete-button" style="background-color: #CDC8E7; color: #8475BC; border: none; padding: 10px 20px; cursor: pointer; margin-left: auto; border-radius: 8px;">삭제</button>
 			</li>
@@ -425,7 +446,8 @@ h2 {
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1KfVK6CMjDIZtF3wbcKB6dzmFshqiAcuOQ&s" alt="유저 사진">
 				<div class="comment-text">
 					<div class="comment-date">2024-01-10</div>
-					<br>좋은 챌린지네요! 응원합니다!
+					<div class="usernickname">이순신</div>
+					<div class="comment-contents">저도 해봐야겠어요</div>
 				</div>
 				<button class="delete-button" style="background-color: #CDC8E7; color: #8475BC; border: none; padding: 10px 20px; cursor: pointer; margin-left: auto; border-radius: 8px;">삭제</button>
 			</li>
@@ -433,7 +455,8 @@ h2 {
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1KfVK6CMjDIZtF3wbcKB6dzmFshqiAcuOQ&s" alt="유저 사진">
 				<div class="comment-text">
 					<div class="comment-date">2024-01-07</div>
-					<br>우와아아아!
+					<div class="usernickname">강감찬</div>
+					<div class="comment-contents">아주 좋은 챌린지에요</div>
 				</div>
 				<button class="delete-button" style="background-color: #CDC8E7; color: #8475BC; border: none; padding: 10px 20px; cursor: pointer; margin-left: auto; border-radius: 8px;">삭제</button>
 			</li>
