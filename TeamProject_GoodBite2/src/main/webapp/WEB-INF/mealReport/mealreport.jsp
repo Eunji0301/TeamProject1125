@@ -19,7 +19,7 @@
 	<%@ include file="../common/headerBefore.jsp"%>
 	<main>
 	<!-- 메인 컨테이너 -->
-	<div class="diagnosis-container">
+	<div class="diagnosis-container ">
 		<div class="text-center">
 			<!-- 진단 시작 버튼 -->
 			<button id="startButton" class="btn btn-custom">진단 시작 버튼</button>
