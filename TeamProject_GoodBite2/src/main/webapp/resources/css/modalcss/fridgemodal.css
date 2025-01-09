@@ -20,3 +20,10 @@
     background-color: #b2a6cf !important; /* 호버 시 약간 더 어두운 색상 */
     border-color: #b2a6cf !important;
 }
+
+/* 선택된 재료 텍스트 스타일 */
+.list-group-item span {
+    font-size: 16px; /* 글자 크기 */
+    font-weight: bold; /* 굵게 */
+    margin-right: 10px; /* 간격 */
+}

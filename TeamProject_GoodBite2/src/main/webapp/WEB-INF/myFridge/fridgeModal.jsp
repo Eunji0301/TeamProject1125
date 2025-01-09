@@ -22,8 +22,7 @@
 						<li
 							class="list-group-item d-flex align-items-center justify-content-between">
 							<div class="d-flex align-items-center">
-								<img src="../resources/img/mealReportSY/rice.png" alt="쌀"
-									class="ingredient-thumb me-3"> <span>쌀</span>
+								 <span>쌀</span>
 							</div>
 							<div>
 								<button class="btn btn-sm btn-outline-primary"
@@ -38,8 +37,7 @@
 						<li
 							class="list-group-item d-flex align-items-center justify-content-between">
 							<div class="d-flex align-items-center">
-								<img src="../resources/img/mealReportSY/tofu.png" alt="두부"
-									class="ingredient-thumb me-3"> <span>두부</span>
+								<span>두부</span>
 							</div>
 							<div>
 								<button class="btn btn-sm btn-outline-primary"

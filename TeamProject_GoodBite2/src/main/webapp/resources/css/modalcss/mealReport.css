@@ -1,4 +1,13 @@
 @charset "UTF-8";
+
+/* 전체 화면 아래로 당기기 */
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; /* 뷰포트 전체 높이 */
+}
+
 body {
 	background-color: white; /* 전체 배경 흰색 */
 	font-family: Arial, sans-serif;
@@ -11,7 +20,6 @@ body {
 	border-radius: 10px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	padding: 20px;
-	border: 2px solid #CDC6E7;
 }
 
 .diagnosis-container .btn-custom {
