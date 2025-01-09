@@ -1,14 +1,29 @@
 @charset "UTF-8";
-/* 기본 스타일 설정 */
-.inner {
-  position: static;
-  width: auto;
-  max-width: 1000px;
-  padding: 0 10px;
-  margin: 0 auto;
-  min-width: 970px;
+/*공통 css*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-
+a{
+	display:inline-block;
+	text-decoration: none;
+	color : black;
+}
+#header, #footer{
+    position: relative;
+    z-index: 2;
+    background: #CDC8E7;
+}
+.inner {
+	
+width:1180px; 
+margin:0 auto; 
+position:relative;
+ }
+@media (max-width: 1180px){
+	.inner {width:100%;}
+}
 /* 미니 타이틀 스타일 */
 .mini-title {
   display: inline-block;
