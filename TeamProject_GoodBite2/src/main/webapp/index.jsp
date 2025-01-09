@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 <title>팀프로젝트</title>
 
 </head>
@@ -68,7 +68,6 @@ buttons.forEach(button => {
 
 <body>
 <%@ include file="WEB-INF/common/headerBefore.jsp"%>
-
  	<a href="<%=request.getContextPath()%>/challenge/challengeContent.do">challengeContent</a><br>
 	<a href="<%=request.getContextPath()%>/challenge/challengeList.do">challengeList</a><br>
 	<a href="<%=request.getContextPath()%>/challenge/challengeWrite.do">challengeWrite</a><br>
@@ -94,22 +93,24 @@ buttons.forEach(button => {
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeCertificationList.do">myChallengeCertificationList</a><br>
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeContents.do">myChallengeContents</a><br>
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeList.do">myChallengeList</a><br>
+	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeModify.do">myChallengeModify</a><br>
 	<a href="<%=request.getContextPath()%>/myChallenge/myChallengeWrite.do">myChallengeWrite</a><br>
 	<br><br><br>
 	<a href="<%=request.getContextPath()%>/recipe/recipeContents.do">recipeContents</a><br>
 	<a href="<%=request.getContextPath()%>/recipe/recipeList.do">recipeList</a><br>
 	<br><br><br>
-	<a href="<%=request.getContextPath()%>/user/changePwd.do">changePwd</a><br>
-	<a href="<%=request.getContextPath()%>/user/foundId.do">foundId</a><br>
-	<a href="<%=request.getContextPath()%>/user/foundPwd.do">foundPwd</a><br>
-	<a href="<%=request.getContextPath()%>/user/join.do">join</a><br>
-	<a href="<%=request.getContextPath()%>/user/login.do">login</a><br>
-	<a href="<%=request.getContextPath()%>/user/searchId.do">searchId</a><br>
-	<a href="<%=request.getContextPath()%>/user/searchPwd.do">searchPwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/userChangePwd.do">changePwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/userFoundId.do">foundId</a><br>
+	<a href="<%=request.getContextPath()%>/user/userFoundPwd.do">foundPwd</a><br>
+	<a href="<%=request.getContextPath()%>/user/userJoin.do">join</a><br>
+	<a href="<%=request.getContextPath()%>/user/userLogin.do">login</a><br>
+	<a href="<%=request.getContextPath()%>/user/userSearchId.do">searchId</a><br>
+	<a href="<%=request.getContextPath()%>/user/userSearchPwd.do">searchPwd</a><br>
 	<br><br><br> 
 
 <main class="container">
   <div class="inner">
+
     <div class="row mb-2" style="margin-top:30px; display: block; gap: 10px; flex-wrap: nowrap;">
 
 		<div id="thum-box" class="d-flex justify-content-between w-100" style="margin-bottom: 20px; gap: 40px;">
@@ -132,6 +133,29 @@ buttons.forEach(button => {
 		</div>
 		</div>
     </div>
+
+    <div class="row mb-2" style="margin-top:30px; display: flex; gap: 10px; flex-wrap: nowrap;">
+  <!-- 첫 번째 썸네일 (넓이와 높이 확장) -->
+  <div style="flex: 1 1 60%; width: 60%;">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
+      <div class="col-auto d-none d-lg-block">
+        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <text x="45%" y="50%" dy=".3em">광고</text>
+        </svg>
+      </div>
+  <!-- 두 번째 썸네일 (넓이만 확장) -->
+  <div style="flex: 1 1 45.5%; width: 45.5%;">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
+      <div class="col-auto d-none d-lg-block">
+        <svg class="bd-placeholder-img" width="100%" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <text x="45%" y="50%" dy=".3em">카드뉴스</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="d-flex" style="width: 100%; gap: 40px;">
+
 
 <div class="container mt-3">
   <div class="d-flex flex-wrap justify-content-between" style="">
@@ -169,8 +193,10 @@ buttons.forEach(button => {
             <p>5.홍길동</p>
           </div>
         </div>
+
       </div>
 	<div class="line" style="height: 5px; width: auto; margin-bottom:10px; border-top: 5px solid #8475BC;"></div>
+
       <!-- 완료 메시지 나열 -->
       <div class="mb-2">
         <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
@@ -347,6 +373,7 @@ buttons.forEach(button => {
 </main>
 
 
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

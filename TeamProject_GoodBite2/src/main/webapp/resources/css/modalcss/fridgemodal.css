@@ -1,11 +1,29 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 .selected-ingredients {
   margin-bottom: 15px;
 }
 
 .ingredient-thumb {
-  width: 40px; /* �̹��� �ʺ� */
-  height: 40px; /* �̹��� ���� */
-  border-radius: 5px; /* �ձ� �𼭸� */
-  object-fit: cover; /* ���� ���� */
+  width: 40px; /* 이미지 너비 */
+  height: 40px; /* 이미지 높이 */
+  border-radius: 5px; /* 둥근 모서리 */
+  object-fit: cover; /* 비율 유지 */
+}
+
+.modal .btn {
+    background-color: #CDC6E7 !important; /* 버튼 배경 색상 */
+    border-color: #CDC6E7 !important;    /* 버튼 테두리 색상 */
+    color: #fff !important;             /* 버튼 텍스트 색상 */
+}
+
+.modal .btn:hover {
+    background-color: #b2a6cf !important; /* 호버 시 약간 더 어두운 색상 */
+    border-color: #b2a6cf !important;
+}
+
+/* 선택된 재료 텍스트 스타일 */
+.list-group-item span {
+    font-size: 16px; /* 글자 크기 */
+    font-weight: bold; /* 굵게 */
+    margin-right: 10px; /* 간격 */
 }

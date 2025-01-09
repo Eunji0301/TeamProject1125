@@ -114,8 +114,9 @@ border: 2px solid #8475BC;
 opacity: 1; /* 불투명도 100% */
 }
 #DQ .inner .DQBody .DQBottom img{
-	width: 90px;
-	height: 90px;
+	width: 100%; /* 부모 요소 크기에 맞춤 */
+    max-width: 90px; /* 최대 크기 제한 */
+    height: auto; /* 비율 유지 */
 }
 /* 기본 select 스타일 */
 select {
