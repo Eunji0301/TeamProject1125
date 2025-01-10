@@ -34,5 +34,13 @@ public class ChallengeController {
 
 		return "WEB-INF/challenge/challengeWrite";
 	}
+
+	@RequestMapping(value = "challengeModify.do", method = RequestMethod.GET)
+	public String challengeModify() {
+
+		logger.info("challengeModify 들어옴");
+
+		return "WEB-INF/challenge/challengeModify";
+	}
 	
 }

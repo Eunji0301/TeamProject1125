@@ -1,5 +1,5 @@
 package com.HelloHealthy.myapp.persistance;
 
-public class ChallengeMapper {
+public interface ChallengeMapper {
 
 }

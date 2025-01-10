@@ -24,6 +24,13 @@ position:relative;
 @media (max-width: 1180px){
 	.inner {width:100%;}
 }
+@media (max-width: 768px) {
+  .d-flex.flex-column.align-items-start {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+
 /* 미니 타이틀 스타일 */
 .mini-title {
   display: inline-block;
@@ -318,41 +325,6 @@ body {
   width: 500px;
 }
 
-.challenge-box {
-  padding: 5px;
-  background-color: #FFFFFF;
-  margin-bottom: 16px;
-  border: 5px solid #CDC8E7;
-}
-
-.challenge-header {
-  background-color: #CDC8E7;
-  color: #8475BC;
-  text-align: center;
-  font-size: 17px;
-  border: 5px solid #CDC8E7;
-  margin: 10px auto;
-  width: 475px;
-  padding: 5px;
-}
-
-.challenge-wrapper {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  background-color: #F9F9F9;
-  border: 5px solid #CDC8E7;
-  margin-bottom: 10px;
-}
-
-.challenge-img {
-  width: 100px;
-  height: 95px;
-  margin-right: 10px;
-  border-radius: 8px;
-  border: 5px solid #CDC8E7;
-}
-
 /* 페이지 버튼 */
 .pagination {
   display: flex;
@@ -503,14 +475,6 @@ body {
     border-bottom: 5px solid #8475BC;
 }
 
-/* 챌린지 박스 */
-.challenge-box {
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 5px solid #CDC8E7;
-    background-color: #F9F9F9;
-}
-
 /* 버튼 옵션 */
 .btn-option {
     border: 5px solid #CDC8E7;
@@ -600,20 +564,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* 챌린지 헤더 */
-.challenge-header {
-    border: 5px solid #CDC8E7;
-    background-color: #CDC8E7;
-    color: #8475BC;
-    margin-top: 10px;
-    width: 475px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 17px;
-}
-
 /* 카드뉴스 */
 .p-md-5 {
     padding: 2rem;
@@ -624,115 +574,48 @@ body {
     background-color: #FFFFFF;
 }
 
-
-/* 미디어 쿼리 - 화면 크기별 스타일 */
-@media (max-width: 1200px) {
-  .inner {
-    max-width: 90% !important;
-    min-width: 800px !important;
-  }
-
-  .mini-title {
-    font-size: 1rem !important;
-    padding: 8px 16px !important;
-  }
-
-  .p-5 {
-    padding: 2.5rem !important;
-  }
-
-  .btn-primary {
-    width: auto !important;
-  }
+/* 수정된 옵션 버튼 및 플렉스박스 관련 스타일 */
+#box-1, #box-2 {
+  display: flex;
+  flex-wrap: wrap; /* 자동 줄바꿈 */
+  gap: 10px; /* 버튼 간격 */
 }
 
-@media (max-width: 992px) {
-  .inner {
-    max-width: 100% !important;
-    min-width: 700px !important;
-  }
-
-  .mini-title {
-    font-size: 1.1rem !important;
-    padding: 8px 16px !important;
-  }
-
-  .p-5 {
-    padding: 2rem !important;
-  }
-
-  .btn-primary {
-    width: 100% !important;
-  }
-
-  .challenge-box {
-    max-width: 450px !important;
-  }
-}
-
+/* 작은 화면(예: 768px 이하)에서 옵션 버튼 나열 */
 @media (max-width: 768px) {
-  .inner {
-    max-width: 100% !important;
-    min-width: 100% !important;
-    padding: 0 15px !important;
+  .d-flex.w-100 {
+    flex-direction: column; /* 세로 배치 */
+    align-items: flex-start; /* 좌측 정렬 */
   }
 
-  .mini-title {
-    font-size: 1rem !important;
-    padding: 8px 15px !important;
+  #box-1, #box-2 {
+    width: 100%; /* 전체 너비 사용 */
+    margin: 0 auto; /* 중앙 정렬 */
   }
 
-  .p-5 {
-    padding: 1.5rem !important;
-  }
-
-  .btn-primary {
-    width: 100% !important;
-  }
-
-  .challenge-box {
-    width: 100% !important;
-  }
-
-  .photo-wrapper img {
-    width: 80px !important;
-    height: 80px !important;
+  .btn-option {
+    width: 100%; /* 버튼이 전체 너비를 차지 */
   }
 }
 
-@media (max-width: 576px) {
-  .inner {
-    max-width: 100% !important;
-    min-width: 100% !important;
-    padding: 0 10px !important;
-  }
 
-  .mini-title {
-    font-size: 0.9rem !important;
-    padding: 6px 12px !important;
-  }
+/* 이미지 슬라이더 스타일 */
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  .p-5 {
-    padding: 1.2rem !important;
-  }
+.slider-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-  .btn-primary {
-    width: 100% !important;
-  }
-
-  .challenge-box {
-    width: 100% !important;
-    padding: 15px !important;
-  }
-
-  .photo-wrapper img {
-    width: 70px !important;
-    height: 70px !important;
-  }
-
-  .custom-btn {
-    width: 35px !important;
-    height: 35px !important;
-    font-size: 14px !important;
-  }
+.slider-image.active {
+  opacity: 1;
 }
