@@ -7,8 +7,6 @@
 </head>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -138,7 +136,32 @@ buttons.forEach(button => {
 	  <div class="thumbnail-box flex-grow-1" style="flex: 1 1 40%;">
 	    <div class="row g-0 border rounded overflow-hidden shadow-sm position-relative h-100">
 	      <div class="col-auto d-flex justify-content-center align-items-center w-100 h-100">
-	        <img src="/resources/img/indexSO/profile.png" alt="카드 뉴스" class="img-fluid" style="object-fit: cover; height: 100%; width: auto;">
+	        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			  <div class="carousel-indicators">
+			    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			  </div>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="/resources/img/indexSO/pon1.png" class="d-block w-100" alt="사진 1">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="/resources/img/indexSO/pon2.png" class="d-block w-100" alt="사진 2">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="/resources/img/indexSO/pon3.png" class="d-block w-100" alt="사진 3">
+			    </div>
+			  </div>
+			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+			</div>
 	      </div>
 	    </div>
 	  </div>
@@ -148,9 +171,9 @@ buttons.forEach(button => {
 <div class="container mt-3">
   <div class="d-flex flex-wrap justify-content-between" style="">
 
-<div class="d-flex justify-content-between w-100" style="margin-bottom: 30px; gap: 40px;">
+<div class="d-flex justify-content-between w-100" style="margin-top: 10px; gap: 0px;">
   <!-- 왼쪽: 최강 챌린저 섹션 -->
-  <div class="border-5 rounded w-60" style="margin-bottom: 30px; margin-left:-10px;">
+  <div class="border-5 rounded w-70" style="margin-bottom: 30px; margin-left:-11px; ">
     <div class="rounded p-4" style="border: 5px solid #CDC8E7;">
       <!-- 상단 제목: 보드 처리 및 색상 변경 -->
       <div class="border-bottom mb-4 p-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
@@ -193,7 +216,7 @@ buttons.forEach(button => {
   </div>
 
   <!-- 오른쪽: 챌린지와 라디오 박스 -->
-  <div class="d-flex justify-content-between w-50" style="margin-bottom: 30px; gap: 0px; margin-left:10px; margin-right:-10px;">
+  <div class="d-flex justify-content-between w-50" style="margin-bottom: 30px; gap: 0px; margin-left:20px; margin-right:-54px;">
     <!-- 챌린지들 -->
     <div class="d-flex w-100" style="height: 100%; flex-grow: 1;">
       <div class="board" style="border: 5px solid #CDC8E7; border-radius: 5px; background-color: #FFFFFF;">
@@ -260,17 +283,21 @@ buttons.forEach(button => {
 
 	        <div id="box-2" style="flex-grow: 1;">
 	          <!-- 옵션 버튼들 -->
-	          <div class="flex-column align-items-start w-100" style="display: flex; flex-direction: column; gap: 0px; height: 100%; width: 100%; ">
-	            <button class="list-group-item align-items-center btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px; display: block; justify-content: center; align-items: center; flex-grow: 1; min-width:180px; width: 100%;">
-	              <span>1주</span>
-	            </button>
-	            <button class="list-group-item align-items-center btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px; display: block; justify-content: center; align-items: center; flex-grow: 1; min-width:180px; width: 100%;">
-	              <span>2주</span>
-	            </button>
-	            <button class="list-group-item align-items-center btn-option" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 20px; display: block; justify-content: center; align-items: center; flex-grow: 1; min-width:180px; width: 100%;">
-	              <span>한달</span>
-	            </button>
-	          </div>
+	          <div class="flex-column align-items-start w-100" style="display: flex; flex-direction: column; gap: 0px; height: 100%; width: 100%;">
+				  <button class="list-group-item align-items-center btn-option" 
+				          style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 50px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
+				    <span>1주</span>
+				  </button>
+				  <button class="list-group-item align-items-center btn-option" 
+				          style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 50px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
+				    <span>2주</span>
+				  </button>
+				  <button class="list-group-item align-items-center btn-option" 
+				          style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 50px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
+				    <span>한달</span>
+				  </button>
+				</div>
+
 	        </div>
 	      </div>
  	     </div>
@@ -308,7 +335,7 @@ buttons.forEach(button => {
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <!-- 제목을 담은 보드 -->
-    <div class="border-bottom mb-4 p-3" style="background-color: #8475BC; margin-left:170px; margin-right:170px;"> 
+    <div class="border-bottom mb-5 p-3" style="background-color: #8475BC; margin-left:170px; margin-right:170px; text-align: center;"> 
         <h2 class="text-center mb-0" style="color: #FFFFFF;">굿바이트란?</h2>
     </div>
     
@@ -316,42 +343,42 @@ buttons.forEach(button => {
     <div class="row justify-content-center">
         <!-- 첫 번째 항목: 원형 배경 텍스트 -->
         <div class="col-lg-2 px-0 d-flex justify-content-center">
-            <div class="d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
+            <div class="d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
                 <p class="lead my-3 fw-bold" style="font-size: 1.2em; margin: 0;">건강 데이터 분석</p>
             </div>
         </div>
 
         <!-- 두 번째 항목: 원형 배경 텍스트 -->
         <div class="col-lg-2 px-0 d-flex justify-content-center">
-            <div class="d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
+            <div class="d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
                 <p class="lead my-3 fw-bold" style="font-size: 1.2em; margin: 0;">질병예방</p>
             </div>
         </div>
 
         <!-- 세 번째 항목: 원형 배경 텍스트 -->
         <div class="col-lg-2 px-0 d-flex justify-content-center">
-            <div class="d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
+            <div class="d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
                 <p class="lead my-3 fw-bold" style="font-size: 1.2em; margin: 0;">건강 관리 리스트</p>
             </div>
         </div>
 
         <!-- 네 번째 항목: 원형 배경 텍스트 -->
         <div class="col-lg-2 px-0 d-flex justify-content-center">
-            <div class="d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
+            <div class="d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
                 <p class="lead my-3 fw-bold" style="font-size: 1.2em; margin: 0;">식습관 형성</p>
             </div>
         </div>
         
         <!-- 다섯 번째 항목: 원형 배경 텍스트 -->
         <div class="col-lg-2 px-0 d-flex justify-content-center">
-            <div class="d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
+            <div class="d-flex justify-content-center align-items-center" style="width: 150px; height: 150px; border-radius: 50%; background-color: #CDC8E7; color: black; text-align: center;">
                 <p class="lead my-3 fw-bold" style="font-size: 1.2em; margin: 0;">챌린지 동기부여</p>
             </div>
         </div>
     </div>
 
     <!-- 텍스트 가운데 정렬 -->
-    <p class="text-center" style="font-size: 1.2em; margin-top: 30px;">"굿바이트는 질병을 예방하고 개인의 건강을 관리하는 혁신적인 플랫폼입니다."</p>
+    <p class="text-center" style="font-size: 1.7em; margin-top: 30px;">"굿바이트는 질병을 예방하고 개인의 건강을 관리하는 혁신적인 플랫폼입니다."</p>
 
 </div>
 </div>
