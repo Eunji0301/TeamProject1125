@@ -3,30 +3,44 @@
 <html>
 <head>
 <title>팀프로젝트</title>
+<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/index.css">
 
+<style>
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a{
+	display:inline-block;
+	text-decoration: none;
+	color : black;
+}
+#header, #footer{
+    position: relative;
+    z-index: 2;
+    background: #CDC8E7;
+}
+.inner {
+	
+width:1180px; 
+margin:0 auto; 
+position:relative;
+ }
+@media (max-width: 1180px){
+	.inner {width:100%;}
+}
+@media (max-width: 768px) {
+  .d-flex.flex-column.align-items-start {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+</style>
 </head>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#712cf9">
-    
-    <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
-  </head>
 
 <script>
 //버튼 클릭 시 해당 주차 내용만 보이게 처리하는 함수
@@ -173,7 +187,7 @@ buttons.forEach(button => {
 
 <div class="d-flex justify-content-between w-100" style="margin-top: 10px; gap: 0px;">
   <!-- 왼쪽: 최강 챌린저 섹션 -->
-  <div class="border-5 rounded w-70" style="margin-bottom: 30px; margin-left:-11px; ">
+  <div class="border-5 rounded w-60" style="margin-bottom: 30px; margin-left:-10px; margin-right:10px;">
     <div class="rounded p-4" style="border: 5px solid #CDC8E7;">
       <!-- 상단 제목: 보드 처리 및 색상 변경 -->
       <div class="border-bottom mb-4 p-2" style="background-color: #CDC8E7; border-bottom: 5px solid #8475BC;">
@@ -182,7 +196,7 @@ buttons.forEach(button => {
 
       <!-- 사진과 이름 나열 -->
       <div class="row mb-4">
-        <div class="row justify-content-center mb-2">
+        <div class="row justify-content-center mt-4 mb-4">
           <div class=" col-md-2 text-center">
             <img src="/resources/img/indexSO/profile.png" alt="사진 1" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
             <p>1.홍길동</p>
@@ -205,7 +219,7 @@ buttons.forEach(button => {
           </div>
         </div>
       </div>
-	<div class="line" style="height: 5px; width: auto; margin-bottom:10px; border-top: 5px solid #8475BC;"></div>
+	<div class="line" style="height: 5px; width: auto; margin-bottom:25px; border-top: 5px solid #8475BC;"></div>
       <!-- 완료 메시지 나열 -->
       <div class="mb-2">
         <p class="border p-3 mb-2" style="background-color: #FFFFFF; color: #8475BC; border: 5px solid #8475BC;">홍길동님이 ㅇㅇㅇ 챌린지를 완료했습니다!</p>
@@ -216,9 +230,9 @@ buttons.forEach(button => {
   </div>
 
   <!-- 오른쪽: 챌린지와 라디오 박스 -->
-  <div class="d-flex justify-content-between w-50" style="margin-bottom: 30px; gap: 0px; margin-left:20px; margin-right:-54px;">
+  <div class="d-flex justify-content-between w-60" style="margin-bottom: 30px; gap: 0px; margin-left:10px; margin-right:-10px;">
     <!-- 챌린지들 -->
-    <div class="d-flex w-100" style="height: 100%; flex-grow: 1;">
+    <div class="d-flex w-50" style="height: 100%; flex-grow: 1;">
       <div class="board" style="border: 5px solid #CDC8E7; border-radius: 5px; background-color: #FFFFFF;">
       <div class="d-flex">
       <div id="box-1">
@@ -227,78 +241,82 @@ buttons.forEach(button => {
             <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; margin-top: 10px; width: 100%; margin-bottom: 10px; text-align: center; font-size: 17px;">
               최다 도전 챌린지
             </div>
-            <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7; margin-bottom: 10px; background-color: #F9F9F9;">
-              <div class="d-flex align-items-center" style="padding: 5px;">
-                <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-                <p>배달음식 없는 하루 챌린지</p>
-              </div>
+            <div id="week-2-1" class="photo-wrapper">
+			<div class="d-flex justify-content-between align-items-center">
+			  <div class="d-flex align-items-center" style="padding: 5px;">
+			    <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="photo-wrapper-zone" style="margin-right: 10px;">
+			  </div>
+			  <div class="chall-text">
+			    <p>배달음식 없는 하루 챌린지</p>
+			  </div>
+			</div>
             </div>
+            
             <!-- 페이지 버튼 -->
             <div class="pagination d-flex justify-content-center">
               <ul class="pagination">
                 <li class="page-item">
-                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
+                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)"></a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
+                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)"></a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
+                  <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)"></a>
                 </li>
               </ul>
             </div>
           </div>
         
-        <div style="padding: 5px;">
-        <div class="line" style="height: auto; width: auto; border-top: 5px solid #8475BC; padding: 0px;"></div>
-        </div>
-        
+        <div style="height: auto; width: auto; border-top: 5px solid #8475BC;"></div>
+
           <!-- 최다 성공 챌린지 -->
           <div class="challenge-box" id="challenge-2" style="padding: 5px;">
-            <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; width: 100%; margin-bottom: 10px; text-align: center; font-size: 17px;">
+            <div class="challenge-header" style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; width: 100%;  margin-top: 10px; margin-bottom: 10px; text-align: center; font-size: 17px;">
               최다 성공 챌린지
             </div>
-            <div id="week-2-1" class="photo-wrapper" style="border: 5px solid #CDC8E7; margin-bottom: 10px; background-color: #F9F9F9;">
-              <div class="d-flex align-items-center" style="padding: 5px;">
-                <img src="/resources/img/indexSO/profile.png" alt="사진 4" style="width: 100px; height: 95px; margin-right: 10px; border-radius: 8px; border: 5px solid #CDC8E7;">
-                <p>하루 음식 메뉴 인증 챌린지</p>
-              </div>
+            <div id="week-2-1" class="photo-wrapper">
+			<div class="d-flex justify-content-between align-items-center">
+			  <div class="d-flex align-items-center" style="padding: 5px;">
+			    <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="photo-wrapper-zone" style="margin-right: 10px;">
+			  </div>
+			  <div class="chall-text">
+			    <p>하루 음식 메뉴 인증 챌린지</p>
+			  </div>
+			</div>
             </div>
           </div>
           <!-- 페이지 버튼 -->
           <div class="pagination d-flex justify-content-center">
             <ul class="pagination">
               <li class="page-item">
-                <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)">1</a>
+                <a class="page-link custom-btn" href="#" onclick="showContent(1, 1)"></a>
               </li>
               <li class="page-item">
-                <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)">2</a>
+                <a class="page-link custom-btn" href="#" onclick="showContent(1, 2)"></a>
               </li>
               <li class="page-item">
-                <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)">3</a>
+                <a class="page-link custom-btn" href="#" onclick="showContent(1, 3)"></a>
               </li>
             </ul>
           </div>
         </div>
 
-	        <div id="box-2" style="flex-grow: 1;">
-	          <!-- 옵션 버튼들 -->
-	          <div class="flex-column align-items-start w-100" style="display: flex; flex-direction: column; gap: 0px; height: 100%; width: 100%;">
-				  <button class="list-group-item align-items-center btn-option" 
-				          style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 50px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
-				    <span>1주</span>
-				  </button>
-				  <button class="list-group-item align-items-center btn-option" 
-				          style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 50px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
-				    <span>2주</span>
-				  </button>
-				  <button class="list-group-item align-items-center btn-option" 
-				          style="border: 5px solid #CDC8E7; background-color: #CDC8E7; color: #8475BC; font-size: 50px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
-				    <span>한달</span>
-				  </button>
-				</div>
+	        <div id="box-2" style="display: flex; flex-direction: column; height: auto; width: 30%">
+			  <button id="op-btn" class="list-group-item align-items-center btn-option" 
+			          style="background-color: #8475BC; color: #CDC8E7; font-size: 30px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
+			    <span>1주</span>
+			  </button>
+			  <button id="op-btn" class="list-group-item align-items-center btn-option" 
+			          style="background-color: #8475BC; color: #CDC8E7; font-size: 30px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
+			    <span>2주</span>
+			  </button>
+			  <button id="op-btn" class="list-group-item align-items-center btn-option" 
+			          style="background-color: #8475BC; color: #CDC8E7; font-size: 30px; display: flex; justify-content: center; align-items: center; flex-grow: 1; width: 100%;">
+			    <span>한달</span>
+			  </button>
+			</div>
 
-	        </div>
 	      </div>
  	     </div>
         </div>
@@ -311,22 +329,22 @@ buttons.forEach(button => {
   <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <div class="row text-center">
         <div class="col-lg-3 px-0">
-            <img src="/resources/img/indexSO/profile.png" alt="사진 1" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 1" class="img-fluid" style="border-radius: 1000px; width: 50%; border: 5px solid #CDC8E7;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">엄은지</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
         <div class="col-lg-3 px-0">
-            <img src="/resources/img/indexSO/profile.png" alt="사진 2" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 2" class="img-fluid" style="border-radius: 1000px; width: 50%; border: 5px solid #CDC8E7;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">김건주</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
         <div class="col-lg-3 px-0">
-            <img src="/resources/img/indexSO/profile.png" alt="사진 3" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 3" class="img-fluid" style="border-radius: 1000px; width: 50%; border: 5px solid #CDC8E7;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">김세옥</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
         <div class="col-lg-3 px-0">
-            <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="img-fluid" style="border-radius: 15px; width: 50%;">
+            <img src="/resources/img/indexSO/profile.png" alt="사진 4" class="img-fluid" style="border-radius: 1000px; width: 50%; border: 5px solid #CDC8E7;">
             <p class="lead my-3 fw-bold" style="font-size: 1.2em;">김시연</p>
             <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">챌린지 기능</a></p>
         </div>
@@ -335,7 +353,7 @@ buttons.forEach(button => {
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <!-- 제목을 담은 보드 -->
-    <div class="border-bottom mb-5 p-3" style="background-color: #8475BC; margin-left:170px; margin-right:170px; text-align: center;"> 
+    <div class="border-bottom mb-5 p-3" style="background-color: #8475BC; text-align: center; width: 400px; margin: 0 auto;">
         <h2 class="text-center mb-0" style="color: #FFFFFF;">굿바이트란?</h2>
     </div>
     
