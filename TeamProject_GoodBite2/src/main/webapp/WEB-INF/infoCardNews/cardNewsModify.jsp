@@ -14,10 +14,11 @@
  } */
  %>
 <!doctype html>
-<html>
+<html lang="ko">
 <head>
-<title>cardNewsContents</title>
-<link href="${pageContext.request.contextPath}/resources/css/cardNews.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>cardNewsModify</title>
+<link href="${pageContext.request.contextPath}/resources/css/cardNewsWriteAndModify.css" rel="stylesheet">
 <!--jquery CDN주소 -->
 <script src="https://code.jquery.com/jquery-latest.min.js"></script> 
 <!-- <script>
@@ -204,38 +205,34 @@ $(document).ready(function(){
 <%@ include file="../common/headerBefore.jsp"%>
 <div class="inner">
 <header>
-
-<h1 class="mainTitle" style="margin-top:25px; margin-bottom:15px;">카드 뉴스</h1>
-
+	<h1 class="mainTitle">카드 뉴스</h1>
 </header>
-<div class="headers-line" style="height: 5px; width: 1150px; margin: 0 auto; border-top: 5px solid #8475BC;"></div>
-<br>
-<div class="board notice" style="margin-left:15px; margin-right:15px;"><p>추운 겨울 어르신은 한랭질환을 조심하세요!</p></div> <!-- 수정사항 -->
-<article class="detailContents">
-	<h2 class="contentTitle">${bv.subject}</h2>	
-	<p class="write">${bv.writer}</p>
-	<div class="content">
-		${bv.contents}	
-		<div class="image-gallery">
-        <img src="/resources/img/indexSO/profile.png" alt="Image 1" class="content-image">
-        <img src="/resources/img/indexSO/profile.png" alt="Image 2" class="content-image">
-    	</div>
-	</div>	
-<%-- 	<c:if test="${!empty bv.filename}">
-	<img src="${pageContext.request.contextPath}/board/displayFile.aws?fileName=${bv.filename}">	
-	<p>
-	<a id="dUrl"  href="#"  class="fileDown">첨부파일 다운로드</a>
-	</p>		
-	</c:if> --%>
+<div class="headers-line" style="height: 5px; width: auto; margin-top: 20px; margin-bottom: 20px; border: 3px solid #8475BC;"></div>
+<div class="board write"> <!-- 수정사항 -->
 	
-<div class="headers-line" style="height: 5px; width: 1150px; margin: 0 auto; border-top: 5px solid #8475BC;"></div>
-<br>
-	<div class="sysbtn-box">
-		<a class="sysbtn" href="${pageContext.request.contextPath}/board/boardDelete.aws?bidx=${bv.bidx}">삭제</a>
-		<a class="sysbtn" href="${pageContext.request.contextPath}/board/boardModify.aws?bidx=${bv.bidx}">수정</a>
-		<a class="sysbtn" href="${pageContext.request.contextPath}/board/boardList.aws">목록</a>
-	</div>
-</article>
+		<article class="detailContents">
+			<div class="contentTitle">
+		    	<p class="title">제목</p>
+		    	<a class="subbox">${bv.subject}</a>
+			</div>
+			<p class="write">${bv.writer}</p>
+			<div class="editer">에티터</div>
+			<div class="content">
+				${bv.contents}	
+			</div>	
+			<c:if test="${!empty bv.filename}">
+			<img src="${pageContext.request.contextPath}/board/displayFile.aws?fileName=${bv.filename}">	
+			<p>
+			<a id="dUrl"  href="#"  class="fileDown">첨부파일 다운로드</a>
+			</p>		
+			</c:if>
+		</article>
+
+		<div class="sysbox">
+			<a class="sys" >삭제</a>
+			<a class="sys" >저장</a>
+		</div>
+</div>
 </div>
 <%@ include file="../common/footer.jsp"%>
 </body>

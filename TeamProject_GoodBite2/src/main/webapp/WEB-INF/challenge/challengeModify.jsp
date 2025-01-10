@@ -125,6 +125,35 @@
       margin-right: 10px;
       color: #7A5FBB; /* 글자 색상을 진한 보라색으로 변경 */
     }
+    .label {
+      width: 100px;
+      text-align: center;
+      background-color: #CDC6E7;
+      color: white; /* 라벨은 흰색 유지 */
+      padding: 5px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .period-button-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .period-button {
+      border: 1px solid #DBD1E9;
+      background-color: white;
+      color: #7A5FBB; /* 버튼 텍스트 색상 */
+      padding: 5px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .period-button.active {
+      background-color: #AED7ED;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -144,9 +173,9 @@
       <div class="form-group">
         <label class="theme-color text-color">기간</label>
         <div class="d-flex">
-          <button type="button" class="btn-theme btn-outline-theme me-2">7일</button>
-          <button type="button" class="btn-theme btn-outline-theme me-2">14일</button>
-          <button type="button" class="btn-theme btn-outline-theme">30일</button>
+          <button type="button" class="btn-theme period-button me-2">7일</button>
+          <button type="button" class="btn-theme period-button me-2">14일</button>
+          <button type="button" class="btn-theme period-button">30일</button>
         </div>
       </div>
       <div class="separator"></div>

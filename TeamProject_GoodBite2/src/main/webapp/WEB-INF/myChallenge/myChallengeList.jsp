@@ -126,6 +126,7 @@ body {
 	border-radius: 8px;
 	border: 1px solid #CDC8E7;
 }
+
 </style>
 </head>
 <body>
@@ -134,9 +135,7 @@ body {
 		<div class="container">
 			<h2 class="challenge-title">MY CHALLENGE</h2>
 			<div class="challenge-banner" style="text-align: center;">
-				<a href="myChallengeContents.do">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmVhlrwH4pVkejAZ7dLlAZlpUdQMPyic4ZxA&s" alt="챌린지 배너 이미지">
-				</a>
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmVhlrwH4pVkejAZ7dLlAZlpUdQMPyic4ZxA&s" onclick="window.location.href='myChallengeCertificationList.do';" style="cursor: pointer;" alt="챌린지 배너 이미지">
 				<div class="challenge-status">
 					<p>1일차 챌린지 진행 중</p>
 					<p>20명이 챌린지를 진행중입니다.</p>

@@ -54,11 +54,6 @@ tap {
 	color:#8475BC;
 }
 
-svg {
-  max-width: 100%;
-  height: auto; /* SVG 크기 조정 */
-}
-
 /* 페이지네이션 스타일 */
 .pagination {
     list-style: none;
@@ -90,19 +85,6 @@ svg {
     text-align: center !important;
 }
 
-/* 미디어 쿼리 (반응형) */
-@media (min-width: 1400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1320px;
-    }
-}
-
-@media (min-width: 992px) {
-    .py-lg-5 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-}
 
 /* Row 스타일 */
 .row {
@@ -123,12 +105,6 @@ svg {
 
 .fw-light {
     font-weight: 300 !important;
-}
-
-@media (min-width: 1200px) {
-    .h1, h1 {
-        font-size: 2.5rem;
-    }
 }
 
 /* 텍스트 스타일 */
@@ -166,11 +142,6 @@ p {
     --bs-btn-disabled-border-color: #0d6efd;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .btn {
-        transition: none;
-    }
-}
 
 /* 그리드 시스템 */
 .g-3, .gy-3 {
@@ -268,9 +239,7 @@ p {
     flex: 1 1 auto;
 }
 
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
-}
+
 
 .btn-group-sm>.btn, .btn-sm {
     --bs-btn-padding-y: 0.25rem;
@@ -316,24 +285,3 @@ p {
     --bs-light-rgb: 248, 249, 250;
     --bs-dark-rgb: 33, 37, 41;
 }
-
-	  .fix {
-	    position: static;
-	    width: 100%; /* fix 클래스에 대해 부모 너비 맞추기 */
-  		box-sizing: border-box;
-	    max-width: 645px;
-	    margin: 0 auto;
-	  }
-	  
-	  .Fix {
-		width:645px; 
-		margin:0 auto; 
-		position:relative;
-	  }
-		
-	  @media (max-width: 1299px) {
-		.inner {
-		padding-left: 16px;
-		padding-right: 16px;
-		}
-      }
