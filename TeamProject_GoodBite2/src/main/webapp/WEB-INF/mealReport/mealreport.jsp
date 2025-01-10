@@ -19,10 +19,11 @@
 	<%@ include file="../common/headerBefore.jsp"%>
 	<main>
 	<!-- 메인 컨테이너 -->
-	<div class="diagnosis-container ">
+	<form id="healthForm">
+	<div class="diagnosis-container">
 		<div class="text-center">
 			<!-- 진단 시작 버튼 -->
-			<button id="startButton" class="btn btn-custom">진단 시작 버튼</button>
+			<button id="startButton" type="button" class="btn btn-custom">진단 시작 버튼</button>
 		</div>
 
 		<!-- 숨겨진 폼 섹션 -->
@@ -40,8 +41,8 @@
 
 			<!-- 의심질환 선택 -->
 			<div class="mb-3">
-				<label for="opinion" class="form-label">의심되는 질환을 선택하세요 (선택
-					사항)</label> <select id="opinion" class="form-select">
+				<label for="opinion" class="form-label">의심되는 질환을 선택하세요 (선택사항)</label> 
+				<select id="opinion" class="form-select">
 					<option value="" selected>선택하세요</option>
 					<option value="고혈압">고혈압</option>
 					<option value="당뇨병">당뇨병</option>
@@ -59,19 +60,20 @@
 			<div class="mb-3">
 				<h3 class="mb-3">평소 활동량을 알려주세요</h3>
 				<div class="d-grid gap-2">
-					<button class="btn btn-custom">하루의 대부분을 앉아서 생활해요</button>
-					<button class="btn btn-custom">산책, 집안일 등 가벼운 활동을 해요</button>
-					<button class="btn btn-custom">자전거나 조깅 등 약간 가벼운 운동을 해요</button>
-					<button class="btn btn-custom">등산이나 축구 같은 격렬한 운동을 해요</button>
+					<button class="btn btn-custom activity-btn" type="button" data-activity="하루의 대부분을 앉아서 생활해요">하루의 대부분을 앉아서 생활해요</button>
+					<button class="btn btn-custom activity-btn" type="button" data-activity="산책, 집안일 등 가벼운 활동을 해요">산책, 집안일 등 가벼운 활동을 해요</button>
+					<button class="btn btn-custom activity-btn" type="button" data-activity="자전거나 조깅 등 약간 가벼운 운동을 해요">자전거나 조깅 등 약간 가벼운 운동을 해요</button>
+					<button class="btn btn-custom activity-btn" type="button" data-activity="등산이나 축구 같은 격렬한 운동을 해요">등산이나 축구 같은 격렬한 운동을 해요</button>
 				</div>
 			</div>
 
 			<!-- 다음 버튼 -->
 			<div class="text-center">
-				<button class="btn btn-custom">다음</button>
+				<button class="btn btn-custom" type="submit" onclick="location.href='<%=request.getContextPath()%>/mealReport/dietaryQuestionnaire.do'">다음</button>
 			</div>
 		</div>
 	</div>
+	</form>
 </main>
 
 
@@ -87,6 +89,57 @@
     const formSection = document.getElementById("formSection");
     formSection.style.display = "block";
     this.style.display = "none"; // 진단 시작 버튼 숨기기
+  });
+  
+//데이터 전송 및 폼 동작 이벤트
+  document.addEventListener("DOMContentLoaded", () => {
+      let selectedActivity = "";
+
+      // 활동량 버튼 클릭 이벤트
+      document.querySelectorAll(".activity-btn").forEach(button => {
+          button.addEventListener("click", () => {
+              selectedActivity = button.getAttribute("data-activity");
+              // 선택된 버튼 강조
+              document.querySelectorAll(".activity-btn").forEach(btn => btn.classList.remove("btn-primary"));
+              button.classList.add("btn-primary");
+          });
+      });
+
+      // 폼 제출 이벤트
+      document.getElementById("healthForm").addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const height = document.getElementById("height").value;
+          const weight = document.getElementById("weight").value;
+          const opinion = document.getElementById("opinion").value;
+
+          if (!height || !weight || !selectedActivity) {
+              alert("키, 몸무게, 활동량을 모두 입력해주세요!");
+              return;
+          }
+
+          // AJAX로 데이터 전송
+          const response = await fetch("/insertHealthData", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                  height: parseFloat(height),
+                  weight: parseFloat(weight),
+                  opinion: opinion,
+                  activity: selectedActivity
+              })
+          });
+
+          if (response.ok) {
+              alert("데이터가 저장되었습니다!");
+              document.getElementById("healthForm").reset(); // 폼 초기화
+              selectedActivity = ""; // 선택 초기화
+          } else {
+              alert("데이터 저장에 실패했습니다.");
+          }
+      });
   });
 </script>
 

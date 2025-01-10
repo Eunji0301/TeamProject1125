@@ -1,5 +1,8 @@
 package com.HelloHealthy.myapp.service;
 
-public interface MealReportService {
+import com.HelloHealthy.myapp.domain.DiagnosisRecordVo;
 
+public interface MealReportService {
+	
+	 public int diagnosisInsert(DiagnosisRecordVo drv);
 }

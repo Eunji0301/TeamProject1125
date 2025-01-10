@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.HelloHealthy.myapp.persistance.MealReportMapper">
+<mapper
+	namespace="com.HelloHealthy.myapp.persistance.MealReportMapper">
+
+	<insert id="diagnosisInsert" parameterType="drv">
+		INSERT INTO Diagnosis_Record (uId, drHeight, drWeight, drAge, drDisease,
+		drActivity)
+		VALUES (#{uId}, #{drHeight}, #{drWeight}, #{drAge}, #{drDisease},
+		#{drActivity})
+	</insert>
+
 
 </mapper>
