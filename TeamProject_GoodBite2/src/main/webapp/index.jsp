@@ -310,7 +310,7 @@ buttons.forEach(button => {
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis" style="background-color: #FFFFFF; border: 5px solid #CDC8E7;">
     <!-- 제목을 담은 보드 -->
-    <div class="border-bottom mb-4 pb-2" style="background-color: #8475BC;">
+    <div class="border-bottom mb-4 p-3" style="background-color: #8475BC; margin-left:170px; margin-right:170px;"> 
         <h2 class="text-center mb-0" style="color: #FFFFFF;">굿바이트란?</h2>
     </div>
     
