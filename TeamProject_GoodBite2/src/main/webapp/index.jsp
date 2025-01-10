@@ -124,28 +124,25 @@ buttons.forEach(button => {
 
 <main id="container">
   <div class="inner">
-    <div class="row mb-2" style="margin-top:30px; display: block; gap: 10px; flex-wrap: nowrap;">
-
-		<div id="thum-box" class="d-flex justify-content-between w-100" style="margin-bottom: 20px; gap: 40px;">
-		<!-- 첫 번째 썸네일 (넓이와 높이 확장) -->
-		<div style="flex: 1 1 55%; width: 55%; height: auto; display: block; justify-content: center; align-items: center;">
-		  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
-		    <div class="col-auto d-none d-lg-block" style="max-width: 100%; max-height: 100%; display: flex; justify-content: center; align-items: center;">
-		      <img src="/resources/img/indexSO/profile.png" alt="광고 이미지" style="width: auto; height: auto; object-fit: cover;">
-		    </div>
-		  </div>
-		</div>
-		
-		<!-- 두 번째 썸네일 (넓이만 확장) -->
-		<div style="flex: 1 1 40%; width: 40%; height: auto; display: block; justify-content: center; align-items: center;">
-		  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-3 shadow-sm h-md-400 position-relative">
-		    <div class="col-auto d-none d-lg-block" style="max-width: 100%; max-height: 100%; display: flex; justify-content: center; align-items: center;">
-		      <img src="/resources/img/indexSO/profile.png" alt="카드 뉴스" style="width: auto; height: auto; object-fit: cover;">
-		    </div>
-		  </div>
-		</div>
-		</div>
-    </div>
+	<div class="row mb-2" style="margin-top: 30px; display: flex; gap: 10px; flex-wrap: nowrap; align-items: stretch;">
+	  <!-- 첫 번째 썸네일 -->
+	  <div class="thumbnail-box flex-grow-1" style="flex: 1 1 55%;">
+	    <div class="row g-0 border rounded overflow-hidden shadow-sm position-relative h-100">
+	      <div class="col-auto d-flex justify-content-center align-items-center w-100 h-100">
+	        <img src="/resources/img/indexSO/profile.png" alt="광고 이미지" class="img-fluid" style="object-fit: cover; height: 100%; width: auto;">
+	      </div>
+	    </div>
+	  </div>
+	
+	  <!-- 두 번째 썸네일 -->
+	  <div class="thumbnail-box flex-grow-1" style="flex: 1 1 40%;">
+	    <div class="row g-0 border rounded overflow-hidden shadow-sm position-relative h-100">
+	      <div class="col-auto d-flex justify-content-center align-items-center w-100 h-100">
+	        <img src="/resources/img/indexSO/profile.png" alt="카드 뉴스" class="img-fluid" style="object-fit: cover; height: 100%; width: auto;">
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 <div class="container mt-3">
   <div class="d-flex flex-wrap justify-content-between" style="">
