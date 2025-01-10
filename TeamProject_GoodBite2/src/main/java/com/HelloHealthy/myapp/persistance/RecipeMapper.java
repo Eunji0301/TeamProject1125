@@ -1,5 +1,5 @@
 package com.HelloHealthy.myapp.persistance;
 
-public class RecipeMapper {
+public interface RecipeMapper {
 
 }
