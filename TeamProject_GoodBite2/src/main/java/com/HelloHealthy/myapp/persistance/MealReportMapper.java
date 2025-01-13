@@ -1,8 +1,9 @@
 package com.HelloHealthy.myapp.persistance;
 
+import com.HelloHealthy.myapp.domain.DiagnosisRecordVo;
+
 public interface MealReportMapper {
-<<<<<<< HEAD
+	
+	 public int diagnosisInsert(DiagnosisRecordVo drv);
 	
 }
-=======
->>>>>>> f7fd9764801c84e936fcf7ad8714c0276e1beb9b
