@@ -32,6 +32,13 @@ public class MealReportController {
 		return path;
 	}
 	
+	@RequestMapping(value = "mealreportWriteAction.do", method=RequestMethod.GET)
+	public String mealreportWriteAction() {
+		
+		String path;
+		return path;
+	}
+	
 	@RequestMapping(value = "mealreportResult.do", method=RequestMethod.GET)
 	public String mealreportResult() {
 		
